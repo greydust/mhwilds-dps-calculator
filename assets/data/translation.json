@@ -1,0 +1,60 @@
+{
+  "en": {
+    "title": "Monster Hunter Wilds DPS Calculator",
+    "weapon-type-label": "Weapon Type:",
+    "heavy-bowgun": "Heavy Bowgun",
+    "weapon-label": "Weapon:",
+    "base-attack": "Base Attack:",
+    "affinity": "Affinity:",
+    "ammo-type-label": "Ammo Type:",
+    "ammo-level": "Ammo Level:",
+    "enhancement-1-label": "Enhancement 1:",
+    "enhancement-2-label": "Enhancement 2:",
+    "enhance-type": "Enhance Type:",
+    "github-link": "View on GitHub",
+    "language-label": "Language:",
+    "ammo": {
+      "normal": "Normal Ammo",
+      "pierce": "Pierce Ammo",
+      "spread": "Spread Ammo",
+      "slicing": "Slicing Ammo",
+      "sticky": "Sticky Ammo",
+      "cluster": "Cluster Ammo",
+      "wyvern": "Wyvern Ammo",
+      "flaming": "Flaming Ammo",
+      "water": "Water Ammo",
+      "freeze": "Freeze Ammo",
+      "thunder": "Thunder Ammo",
+      "dragon": "Dragon Ammo"
+    }
+  },
+  "zh": {
+    "title": "魔物獵人荒野 DPS 計算器",
+    "weapon-type-label": "武器類型：",
+    "heavy-bowgun": "重弩槍",
+    "weapon-label": "武器：",
+    "base-attack": "基礎攻擊：",
+    "affinity": "會心：",
+    "ammo-type-label": "彈藥類型：",
+    "ammo-level": "彈藥等級：",
+    "enhancement-1-label": "強化 1：",
+    "enhancement-2-label": "強化 2：",
+    "enhance-type": "強化類型：",
+    "github-link": "查看 GitHub",
+    "language-label": "語言：",
+    "ammo": {
+      "normal": "通常彈",
+      "pierce": "貫通彈",
+      "spread": "散彈",
+      "slicing": "斬裂彈",
+      "sticky": "徹甲榴彈",
+      "cluster": "擴散彈",
+      "wyvern": "龍擊彈",
+      "flaming": "火炎彈",
+      "water": "水冷彈",
+      "freeze": "冰結彈",
+      "thunder": "電擊彈",
+      "dragon": "滅龍彈"
+    }
+  }
+}

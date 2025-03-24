@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang="title">MHWilds DPS Calculator</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <h1 data-lang="title">Monster Hunter Wilds DPS Calculator</h1>
+  <div id="calculator">
+    <label for="weapon-type" data-lang="weapon-type-label">Weapon Type:</label>
+    <select id="weapon-type">
+      <option value="heavy-bowgun" data-lang="heavy-bowgun">Heavy Bowgun</option>
+      <!-- Add other weapon types here -->
+    </select></p>
+
+    <label for="weapon" data-lang="weapon-label">Weapon:</label>
+    <select id="weapon"></select>
+
+    <div id="weapon-stats">
+      <p><span data-lang="base-attack">Base Attack:</span> <span id="base-attack">-</span></p>
+      <p><span data-lang="affinity">Affinity:</span> <span id="affinity">-</span></p>
+    </div>
+
+    <label for="ammo-type" data-lang="ammo-type-label">Ammo Type:</label>
+    <select id="ammo-type"></select>
+
+    <p data-lang="ammo-level">Ammo Level: <span id="ammo-level">-</span></p>
+
+    <label for="enhancement-1" data-lang="enhancement-1-label">Enhancement 1:</label>
+    <select id="enhancement-1"></select>
+
+    <label for="enhancement-2" data-lang="enhancement-2-label">Enhancement 2:</label>
+    <select id="enhancement-2"></select>
+
+    <p data-lang="enhance-type">Enhance Type: <span id="enhance-type">-</span></p>
+  </div>
+
+  <footer>
+    <p>
+      <a href="https://github.com/greydust/mhwilds-dps-calculator" target="_blank" data-lang="github-link">
+        View on GitHub
+      </a>
+    </p>
+    <div class="language-selector-container">
+      <label for="language-selector" data-lang="language-label">Language:</label>
+      <select id="language-selector">
+        <option value="en">English</option>
+        <option value="zh">繁體中文</option>
+      </select>
+    </div>
+  </footer>
+
+  <script src="scripts/app.js"></script>
+</body>
+
+</html>

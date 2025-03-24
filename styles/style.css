@@ -1,0 +1,38 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  font-size: 0.9em;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.language-selector-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px; /* Adds a small space between the label and the selector */
+}
+
+footer select {
+  width: auto; /* Adjusts the width to fit the content */
+  padding: 5px;
+  font-size: 0.9em;
+}

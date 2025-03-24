@@ -1,0 +1,506 @@
+{
+    "Adaptability": {
+        "name": {
+            "en": "Adaptability",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Adrenaline Rush": {
+        "name": {
+            "en": "Adrenaline Rush",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Agitator": {
+        "name": {
+            "en": "Agitator",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Ambush": {
+        "name": {
+            "en": "Ambush",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Antivirus": {
+        "name": {
+            "en": "Antivirus",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Aquatic/Oilsilt Mobility": {
+        "name": {
+            "en": "Aquatic/Oilsilt Mobility",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Blight Resistance": {
+        "name": {
+            "en": "Blight Resistance",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Blast Resistance": {
+        "name": {
+            "en": "Blast Resistance",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Bleeding Resistance": {
+        "name": {
+            "en": "Bleeding Resistance",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Blindsider": {
+        "name": {
+            "en": "Blindsider",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Bombardier": {
+        "name": {
+            "en": "Bombardier",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Botanist": {
+        "name": {
+            "en": "Botanist",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Burst": {
+        "name": {
+            "en": "Burst",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Cliffhanger": {
+        "name": {
+            "en": "Cliffhanger",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Coalescence": {
+        "name": {
+            "en": "Coalescence",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Constitution": {
+        "name": {
+            "en": "Constitution",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Convert Element": {
+        "name": {
+            "en": "Convert Element",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Counterstrike": {
+        "name": {
+            "en": "Counterstrike",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Defense Boost": {
+        "name": {
+            "en": "Defense Boost",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Divine Blessing": {
+        "name": {
+            "en": "Divine Blessing",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Earplugs": {
+        "name": {
+            "en": "Earplugs",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Elemental Absorption": {
+        "name": {
+            "en": "Elemental Absorption",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Entomologist": {
+        "name": {
+            "en": "Entomologist",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Evade Extender": {
+        "name": {
+            "en": "Evade Extender",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Evade Window": {
+        "name": {
+            "en": "Evade Window",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Fire Resistance": {
+        "name": {
+            "en": "Fire Resistance",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Flayer": {
+        "name": {
+            "en": "Flayer",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Flinch Free": {
+        "name": {
+            "en": "Flinch Free",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Foray": {
+        "name": {
+            "en": "Foray",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Free Meal": {
+        "name": {
+            "en": "Free Meal",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Geologist": {
+        "name": {
+            "en": "Geologist",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Heroics": {
+        "name": {
+            "en": "Heroics",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Hunger Resistance": {
+        "name": {
+            "en": "Hunger Resistance",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Intimidator": {
+        "name": {
+            "en": "Intimidator",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Iron Skin": {
+        "name": {
+            "en": "Iron Skin",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Item Prolonger": {
+        "name": {
+            "en": "Item Prolonger",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Jump Master": {
+        "name": {
+            "en": "Jump Master",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Latent Power": {
+        "name": {
+            "en": "Latent Power",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Leap of Faith": {
+        "name": {
+            "en": "Leap of Faith",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Marathon Runner": {
+        "name": {
+            "en": "Marathon Runner",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Maximum Might": {
+        "name": {
+            "en": "Maximum Might",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Mushroomancer": {
+        "name": {
+            "en": "Mushroomancer",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Outdoorsman": {
+        "name": {
+            "en": "Outdoorsman",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Palico Rally": {
+        "name": {
+            "en": "Palico Rally",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Partbreaker": {
+        "name": {
+            "en": "Partbreaker",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Peak Performance": {
+        "name": {
+            "en": "Peak Performance",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Poison Resistance": {
+        "name": {
+            "en": "Poison Resistance",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Quick Sheathe": {
+        "name": {
+            "en": "Quick Sheathe",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Recovery Speed": {
+        "name": {
+            "en": "Recovery Speed",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Recovery Up": {
+        "name": {
+            "en": "Recovery Up",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Resentment": {
+        "name": {
+            "en": "Resentment",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Self-Improvement": {
+        "name": {
+            "en": "Self-Improvement",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Shock Absorber": {
+        "name": {
+            "en": "Shock Absorber",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Speed Eating": {
+        "name": {
+            "en": "Speed Eating",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Stamina Surge": {
+        "name": {
+            "en": "Stamina Surge",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Stench Resistance": {
+        "name": {
+            "en": "Stench Resistance",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Survival Expert": {
+        "name": {
+            "en": "Survival Expert",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Tool Specialist": {
+        "name": {
+            "en": "Tool Specialist",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Tremor Resistance": {
+        "name": {
+            "en": "Tremor Resistance",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Water Resistance": {
+        "name": {
+            "en": "Water Resistance",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Weakness Exploit": {
+        "name": {
+            "en": "Weakness Exploit",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Wide-Range": {
+        "name": {
+            "en": "Wide-Range",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    },
+    "Windproof": {
+        "name": {
+            "en": "Windproof",
+            "zh": ""
+        },
+        "maxLevel": 0,
+        "effect": []
+    }
+}

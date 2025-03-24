@@ -1,0 +1,883 @@
+{
+  "Esperanza Cannon": {
+    "name": {
+      "en": "Esperanza Cannon",
+      "zh": "祈望加農砲"
+    },
+    "baseAttack": 210,
+    "affinity": 0,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 2,
+        "ammo": 4
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 5
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 4
+      },
+      "sticky": {
+        "level": 2,
+        "ammo": 2
+      },
+      "thunder": {
+        "level": 1,
+        "ammo": 3
+      }
+    },
+    "skills": {
+      "Ballistics": 3,
+      "Critical Eye": 1
+    },
+    "ignitionRecovery": 2,
+    "mode": {
+      "type": "base",
+      "level": 0
+    },
+    "modType": [
+      "magazine",
+      "magazine"
+    ]
+  },
+  "Precipice Malmiam": {
+    "name": {
+      "en": "Precipice Malmiam",
+      "zh": "斷崖金屬弩"
+    },
+    "baseAttack": 210,
+    "affinity": 0,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 2,
+        "ammo": 3
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 4
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 3
+      },
+      "wyvern": {
+        "level": 1,
+        "ammo": 2
+      },
+      "freeze": {
+        "level": 1,
+        "ammo": 7
+      },
+      "dragon": {
+        "level": 1,
+        "ammo": 2
+      }
+    },
+    "skills": {
+      "Guard": 3
+    },
+    "ignitionRecovery": 2,
+    "mode": {
+      "type": "base",
+      "level": 0
+    },
+    "modType": [
+      "powder",
+      "magazine"
+    ]
+  },
+  "Steel Assault": {
+    "name": {
+      "en": "Steel Assault",
+      "zh": "鋼鐵突擊弩"
+    },
+    "baseAttack": 220,
+    "affinity": 0,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 4
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 6
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 4
+      },
+      "slicing": {
+        "level": 1,
+        "ammo": 4
+      },
+      "freeze": {
+        "level": 1,
+        "ammo": 7
+      }
+    },
+    "skills": {
+      "Tetrad Shot": 3
+    },
+    "ignitionRecovery": 1,
+    "mode": {
+      "type": "standard",
+      "level": 1
+    },
+    "modType": [
+      "powder",
+      "magazine"
+    ]
+  },
+  "Rompo Latrotox": {
+    "name": {
+      "en": "Rompo Latrotox",
+      "zh": "黑寡婦毒沼噴銃"
+    },
+    "baseAttack": 220,
+    "affinity": 0,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 4
+      },
+      "pierce": {
+        "level": 2,
+        "ammo": 4
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 3
+      },
+      "sticky": {
+        "level": 2,
+        "ammo": 3
+      },
+      "thunder": {
+        "level": 1,
+        "ammo": 6
+      }
+    },
+    "skills": {
+      "Guard Up": 3
+    },
+    "ignitionRecovery": 2,
+    "mode": {
+      "type": "base",
+      "level": 0
+    },
+    "modType": [
+      "magazine",
+      "magazine"
+    ]
+  },
+  "Shrouded Muktana": {
+    "name": {
+      "en": "Shrouded Muktana",
+      "zh": "纏蛙鳴放砲"
+    },
+    "baseAttack": 230,
+    "affinity": 0,
+    "def": 15,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 5
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 3
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 3
+      },
+      "wyvern": {
+        "level": 1,
+        "ammo": 2
+      },
+      "water": {
+        "level": 1,
+        "ammo": 6
+      }
+    },
+    "skills": {
+      "Opening Shot": 3
+    },
+    "ignitionRecovery": 1,
+    "mode": {
+      "type": "standard",
+      "level": 1
+    },
+    "modType": [
+      "powder",
+      "magazine"
+    ]
+  },
+  "G. Aeternal Palamedes": {
+    "name": {
+      "en": "G. Aeternal Palamedes",
+      "zh": "護鎖刃砲帕拉米迪斯"
+    },
+    "baseAttack": 240,
+    "affinity": -10,
+    "def": 0,
+    "sockets": [
+      3,
+      3,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 3,
+        "ammo": 2
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 4
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 6
+      },
+      "wyvern": {
+        "level": 1,
+        "ammo": 2
+      },
+      "dragon": {
+        "level": 1,
+        "ammo": 2
+      }
+    },
+    "skills": {
+      "Tetrad Shot": 2
+    },
+    "ignitionRecovery": 2,
+    "mode": {
+      "type": "base",
+      "level": 0
+    },
+    "modType": [
+      "magazine",
+      "magazine"
+    ]
+  },
+  "Aeternal Palamedes": {
+    "name": {
+      "en": "Aeternal Palamedes",
+      "zh": "鎖刃砲帕拉米迪斯"
+    },
+    "baseAttack": 220,
+    "affinity": 0,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 6
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 3
+      },
+      "spread": {
+        "level": 3,
+        "ammo": 3
+      },
+      "sticky": {
+        "level": 3,
+        "ammo": 3
+      },
+      "thunder": {
+        "level": 2,
+        "ammo": 5
+      },
+      "dragon": {
+        "level": 1,
+        "ammo": 3
+      }
+    },
+    "skills": {
+      "Tetrad Shot": 3
+    },
+    "ignitionRecovery": 2,
+    "mode": {
+      "type": "base",
+      "level": 0
+    },
+    "modType": [
+      "magazine",
+      "magazine"
+    ]
+  },
+  "Heavy Shooter": {
+    "name": {
+      "en": "Heavy Shooter",
+      "zh": "堅骨發射器"
+    },
+    "baseAttack": 230,
+    "affinity": 0,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 5
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 4
+      },
+      "spread": {
+        "level": 2,
+        "ammo": 4
+      },
+      "wyvern": {
+        "level": 2,
+        "ammo": 2
+      },
+      "flaming": {
+        "level": 1,
+        "ammo": 7
+      }
+    },
+    "skills": {
+      "Guard": 3,
+      "Attack Boost": 1
+    },
+    "ignitionRecovery": 2,
+    "mode": {
+      "type": "base",
+      "level": 0
+    },
+    "modType": [
+      "magazine",
+      "magazine"
+    ]
+  },
+  "Buster Blaster": {
+    "name": {
+      "en": "Buster Blaster",
+      "zh": "破壞者獵弩"
+    },
+    "baseAttack": 200,
+    "affinity": 15,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 5
+      },
+      "pierce": {
+        "level": 3,
+        "ammo": 2
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 4
+      },
+      "slicing": {
+        "level": 1,
+        "ammo": 2
+      },
+      "freeze": {
+        "level": 1,
+        "ammo": 7
+      }
+    },
+    "skills": {
+      "Offensive Guard": 2,
+      "Guard": 1
+    },
+    "ignitionRecovery": 2,
+    "mode": {
+      "type": "base",
+      "level": 0
+    },
+    "modType": [
+      "magazine",
+      "magazine"
+    ]
+  },
+  "Dalgap-of-the-Waves": {
+    "name": {
+      "en": "Dalgap-of-the-Waves",
+      "zh": "狂瀾波濤砲弩"
+    },
+    "baseAttack": 240,
+    "affinity": -15,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 6
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 5
+      },
+      "spread": {
+        "level": 3,
+        "ammo": 2
+      },
+      "cluster": {
+        "level": 2,
+        "ammo": 2
+      },
+      "water": {
+        "level": 2,
+        "ammo": 6
+      }
+    },
+    "skills": {
+      "Tetrad Shot": 3
+    },
+    "ignitionRecovery": 2,
+    "mode": {
+      "type": "base",
+      "level": 0
+    },
+    "modType": [
+      "magazine",
+      "magazine"
+    ]
+  },
+  "Wild Stinger": {
+    "name": {
+      "en": "Wild Stinger",
+      "zh": "狂野放臭者"
+    },
+    "baseAttack": 220,
+    "affinity": 5,
+    "def": 0,
+    "sockets": [
+      3,
+      3,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 5
+      },
+      "pierce": {
+        "level": 2,
+        "ammo": 3
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 4
+      },
+      "cluster": {
+        "level": 2,
+        "ammo": 2
+      },
+      "flaming": {
+        "level": 1,
+        "ammo": 5
+      }
+    },
+    "skills": {
+      "Special Ammo Boost": 2,
+      "Opening Shot": 1
+    },
+    "ignitionRecovery": 1,
+    "mode": {
+      "type": "standard",
+      "level": 1
+    },
+    "modType": [
+      "powder",
+      "magazine"
+    ]
+  },
+  "Abaddonian Muneo": {
+    "name": {
+      "en": "Abaddonian Muneo",
+      "zh": "獄焰八帶砲"
+    },
+    "baseAttack": 230,
+    "affinity": -15,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 5
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 4
+      },
+      "spread": {
+        "level": 2,
+        "ammo": 4
+      },
+      "cluster": {
+        "level": 2,
+        "ammo": 3
+      },
+      "flaming": {
+        "level": 2,
+        "ammo": 6
+      }
+    },
+    "skills": {
+      "Opening Shot": 3
+    },
+    "ignitionRecovery": 2,
+    "mode": {
+      "type": "standard",
+      "level": 1
+    },
+    "modType": [
+      "magazine",
+      "magazine"
+    ]
+  },
+  "Super Kut-Ku Cannon": {
+    "name": {
+      "en": "Super Kut-Ku Cannon",
+      "zh": "怪鳥大砲"
+    },
+    "baseAttack": 220,
+    "affinity": 0,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 2,
+        "ammo": 4
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 6
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 4
+      },
+      "sticky": {
+        "level": 2,
+        "ammo": 3
+      },
+      "flaming": {
+        "level": 2,
+        "ammo": 6
+      }
+    },
+    "skills": {
+      "Slugger": 3
+    },
+    "ignitionRecovery": 2,
+    "mode": {
+      "type": "base",
+      "level": 0
+    },
+    "modType": [
+      "magazine",
+      "magazine"
+    ]
+  },
+  "Fulgurblast Guardiana": {
+    "name": {
+      "en": "Fulgurblast Guardiana",
+      "zh": "護雷重弩守衛導彈"
+    },
+    "baseAttack": 210,
+    "affinity": 15,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 5
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 5
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 3
+      },
+      "wyvern": {
+        "level": 1,
+        "ammo": 1
+      },
+      "thunder": {
+        "level": 1,
+        "ammo": 7
+      }
+    },
+    "skills": {
+      "Critical Element": 3
+    },
+    "ignitionRecovery": 2,
+    "mode": {
+      "type": "base",
+      "level": 0
+    },
+    "modType": [
+      "powder",
+      "magazine"
+    ]
+  },
+  "Tanksorcerer": {
+    "name": {
+      "en": "Tanksorcerer",
+      "zh": "戰車黑法師"
+    },
+    "baseAttack": 230,
+    "affinity": 0,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 4
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 4
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 5
+      },
+      "cluster": {
+        "level": 2,
+        "ammo": 2
+      },
+      "water": {
+        "level": 1,
+        "ammo": 5
+      }
+    },
+    "skills": {
+      "Guard": 3
+    },
+    "ignitionRecovery": 1,
+    "mode": {
+      "type": "standard",
+      "level": 1
+    },
+    "modType": [
+      "powder",
+      "magazine"
+    ]
+  },
+  "Queen's Farflier": {
+    "name": {
+      "en": "Queen's Farflier",
+      "zh": "妃龍砲【飛擊】"
+    },
+    "baseAttack": 210,
+    "affinity": 15,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 5
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 4
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 3
+      },
+      "wyvern": {
+        "level": 1,
+        "ammo": 2
+      },
+      "flaming": {
+        "level": 1,
+        "ammo": 6
+      }
+    },
+    "skills": {
+      "Tetrad Shot": 3,
+      "Poison Duration Up": 1
+    },
+    "ignitionRecovery": 1,
+    "mode": {
+      "type": "standard",
+      "level": 1
+    },
+    "modType": [
+      "powder",
+      "magazine"
+    ]
+  },
+  "Gravios Gigahowl": {
+    "name": {
+      "en": "Gravios Gigahowl",
+      "zh": "鎧龍終極怒吼"
+    },
+    "baseAttack": 240,
+    "affinity": -15,
+    "def": 30,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 4
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 4
+      },
+      "spread": {
+        "level": 2,
+        "ammo": 3
+      },
+      "cluster": {
+        "level": 3,
+        "ammo": 2
+      },
+      "flaming": {
+        "level": 1,
+        "ammo": 6
+      }
+    },
+    "skills": {
+      "Guard Up": 3
+    },
+    "ignitionRecovery": 1,
+    "mode": {
+      "type": "ignition",
+      "level": 1
+    },
+    "modType": [
+      "powder",
+      "magazine"
+    ]
+  },
+  "Ableben Abzug": {
+    "name": {
+      "en": "Ableben Abzug",
+      "zh": "觸發of滅絕"
+    },
+    "baseAttack": 200,
+    "affinity": 20,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 6
+      },
+      "pierce": {
+        "level": 3,
+        "ammo": 3
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 4
+      },
+      "slicing": {
+        "level": 1,
+        "ammo": 3
+      },
+      "freeze": {
+        "level": 2,
+        "ammo": 5
+      },
+      "dragon": {
+        "level": 1,
+        "ammo": 3
+      }
+    },
+    "skills": {
+      "Critical Element": 3
+    },
+    "ignitionRecovery": 1,
+    "mode": {
+      "type": "standard",
+      "level": 1
+    },
+    "modType": [
+      "magazine",
+      "magazine"
+    ]
+  }
+}

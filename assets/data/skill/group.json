@@ -1,0 +1,106 @@
+{
+    "Alluring Pelt": {
+        "name": {
+            "en": "Alluring Pelt",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    },
+    "Buttery Leathercraft": {
+        "name": {
+            "en": "Buttery Leathercraft",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    },
+    "Flexible Leathercraft": {
+        "name": {
+            "en": "Flexible Leathercraft",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    },
+    "Fortifying Pelt": {
+        "name": {
+            "en": "Fortifying Pelt",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    },
+    "Guardian's Protection": {
+        "name": {
+            "en": "Guardian's Protection",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    },
+    "Guardian's Pulse": {
+        "name": {
+            "en": "Guardian's Pulse",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    },
+    "Imparted Wisdom": {
+        "name": {
+            "en": "Imparted Wisdom",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    },
+    "Lord's Favor": {
+        "name": {
+            "en": "Lord's Favor",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    },
+    "Lord's Fury": {
+        "name": {
+            "en": "Lord's Fury",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    },
+    "Neopteron Alert": {
+        "name": {
+            "en": "Neopteron Alert",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    },
+    "Neopteron Camouflage": {
+        "name": {
+            "en": "Neopteron Camouflage",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    },
+    "Scale Layering": {
+        "name": {
+            "en": "Scale Layering",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    },
+    "Scaling Prowess": {
+        "name": {
+            "en": "Scaling Prowess",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": []
+    }
+}

@@ -1,0 +1,526 @@
+{
+  "heavy-bowgun": {
+    "ammo": {
+      "normal": [
+        {
+          "damage": [
+            {
+              "value": 15,
+              "type": "shell",
+              "hit": 3
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 21,
+              "type": "shell",
+              "hit": 3
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 28.5,
+              "type": "shell",
+              "hit": 3
+            }
+          ]
+        }
+      ],
+      "pierce": [
+        {
+          "damage": [
+            {
+              "value": 11,
+              "type": "shell",
+              "hit": 2
+            },
+            {
+              "value": 9.9,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 8.8,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 7.7,
+              "type": "shell",
+              "hit": 1
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 12,
+              "type": "shell",
+              "hit": 2
+            },
+            {
+              "value": 10.8,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 9.6,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 8.4,
+              "type": "shell",
+              "hit": 1
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 12,
+              "type": "shell",
+              "hit": 2
+            },
+            {
+              "value": 10.8,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 9.6,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 8.4,
+              "type": "shell",
+              "hit": 1
+            }
+          ]
+        }
+      ],
+      "spread": [
+        {
+          "damage": [
+            {
+              "value": 11,
+              "type": "shell",
+              "hit": 5
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 12.65,
+              "type": "shell",
+              "hit": 6
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 14.3,
+              "type": "shell",
+              "hit": 1
+            }
+          ]
+        }
+      ],
+      "slicing": [
+        {
+          "damage": [
+            {
+              "value": 1,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 33,
+              "type": "slash",
+              "hit": 4
+            }
+          ]
+        }
+      ],
+      "sticky": [
+        {
+          "damage": [
+            {
+              "value": 1,
+              "type": "fixed",
+              "hit": 1
+            },
+            {
+              "value": 25,
+              "type": "fixed",
+              "hit": 1
+            },
+            {
+              "value": 5,
+              "type": "fire",
+              "hit": 1
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 1,
+              "type": "fixed",
+              "hit": 1
+            },
+            {
+              "value": 32,
+              "type": "fixed",
+              "hit": 1
+            },
+            {
+              "value": 5,
+              "type": "fire",
+              "hit": 1
+            }
+          ],
+          "hit": 1
+        },
+        {
+          "damage": [
+            {
+              "value": 1,
+              "type": "fixed",
+              "hit": 1
+            },
+            {
+              "value": 40,
+              "type": "fixed",
+              "hit": 1
+            },
+            {
+              "value": 5,
+              "type": "fire",
+              "hit": 1
+            }
+          ],
+          "hit": 1
+        }
+      ],
+      "cluster": [
+        {
+          "damage": [
+            {
+              "value": 1,
+              "type": "fixed",
+              "hit": 1
+            },
+            {
+              "value": 23,
+              "type": "fixed",
+              "hit": 3
+            },
+            {
+              "value": 5,
+              "type": "fire",
+              "hit": 3
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 1,
+              "type": "fixed",
+              "hit": 1
+            },
+            {
+              "value": 27.6,
+              "type": "fixed",
+              "hit": 4
+            },
+            {
+              "value": 5,
+              "type": "fire",
+              "hit": 4
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 1,
+              "type": "fixed",
+              "hit": 1
+            },
+            {
+              "value": 32.2,
+              "type": "fixed",
+              "hit": 5
+            },
+            {
+              "value": 5,
+              "type": "fire",
+              "hit": 5
+            }
+          ]
+        }
+      ],
+      "wyvern": [
+        {
+          "damage": [
+            {
+              "value": 80,
+              "type": "fixed",
+              "hit": 1
+            },
+            {
+              "value": 40,
+              "type": "fire",
+              "hit": 1
+            },
+            {
+              "value": 19,
+              "type": "fixed",
+              "hit": 1
+            },
+            {
+              "value": 20,
+              "type": "fire",
+              "hit": 1
+            }
+          ]
+        }
+      ],
+      "flaming": [
+        {
+          "damage": [
+            {
+              "value": 8,
+              "type": "fire",
+              "hit": 2
+            },
+            {
+              "value": 7.2,
+              "type": "fire",
+              "hit": 1
+            },
+            {
+              "value": 6.4,
+              "type": "fire",
+              "hit": 1
+            },
+            {
+              "value": 5.6,
+              "type": "fire",
+              "hit": 3
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 10,
+              "type": "fire",
+              "hit": 2
+            },
+            {
+              "value": 9,
+              "type": "fire",
+              "hit": 1
+            },
+            {
+              "value": 8,
+              "type": "fire",
+              "hit": 1
+            },
+            {
+              "value": 7,
+              "type": "fire",
+              "hit": 3
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "damage": [
+            {
+              "value": 8,
+              "type": "water",
+              "hit": 2
+            },
+            {
+              "value": 7.2,
+              "type": "water",
+              "hit": 1
+            },
+            {
+              "value": 6.4,
+              "type": "water",
+              "hit": 1
+            },
+            {
+              "value": 5.6,
+              "type": "water",
+              "hit": 3
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 10,
+              "type": "water",
+              "hit": 2
+            },
+            {
+              "value": 9,
+              "type": "water",
+              "hit": 1
+            },
+            {
+              "value": 8,
+              "type": "water",
+              "hit": 1
+            },
+            {
+              "value": 7,
+              "type": "water",
+              "hit": 3
+            }
+          ]
+        }
+      ],
+      "freeze": [
+        {
+          "damage": [
+            {
+              "value": 8,
+              "type": "ice",
+              "hit": 2
+            },
+            {
+              "value": 7.2,
+              "type": "ice",
+              "hit": 1
+            },
+            {
+              "value": 6.4,
+              "type": "ice",
+              "hit": 1
+            },
+            {
+              "value": 5.6,
+              "type": "ice",
+              "hit": 3
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 10,
+              "type": "ice",
+              "hit": 2
+            },
+            {
+              "value": 9,
+              "type": "ice",
+              "hit": 1
+            },
+            {
+              "value": 8,
+              "type": "ice",
+              "hit": 1
+            },
+            {
+              "value": 7,
+              "type": "ice",
+              "hit": 3
+            }
+          ]
+        }
+      ],
+      "thunder": [
+        {
+          "damage": [
+            {
+              "value": 8,
+              "type": "thunder",
+              "hit": 2
+            },
+            {
+              "value": 7.2,
+              "type": "thunder",
+              "hit": 1
+            },
+            {
+              "value": 6.4,
+              "type": "thunder",
+              "hit": 1
+            },
+            {
+              "value": 5.6,
+              "type": "thunder",
+              "hit": 3
+            }
+          ]
+        },
+        {
+          "damage": [
+            {
+              "value": 10,
+              "type": "thunder",
+              "hit": 2
+            },
+            {
+              "value": 9,
+              "type": "thunder",
+              "hit": 1
+            },
+            {
+              "value": 8,
+              "type": "thunder",
+              "hit": 1
+            },
+            {
+              "value": 7,
+              "type": "thunder",
+              "hit": 3
+            }
+          ]
+        }
+      ],
+      "dragon": [
+        {
+          "damage": [
+            {
+              "value": 20,
+              "type": "dragon",
+              "hit": 2
+            },
+            {
+              "value": 18,
+              "type": "dragon",
+              "hit": 1
+            },
+            {
+              "value": 16,
+              "type": "dragon",
+              "hit": 1
+            },
+            {
+              "value": 14,
+              "type": "dragon",
+              "hit": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

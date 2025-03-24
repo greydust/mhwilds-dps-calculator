@@ -1,0 +1,426 @@
+{
+    "Ballistics": {
+        "name": {
+        "en": "Ballistics",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Attack Boost": {
+        "name": {
+        "en": "Attack Boost",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Offensive Guard": {
+        "name": {
+        "en": "Offensive Guard",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Critical Eye": {
+        "name": {
+            "en": "Critical Eye",
+            "zh": "看破"
+        },
+        "maxLevel": 5,
+        "effect" : [
+            {
+                "affinity": 4
+            },
+            {
+                "affinity": 8
+            },
+            {
+                "affinity": 12
+            },
+            {
+                "affinity": 16
+            },
+            {
+                "affinity": 20
+            }
+        ]
+    },
+    "Critical Boost": {
+        "name": {
+        "en": "Critical Boost",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Critical Draw": {
+        "name": {
+        "en": "Critical Draw",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Fire Attack": {
+        "name": {
+        "en": "Fire Attack",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Water Attack": {
+        "name": {
+        "en": "Water Attack",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Ice Attack": {
+        "name": {
+        "en": "Ice Attack",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Thunder Attack": {
+        "name": {
+        "en": "Thunder Attack",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Dragon Attack": {
+        "name": {
+        "en": "Dragon Attack",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Poison Attack": {
+        "name": {
+        "en": "Poison Attack",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Paralysis Attack": {
+        "name": {
+        "en": "Paralysis Attack",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Sleep Attack": {
+        "name": {
+        "en": "Sleep Attack",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Blast Attack": {
+        "name": {
+        "en": "Blast Attack",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Critical Element": {
+        "name": {
+        "en": "Critical Element",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Critical Status": {
+        "name": {
+        "en": "Critical Status",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Charge Master": {
+        "name": {
+        "en": "Charge Master",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Handicraft": {
+        "name": {
+        "en": "Handicraft",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Razor Sharp": {
+        "name": {
+        "en": "Razor Sharp",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Protective Polish": {
+        "name": {
+        "en": "Protective Polish",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Mind's Eye": {
+        "name": {
+        "en": "Mind's Eye",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Bludgeoner": {
+        "name": {
+        "en": "Bludgeoner",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Master's Touch": {
+        "name": {
+        "en": "Master's Touch",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Normal Shots": {
+        "name": {
+        "en": "Normal Shots",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Piercing Shots": {
+        "name": {
+        "en": "Piercing Shots",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Spread/Power Shots": {
+        "name": {
+        "en": "Spread/Power Shots",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Rapid Fire Up": {
+        "name": {
+        "en": "Rapid Fire Up",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Opening Shot": {
+        "name": {
+        "en": "Opening Shot",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Tetrad Shot": {
+        "name": {
+        "en": "Tetrad Shot",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Special Ammo Boost": {
+        "name": {
+        "en": "Special Ammo Boost",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Poison Functionality": {
+        "name": {
+        "en": "Poison Functionality",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Para Functionality": {
+        "name": {
+        "en": "Para Functionality",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Sleep Functionality": {
+        "name": {
+        "en": "Sleep Functionality",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Blast Functionality": {
+        "name": {
+        "en": "Blast Functionality",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Exhaust Functionality": {
+        "name": {
+        "en": "Exhaust Functionality",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Focus": {
+        "name": {
+        "en": "Focus",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Power Prolonger": {
+        "name": {
+        "en": "Power Prolonger",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Punishing Draw": {
+        "name": {
+        "en": "Punishing Draw",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Slugger": {
+        "name": {
+        "en": "Slugger",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Stamina Thief": {
+        "name": {
+        "en": "Stamina Thief",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Artillery": {
+        "name": {
+        "en": "Artillery",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Rapid Morph": {
+        "name": {
+        "en": "Rapid Morph",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Horn Maestro": {
+        "name": {
+        "en": "Horn Maestro",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Charge Up": {
+        "name": {
+        "en": "Charge Up",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Airborne": {
+        "name": {
+        "en": "Airborne",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Poison Duration Up": {
+        "name": {
+        "en": "Poison Duration Up",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Guard": {
+        "name": {
+        "en": "Guard",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Guard Up": {
+        "name": {
+        "en": "Guard Up",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Load Shells": {
+        "name": {
+        "en": "Load Shells",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    },
+    "Speed Sharpening": {
+        "name": {
+        "en": "Speed Sharpening",
+        "zh": ""
+        },
+        "maxLevel": "",
+        "effect": []
+    }
+}
