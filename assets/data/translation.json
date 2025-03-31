@@ -1,6 +1,8 @@
 {
   "en": {
-    "title": "Monster Hunter Wilds DPS Calculator",
+    "title": "Monster Hunter Wilds (HBG) DPS Calculator",
+    "shoot-hitzone-value-label": "Shoot Hitzone Value:",
+    "elemental-hitzone-value-label": "Elemental Hitzone Value:",
     "weapon-type-label": "Weapon Type:",
     "heavy-bowgun": "Heavy Bowgun",
     "weapon-label": "Weapon:",
@@ -56,7 +58,9 @@
     "details-label": "Details"
   },
   "zh": {
-    "title": "魔物獵人荒野 DPS 計算器",
+    "title": "魔物獵人荒野(重弩)DPS計算器",
+    "shoot-hitzone-value-label": "彈肉質:",
+    "elemental-hitzone-value-label": "元素肉質:",
     "weapon-type-label": "武器類型：",
     "heavy-bowgun": "重弩槍",
     "weapon-label": "武器：",

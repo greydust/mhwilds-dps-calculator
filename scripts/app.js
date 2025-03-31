@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function initialize() {
     currentLanguage = getSupportedLanguage();
+    languageSelector.value = currentLanguage; // Set the language selector to match the URL language
     updatePageLanguage();
     populateWeaponTranslation();
     populateWeaponDropdown();
@@ -76,6 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
       populateSkill(skillData, skill, document.getElementById(`${skill}-skill`));
     });
     populateBuff();
+
+    updateFinalStats();
   }
 
   function getSupportedLanguage() {
@@ -95,6 +98,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function getLanguageFromURL() {
     const params = new URLSearchParams(window.location.search);
     return params.get("lang");
+  }
+
+  function updatePageLanguage() {
+    document.querySelectorAll("[data-lang]").forEach((element) => {
+      const key = element.getAttribute("data-lang");
+      if (data.translation[currentLanguage] && data.translation[currentLanguage][key]) {
+        element.textContent = data.translation[currentLanguage][key];
+      }
+    });
   }
 
   function populateWeaponTranslation() {
@@ -153,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
     Object.keys(weapon.ammo).forEach((type) => {
       const option = document.createElement("option");
       option.value = type;
-      option["data-lang"] = `ammo-${type}`;
+      option.setAttribute("data-lang", `ammo-${type}`);
       option.textContent = data.translation[currentLanguage]?.[`ammo-${type}`] || type;
       ammoTypeSelect.appendChild(option);
     });
@@ -212,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
     hunter.ammo.type = ammo;
     updateAmmoLevel(weapon, ammo);
     updateAmmoCount(weapon, ammo);
-    updateAmmoElemental(weapon, ammo);
+    updateAmmoElemental(ammo);
     updateFinalStats();
   }
 
@@ -238,11 +250,11 @@ document.addEventListener("DOMContentLoaded", () => {
     hunter.ammo.ammo = calculatedAmmo;
   }
 
-  function updateAmmoElemental(weapon, ammo) {
+  function updateAmmoElemental(ammo) {
     const elementalAmmo = data.action.hbg.ammo[ammo].elemental;
     if (elementalAmmo) {
-      hunter.ammo.elementalType = elementalAmmo[hunter.ammo.level].type;
-      hunter.ammo.baseElemental = elementalAmmo[hunter.ammo.level].value;
+      hunter.ammo.elementalType = elementalAmmo[hunter.ammo.level - 1].type;
+      hunter.ammo.baseElemental = elementalAmmo[hunter.ammo.level - 1].value;
     } else {
       hunter.ammo.baseElemental = 0;
       hunter.ammo.elementalType = "";
@@ -311,8 +323,6 @@ document.addEventListener("DOMContentLoaded", () => {
         select.appendChild(option);
       }
     });
-
-    updateFinalStats();
   }
 
   function populateSkillTranslation(skill, type, key) {
@@ -385,6 +395,8 @@ document.addEventListener("DOMContentLoaded", () => {
         option.textContent = data.translation[currentLanguage][`buff-${key}-${i + 1}`];
         select.appendChild(option);
       }
+
+      select.value = buff.defaultOption || 0;
     });
   }
 
@@ -715,15 +727,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     params.set("lang", lang);
     window.history.replaceState({}, "", `${window.location.pathname}?${params.toString()}`);
-  }
-
-  function updatePageLanguage() {
-    document.querySelectorAll("[data-lang]").forEach((element) => {
-      const key = element.getAttribute("data-lang");
-      if (data.translation[currentLanguage] && data.translation[currentLanguage][key]) {
-        element.textContent = data.translation[currentLanguage][key];
-      }
-    });
   }
 
   weaponSelect.addEventListener("change", populateWeaponData);

@@ -9,8 +9,19 @@
 </head>
 
 <body>
-  <h1 data-lang="title">Monster Hunter Wilds DPS Calculator</h1>
+  <h1 data-lang="title">Monster Hunter Wilds (HBG) DPS Calculator</h1>
   <div id="calculator">
+    <div class="row">
+      <div class="group">
+        <label for="shoot-hitzone-value" data-lang="shoot-hitzone-value-label">Shoot Hitzone Value:</label>
+        <input class="percentage-input" type="number" id="shoot-hitzone-value" value="45" min="0" max="100" step="1">
+      </div>
+      <div class="group">
+        <label for="elemental-hitzone-value" data-lang="elemental-hitzone-value-label">Elemental Hitzone Value:</label>
+        <input class="percentage-input" type="number" id="elemental-hitzone-value" value="20" min="0" max="45" step="1">
+      </div>
+    </div>
+
     <div class="row">
       <div class="group">
         <label for="weapon-type" data-lang="weapon-type-label">Weapon Type:</label>

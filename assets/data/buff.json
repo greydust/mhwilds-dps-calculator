@@ -16,6 +16,7 @@
         "trigger": false
       }
     ],
+    "defaultOption": 1,
     "group": "attack"
   },
   "Demondrug": {
@@ -45,6 +46,7 @@
         "trigger": false
       }
     ],
+    "defaultOption": 2,
     "group": "attack"
   },
   "DemonPowder": {
@@ -117,6 +119,7 @@
         "group": "attack"
       }
     ],
+    "defaultOption": 0,
     "group": "attack"
   },
   "Might": {
@@ -128,7 +131,7 @@
       {
         "name": {
           "en": "Might Seed",
-          "zh": "鬼人粉塵"
+          "zh": "怪力種子"
         },
         "effect": {
           "attack": 10
@@ -273,6 +276,7 @@
         "group": "attack"
       }
     ],
+    "defaultOption": 0,
     "group": "attack"
   },
   "Meal": {
@@ -302,6 +306,7 @@
         "trigger": false
       }
     ],
+    "defaultOption": 1,
     "group": "meal"
   },
   "CapriceMeal": {
@@ -353,6 +358,7 @@
         "group": "attack"
       }
     ],
+    "defaultOption": 0,
     "group": "meal"
   },
   "SwimmerMeal": {
@@ -383,6 +389,7 @@
         "group": "attack"
       }
     ],
+    "defaultOption": 0,
     "group": "meal"
   },
   "Mantle": {
@@ -440,7 +447,8 @@
         ],
         "group": "attack"
       }
-    ]
+    ],
+    "defaultOption": 1
   },
   "Melody": {
     "name": {
@@ -502,6 +510,7 @@
         ],
         "group": "attack"
       }
-    ]
+    ],
+    "defaultOption": 0
   }
 }
