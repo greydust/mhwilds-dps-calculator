@@ -4,103 +4,213 @@
             "en": "Alluring Pelt",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Buttery Leathercraft": {
         "name": {
             "en": "Buttery Leathercraft",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {
+                "affinity": 0.3
+            }
+        ],
+        "trigger": true,
+        "show": false
     },
     "Flexible Leathercraft": {
         "name": {
             "en": "Flexible Leathercraft",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Fortifying Pelt": {
         "name": {
             "en": "Fortifying Pelt",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {
+                "fpAttackMultiplier1": 1.1,
+                "fpAttackMultiplier2": 1.2
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 2,
+        "triggerName": [
+            {
+                "en": "1 Faint",
+                "zh": "一貓"
+            },
+            {
+                "en": "2 Faints",
+                "zh": "二貓"
+            }
+        ],
+        "defaultCoverage": [
+            0.67,
+            0.33
+        ],
+        "show": true
     },
     "Guardian's Protection": {
         "name": {
             "en": "Guardian's Protection",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Guardian's Pulse": {
         "name": {
             "en": "Guardian's Pulse",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Imparted Wisdom": {
         "name": {
             "en": "Imparted Wisdom",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Lord's Favor": {
         "name": {
             "en": "Lord's Favor",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Lord's Fury": {
         "name": {
             "en": "Lord's Fury",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {
+                "attack": 10
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.1
+        ],
+        "show": true
     },
     "Neopteron Alert": {
         "name": {
             "en": "Neopteron Alert",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Neopteron Camouflage": {
         "name": {
             "en": "Neopteron Camouflage",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Scale Layering": {
         "name": {
             "en": "Scale Layering",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Scaling Prowess": {
         "name": {
             "en": "Scaling Prowess",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     }
 }

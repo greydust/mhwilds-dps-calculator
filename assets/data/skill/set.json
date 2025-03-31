@@ -4,111 +4,297 @@
             "en": "Arkveld's Hunger",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Blangonga's Spirit": {
         "name": {
             "en": "Blangonga's Spirit",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {
+                "attack": 3
+            },
+            {
+                "attack": 3
+            },
+            {
+                "attack": 6
+            }
+        ],
+        "trigger": true,
+        "show": false
     },
     "Doshaguma's Might": {
         "name": {
             "en": "Doshaguma's Might",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {
+                "attack": 10
+            },
+            {
+                "attack": 10
+            },
+            {
+                "attack": 25
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.05
+        ],
+        "show": false
     },
     "Ebony Odogaron's Power": {
         "name": {
             "en": "Ebony Odogaron's Power",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {
+                "burstAttack": 3
+            },
+            {
+                "burstAttack": 3
+            },
+            {
+                "burstAttack": 10
+            }
+        ],
+        "trigger": false,
+        "show": true
     },
     "Fulgur Anjanath's Will": {
         "name": {
             "en": "Fulgur Anjanath's Will",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Gore Magala's Tyranny": {
         "name": {
             "en": "Gore Magala's Tyranny",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {
+                "status": "frenzy",
+                "affinityRecovered": 0.15
+            },
+            {
+                "status": "frenzy",
+                "affinityRecovered": 0.15
+            },
+            {
+                "status": "frenzy",
+                "attack": 10,
+                "attackRecovered": 15,
+                "affinityRecovered": 0.15
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 2,
+        "triggerName": [
+            {
+                "en": "Frenzy",
+                "zh": "狂龍症"
+            },
+            {
+                "en": "Recovered",
+                "zh": "克服"
+            }
+        ],
+        "defaultCoverage": [
+            0.99,
+            0.95
+        ],
+        "show": true
     },
     "Gravios's Protection": {
         "name": {
             "en": "Gravios's Protection",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Guardian Arkveld's Vitality": {
         "name": {
             "en": "Guardian Arkveld's Vitality",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Jin Dahaad's Revolt": {
         "name": {
             "en": "Jin Dahaad's Revolt",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {
+                "attack": 25
+            },
+            {
+                "attack": 25
+            },
+            {
+                "attack": 50
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.05
+        ],
+        "show": true
     },
     "Nu Udra's Mutiny": {
         "name": {
             "en": "Nu Udra's Mutiny",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {
+                "damage": 20
+            },
+            {
+                "damage": 20
+            },
+            {
+                "damage": 48
+            }
+        ],
+        "trigger": true,
+        "show": false
     },
     "Rey Dau's Voltage": {
         "name": {
             "en": "Rey Dau's Voltage",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Rathalos's Flare": {
         "name": {
             "en": "Rathalos's Flare",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {
+                "fireDamage": 24
+            },
+            {
+                "fireDamage": 24
+            },
+            {
+                "fireDamage": 60
+            }
+        ],
+        "trigger": true,
+        "show": false
     },
     "Uth Duna's Cover": {
         "name": {
             "en": "Uth Duna's Cover",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Xu Wu's Vigor": {
         "name": {
             "en": "Xu Wu's Vigor",
             "zh": ""
         },
-        "maxLevel": 5,
-        "effect": []
+        "maxLevel": 4,
+        "effect": [
+            {},
+            {
+                "attack": 15
+            },
+            {
+                "attack": 15
+            },
+            {
+                "attack": 25
+            }
+        ],
+        "trigger": true,
+        "show": false
     }
 }

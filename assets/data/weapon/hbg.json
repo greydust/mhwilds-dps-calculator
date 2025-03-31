@@ -45,7 +45,8 @@
     },
     "modType": [
       "magazine",
-      "magazine"
+      "normal",
+      "standard"
     ]
   },
   "Precipice Malmiam": {
@@ -97,7 +98,8 @@
     },
     "modType": [
       "powder",
-      "magazine"
+      "elemental",
+      "standard"
     ]
   },
   "Steel Assault": {
@@ -145,7 +147,8 @@
     },
     "modType": [
       "powder",
-      "magazine"
+      "normal",
+      "standard"
     ]
   },
   "Rompo Latrotox": {
@@ -193,7 +196,8 @@
     },
     "modType": [
       "magazine",
-      "magazine"
+      "normal",
+      "standard"
     ]
   },
   "Shrouded Muktana": {
@@ -241,7 +245,8 @@
     },
     "modType": [
       "powder",
-      "magazine"
+      "elemental",
+      "standard"
     ]
   },
   "G. Aeternal Palamedes": {
@@ -289,7 +294,8 @@
     },
     "modType": [
       "magazine",
-      "magazine"
+      "normal",
+      "standard"
     ]
   },
   "Aeternal Palamedes": {
@@ -341,7 +347,8 @@
     },
     "modType": [
       "magazine",
-      "magazine"
+      "normal",
+      "standard"
     ]
   },
   "Heavy Shooter": {
@@ -390,7 +397,8 @@
     },
     "modType": [
       "magazine",
-      "magazine"
+      "normal",
+      "ignition"
     ]
   },
   "Buster Blaster": {
@@ -439,7 +447,8 @@
     },
     "modType": [
       "magazine",
-      "magazine"
+      "normal",
+      "standard"
     ]
   },
   "Dalgap-of-the-Waves": {
@@ -487,7 +496,8 @@
     },
     "modType": [
       "magazine",
-      "magazine"
+      "elemental",
+      "ignition"
     ]
   },
   "Wild Stinger": {
@@ -536,7 +546,8 @@
     },
     "modType": [
       "powder",
-      "magazine"
+      "normal",
+      "ignition"
     ]
   },
   "Abaddonian Muneo": {
@@ -584,7 +595,8 @@
     },
     "modType": [
       "magazine",
-      "magazine"
+      "normal",
+      "standard"
     ]
   },
   "Super Kut-Ku Cannon": {
@@ -632,7 +644,8 @@
     },
     "modType": [
       "magazine",
-      "magazine"
+      "normal",
+      "standard"
     ]
   },
   "Fulgurblast Guardiana": {
@@ -680,7 +693,8 @@
     },
     "modType": [
       "powder",
-      "magazine"
+      "elemental",
+      "standard"
     ]
   },
   "Tanksorcerer": {
@@ -723,12 +737,13 @@
     },
     "ignitionRecovery": 1,
     "mode": {
-      "type": "standard",
+      "type": "ignition",
       "level": 1
     },
     "modType": [
       "powder",
-      "magazine"
+      "normal",
+      "ignition"
     ]
   },
   "Queen's Farflier": {
@@ -777,7 +792,8 @@
     },
     "modType": [
       "powder",
-      "magazine"
+      "elemental",
+      "standard"
     ]
   },
   "Gravios Gigahowl": {
@@ -825,7 +841,8 @@
     },
     "modType": [
       "powder",
-      "magazine"
+      "normal",
+      "ignition"
     ]
   },
   "Ableben Abzug": {
@@ -877,7 +894,8 @@
     },
     "modType": [
       "magazine",
-      "magazine"
+      "normal",
+      "standard"
     ]
   }
 }

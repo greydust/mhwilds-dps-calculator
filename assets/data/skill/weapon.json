@@ -1,27 +1,234 @@
 {
-    "Ballistics": {
+    "Airborne": {
         "name": {
-        "en": "Ballistics",
-        "zh": ""
+            "en": "Airborne",
+            "zh": ""
         },
-        "maxLevel": "",
-        "effect": []
+        "maxLevel": 1,
+        "effect": [
+            {
+                "jumpMultiplier": 1.1
+            }
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Artillery": {
+        "name": {
+            "en": "Artillery",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "shellFireAttack": 30
+            },
+            {
+                "shellFireAttack": 60
+            },
+            {
+                "shellFireAttack": 90
+            }
+        ],
+        "trigger": false,
+        "show": false
     },
     "Attack Boost": {
         "name": {
-        "en": "Attack Boost",
-        "zh": ""
+            "en": "Attack Boost",
+            "zh": "攻擊"
         },
-        "maxLevel": "",
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {
+                "attack": 3
+            },
+            {
+                "attack": 5
+            },
+            {
+                "attack": 7
+            },
+            {
+                "attack": 8,
+                "attackMultiplier": 1.02
+            },
+            {
+                "attack": 9,
+                "attackMultiplier": 1.04
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "attack"
     },
-    "Offensive Guard": {
+    "Ballistics": {
         "name": {
-        "en": "Offensive Guard",
-        "zh": ""
+            "en": "Ballistics",
+            "zh": ""
         },
-        "maxLevel": "",
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Blast Attack": {
+        "name": {
+            "en": "Blast Attack",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "blast": 10,
+                "blastMultiplier": 1.05
+            },
+            {
+                "blast": 20,
+                "blastMultiplier": 1.1
+            },
+            {
+                "blast": 50,
+                "blastMultiplier": 1.2
+            }
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Blast Functionality": {
+        "name": {
+            "en": "Blast Functionality",
+            "zh": ""
+        },
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Bludgeoner": {
+        "name": {
+            "en": "Bludgeoner",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": true,
+        "show": false
+    },
+    "Charge Master": {
+        "name": {
+            "en": "Charge Master",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Charge Up": {
+        "name": {
+            "en": "Charge Up",
+            "zh": ""
+        },
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Critical Boost": {
+        "name": {
+            "en": "Critical Boost",
+            "zh": "超會心"
+        },
+        "maxLevel": 5,
+        "effect": [
+            {
+                "criticalDamage": 0.03
+            },
+            {
+                "criticalDamage": 0.06
+            },
+            {
+                "criticalDamage": 0.09
+            },
+            {
+                "criticalDamage": 0.12
+            },
+            {
+                "criticalDamage": 0.15
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "criticalDamage"
+    },
+    "Critical Draw": {
+        "name": {
+            "en": "Critical Draw",
+            "zh": "拔刀術【技】"
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "affinity": 0.5
+            },
+            {
+                "affinity": 0.75
+            },
+            {
+                "affinity": 1
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.01
+        ],
+        "show": true,
+        "group": "affinity"
+    },
+    "Critical Element": {
+        "name": {
+            "en": "Critical Element",
+            "zh": "會心擊【屬性】"
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "elementalCriticalDamageHBG": 0.07
+            },
+            {
+                "elementalCriticalDamageHBG": 0.14
+            },
+            {
+                "elementalCriticalDamageHBG": 0.21
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "criticalDamage"
     },
     "Critical Eye": {
         "name": {
@@ -29,398 +236,648 @@
             "zh": "看破"
         },
         "maxLevel": 5,
-        "effect" : [
+        "effect": [
             {
-                "affinity": 4
+                "affinity": 0.04
             },
             {
-                "affinity": 8
+                "affinity": 0.08
             },
             {
-                "affinity": 12
+                "affinity": 0.12
             },
             {
-                "affinity": 16
+                "affinity": 0.16
             },
             {
-                "affinity": 20
+                "affinity": 0.20
             }
-        ]
-    },
-    "Critical Boost": {
-        "name": {
-        "en": "Critical Boost",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Critical Draw": {
-        "name": {
-        "en": "Critical Draw",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Fire Attack": {
-        "name": {
-        "en": "Fire Attack",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Water Attack": {
-        "name": {
-        "en": "Water Attack",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Ice Attack": {
-        "name": {
-        "en": "Ice Attack",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Thunder Attack": {
-        "name": {
-        "en": "Thunder Attack",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Dragon Attack": {
-        "name": {
-        "en": "Dragon Attack",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Poison Attack": {
-        "name": {
-        "en": "Poison Attack",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Paralysis Attack": {
-        "name": {
-        "en": "Paralysis Attack",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Sleep Attack": {
-        "name": {
-        "en": "Sleep Attack",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Blast Attack": {
-        "name": {
-        "en": "Blast Attack",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Critical Element": {
-        "name": {
-        "en": "Critical Element",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "affinity"
     },
     "Critical Status": {
         "name": {
-        "en": "Critical Status",
-        "zh": ""
+            "en": "Critical Status",
+            "zh": ""
         },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Charge Master": {
-        "name": {
-        "en": "Charge Master",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Handicraft": {
-        "name": {
-        "en": "Handicraft",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Razor Sharp": {
-        "name": {
-        "en": "Razor Sharp",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Protective Polish": {
-        "name": {
-        "en": "Protective Polish",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Mind's Eye": {
-        "name": {
-        "en": "Mind's Eye",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Bludgeoner": {
-        "name": {
-        "en": "Bludgeoner",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Master's Touch": {
-        "name": {
-        "en": "Master's Touch",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Normal Shots": {
-        "name": {
-        "en": "Normal Shots",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Piercing Shots": {
-        "name": {
-        "en": "Piercing Shots",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Spread/Power Shots": {
-        "name": {
-        "en": "Spread/Power Shots",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Rapid Fire Up": {
-        "name": {
-        "en": "Rapid Fire Up",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Opening Shot": {
-        "name": {
-        "en": "Opening Shot",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Tetrad Shot": {
-        "name": {
-        "en": "Tetrad Shot",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Special Ammo Boost": {
-        "name": {
-        "en": "Special Ammo Boost",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Poison Functionality": {
-        "name": {
-        "en": "Poison Functionality",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Para Functionality": {
-        "name": {
-        "en": "Para Functionality",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Sleep Functionality": {
-        "name": {
-        "en": "Sleep Functionality",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Blast Functionality": {
-        "name": {
-        "en": "Blast Functionality",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Exhaust Functionality": {
         "name": {
-        "en": "Exhaust Functionality",
-        "zh": ""
+            "en": "Exhaust Functionality",
+            "zh": ""
         },
-        "maxLevel": "",
-        "effect": []
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Focus": {
         "name": {
-        "en": "Focus",
-        "zh": ""
+            "en": "Focus",
+            "zh": ""
         },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Power Prolonger": {
-        "name": {
-        "en": "Power Prolonger",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Punishing Draw": {
-        "name": {
-        "en": "Punishing Draw",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Slugger": {
-        "name": {
-        "en": "Slugger",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Stamina Thief": {
-        "name": {
-        "en": "Stamina Thief",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Artillery": {
-        "name": {
-        "en": "Artillery",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Rapid Morph": {
-        "name": {
-        "en": "Rapid Morph",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Horn Maestro": {
-        "name": {
-        "en": "Horn Maestro",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Charge Up": {
-        "name": {
-        "en": "Charge Up",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Airborne": {
-        "name": {
-        "en": "Airborne",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
-    },
-    "Poison Duration Up": {
-        "name": {
-        "en": "Poison Duration Up",
-        "zh": ""
-        },
-        "maxLevel": "",
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Guard": {
         "name": {
-        "en": "Guard",
-        "zh": ""
+            "en": "Guard",
+            "zh": ""
         },
-        "maxLevel": "",
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Guard Up": {
         "name": {
-        "en": "Guard Up",
-        "zh": ""
+            "en": "Guard Up",
+            "zh": ""
         },
-        "maxLevel": "",
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Handicraft": {
+        "name": {
+            "en": "Handicraft",
+            "zh": ""
+        },
+        "maxLevel": 5,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Horn Maestro": {
+        "name": {
+            "en": "Horn Maestro",
+            "zh": ""
+        },
+        "maxLevel": 2,
+        "effect": [
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Load Shells": {
         "name": {
-        "en": "Load Shells",
-        "zh": ""
+            "en": "Load Shells",
+            "zh": ""
         },
-        "maxLevel": "",
-        "effect": []
+        "maxLevel": 2,
+        "effect": [
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Master's Touch": {
+        "name": {
+            "en": "Master's Touch",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": true,
+        "show": false
+    },
+    "Mind's Eye": {
+        "name": {
+            "en": "Mind's Eye",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": true,
+        "show": false
+    },
+    "Offensive Guard": {
+        "name": {
+            "en": "Offensive Guard",
+            "zh": "攻擊守勢"
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "attackMultiplier": 1.05
+            },
+            {
+                "attackMultiplier": 1.1
+            },
+            {
+                "attackMultiplier": 1.15
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.1
+        ],
+        "show": true,
+        "group": "attack"
+    },
+    "Opening Shot": {
+        "name": {
+            "en": "Opening Shot",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "attackOpening": 5,
+                "elementalMultiplierOpening": 1.1,
+                "reload": "reloadOpening1"
+            },
+            {
+                "attackOpening": 10,
+                "elementalMultiplierOpening": 1.1,
+                "reload": "reloadOpening2"
+            },
+            {
+                "attackOpening": 15,
+                "elementalMultiplierOpening": 1.1,
+                "reload": "reloadOpening3"
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "shot"
+    },
+    "Para Functionality": {
+        "name": {
+            "en": "Para Functionality",
+            "zh": ""
+        },
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Paralysis Attack": {
+        "name": {
+            "en": "Paralysis Attack",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "paralysis": 10,
+                "paralysisMultiplier": 1.05
+            },
+            {
+                "paralysis": 20,
+                "paralysisMultiplier": 1.1
+            },
+            {
+                "paralysis": 50,
+                "paralysisMultiplier": 1.2
+            }
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Poison Attack": {
+        "name": {
+            "en": "Poison Attack",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "poison": 10,
+                "poisonMultiplier": 1.05
+            },
+            {
+                "poison": 20,
+                "poisonMultiplier": 1.1
+            },
+            {
+                "poison": 50,
+                "poisonMultiplier": 1.2
+            }
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Poison Duration Up": {
+        "name": {
+            "en": "Poison Duration Up",
+            "zh": ""
+        },
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Poison Functionality": {
+        "name": {
+            "en": "Poison Functionality",
+            "zh": ""
+        },
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Power Prolonger": {
+        "name": {
+            "en": "Power Prolonger",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Protective Polish": {
+        "name": {
+            "en": "Protective Polish",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": true,
+        "show": false
+    },
+    "Punishing Draw": {
+        "name": {
+            "en": "Punishing Draw",
+            "zh": "拔刀術【力】"
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "attack": 3
+            },
+            {
+                "attack": 5
+            },
+            {
+                "attack": 7
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.01
+        ],
+        "show": true,
+        "group": "attack"
+    },
+    "Rapid Fire Up": {
+        "name": {
+            "en": "Rapid Fire Up",
+            "zh": ""
+        },
+        "maxLevel": 1,
+        "effect": [
+            {
+                "rapid": 0.05
+            }
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Rapid Morph": {
+        "name": {
+            "en": "Rapid Morph",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Razor Sharp": {
+        "name": {
+            "en": "Razor Sharp",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": true,
+        "show": false
+    },
+    "Slugger": {
+        "name": {
+            "en": "Slugger",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Speed Sharpening": {
         "name": {
-        "en": "Speed Sharpening",
-        "zh": ""
+            "en": "Speed Sharpening",
+            "zh": ""
         },
-        "maxLevel": "",
-        "effect": []
+        "maxLevel": 2,
+        "effect": [
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Stamina Thief": {
+        "name": {
+            "en": "Stamina Thief",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Tetrad Shot": {
+        "name": {
+            "en": "Tetrad Shot",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "afiinityTetrad": 0.04,
+                "finalAttackTetrad": 3,
+                "elementalMultiplierTetrad": 1.05
+            },
+            {
+                "afiinityTetrad": 0.08,
+                "finalAttackTetrad": 6,
+                "elementalMultiplierTetrad": 1.05
+            },
+            {
+                "afiinity": 0.12,
+                "finalAttackTetrad": 10,
+                "elementalMultiplierTetrad": 1.05
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "shot"
+    },
+    "Normal Shots": {
+        "name": {
+            "en": "Normal Shots",
+            "zh": ""
+        },
+        "maxLevel": 1,
+        "effect": [
+            {
+                "normalDamageMultiplier": 0.05
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "ammo"
+    },
+    "Piercing Shots": {
+        "name": {
+            "en": "Piercing Shots",
+            "zh": ""
+        },
+        "maxLevel": 1,
+        "effect": [
+            {
+                "pierceDamageMultiplier": 0.05
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "ammo"
+    },
+    "Spread/Power Shots": {
+        "name": {
+            "en": "Spread/Power Shots",
+            "zh": ""
+        },
+        "maxLevel": 1,
+        "effect": [
+            {
+                "spreadDamageMultiplier": 1.05
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "ammo"
+    },
+    "Special Ammo Boost": {
+        "name": {
+            "en": "Special Ammo Boost",
+            "zh": ""
+        },
+        "maxLevel": 2,
+        "effect": [
+            {
+                "specialDamageMultiplier": 1.1
+            },
+            {
+                "specialDamageMultiplier": 1.2
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "ammo"
+    },
+    "Fire Attack": {
+        "name": {
+            "en": "Fire Attack",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "fire": 40
+            },
+            {
+                "fire": 50,
+                "fireMultiplier": 1.1
+            },
+            {
+                "fire": 60,
+                "fireMultiplier": 1.2
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "elemental"
+    },
+    "Water Attack": {
+        "name": {
+            "en": "Water Attack",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "water": 40
+            },
+            {
+                "water": 50,
+                "waterMultiplier": 1.1
+            },
+            {
+                "water": 60,
+                "waterMultiplier": 1.2
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "elemental"
+    },
+    "Thunder Attack": {
+        "name": {
+            "en": "Thunder Attack",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "thunder": 40
+            },
+            {
+                "thunder": 50,
+                "thunderMultiplier": 1.1
+            },
+            {
+                "thunder": 60,
+                "thunderMultiplier": 1.2
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "elemental"
+    },
+    "Ice Attack": {
+        "name": {
+            "en": "Ice Attack",
+            "zh": ""
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "ice": 40
+            },
+            {
+                "ice": 50,
+                "iceMultiplier": 1.1
+            },
+            {
+                "ice": 60,
+                "iceMultiplier": 1.2
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "elemental"
+    },
+    "Dragon Attack": {
+        "name": {
+            "en": "Dragon Attack",
+            "zh": "龍屬性攻擊強化"
+        },
+        "maxLevel": 3,
+        "effect": [
+            {
+                "dragon": 40
+            },
+            {
+                "dragon": 50,
+                "dragonMultiplier": 1.1
+            },
+            {
+                "dragon": 60,
+                "dragonMultiplier": 1.2
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "elemental"
     }
 }

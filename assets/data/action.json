@@ -1,38 +1,44 @@
 {
-  "heavy-bowgun": {
+  "hbg": {
     "ammo": {
-      "normal": [
-        {
-          "damage": [
+      "normal": {
+        "damage": [
+          [
             {
               "value": 15,
               "type": "shell",
               "hit": 3
             }
-          ]
-        },
-        {
-          "damage": [
+          ],
+          [
             {
               "value": 21,
               "type": "shell",
               "hit": 3
             }
-          ]
-        },
-        {
-          "damage": [
+          ],
+          [
             {
               "value": 28.5,
               "type": "shell",
               "hit": 3
             }
           ]
-        }
-      ],
-      "pierce": [
-        {
-          "damage": [
+        ],
+        "shoot": 1.36,
+        "shootDetail": [
+          0.76,
+          0.3,
+          0.3
+        ],
+        "reload": 1.34,
+        "reloadOpening1": 1.22,
+        "reloadOpening2": 1.175,
+        "reloadOpening3": 1.04
+      },
+      "pierce": {
+        "damage": [
+          [
             {
               "value": 11,
               "type": "shell",
@@ -53,10 +59,8 @@
               "type": "shell",
               "hit": 1
             }
-          ]
-        },
-        {
-          "damage": [
+          ],
+          [
             {
               "value": 12,
               "type": "shell",
@@ -75,12 +79,10 @@
             {
               "value": 8.4,
               "type": "shell",
-              "hit": 1
+              "hit": 3
             }
-          ]
-        },
-        {
-          "damage": [
+          ],
+          [
             {
               "value": 12,
               "type": "shell",
@@ -99,43 +101,49 @@
             {
               "value": 8.4,
               "type": "shell",
-              "hit": 1
+              "hit": 5
             }
           ]
-        }
-      ],
-      "spread": [
-        {
-          "damage": [
+        ],
+        "shoot": 0.95,
+        "reload": 2.25,
+        "reloadOpening1": 2.05,
+        "reloadOpening2": 2.0,
+        "reloadOpening3": 1.75
+      },
+      "spread": {
+        "damage": [
+          [
             {
               "value": 11,
               "type": "shell",
               "hit": 5
             }
-          ]
-        },
-        {
-          "damage": [
+          ],
+          [
             {
               "value": 12.65,
               "type": "shell",
               "hit": 6
             }
-          ]
-        },
-        {
-          "damage": [
+          ],
+          [
             {
               "value": 14.3,
               "type": "shell",
               "hit": 1
             }
           ]
-        }
-      ],
-      "slicing": [
-        {
-          "damage": [
+        ],
+        "shoot": 1.51,
+        "reload": 1.34,
+        "reloadOpening1": 1.22,
+        "reloadOpening2": 1.175,
+        "reloadOpening3": 1.04
+      },
+      "slicing": {
+        "damage": [
+          [
             {
               "value": 1,
               "type": "shell",
@@ -147,11 +155,16 @@
               "hit": 4
             }
           ]
-        }
-      ],
-      "sticky": [
-        {
-          "damage": [
+        ],
+        "shoot": 1.82,
+        "reload": 2.09,
+        "reloadOpening2": 1.9,
+        "reloadOpening1": 1.82,
+        "reloadOpening3": 1.6
+      },
+      "sticky": {
+        "damage": [
+          [
             {
               "value": 1,
               "type": "fixed",
@@ -164,13 +177,11 @@
             },
             {
               "value": 5,
-              "type": "fire",
+              "type": "fixedFire",
               "hit": 1
             }
-          ]
-        },
-        {
-          "damage": [
+          ],
+          [
             {
               "value": 1,
               "type": "fixed",
@@ -183,14 +194,11 @@
             },
             {
               "value": 5,
-              "type": "fire",
+              "type": "fixedFire",
               "hit": 1
             }
           ],
-          "hit": 1
-        },
-        {
-          "damage": [
+          [
             {
               "value": 1,
               "type": "fixed",
@@ -203,16 +211,20 @@
             },
             {
               "value": 5,
-              "type": "fire",
+              "type": "fixedFire",
               "hit": 1
             }
-          ],
-          "hit": 1
-        }
-      ],
-      "cluster": [
-        {
-          "damage": [
+          ]
+        ],
+        "shoot": 1.09,
+        "reload": 3.08,
+        "reloadOpening1": 2.8,
+        "reloadOpening2": 2.68,
+        "reloadOpening3": 2.37
+      },
+      "cluster": {
+        "damage": [
+          [
             {
               "value": 1,
               "type": "fixed",
@@ -225,13 +237,11 @@
             },
             {
               "value": 5,
-              "type": "fire",
+              "type": "fixedFire",
               "hit": 3
             }
-          ]
-        },
-        {
-          "damage": [
+          ],
+          [
             {
               "value": 1,
               "type": "fixed",
@@ -244,13 +254,11 @@
             },
             {
               "value": 5,
-              "type": "fire",
+              "type": "fixedFire",
               "hit": 4
             }
-          ]
-        },
-        {
-          "damage": [
+          ],
+          [
             {
               "value": 1,
               "type": "fixed",
@@ -263,15 +271,20 @@
             },
             {
               "value": 5,
-              "type": "fire",
+              "type": "fixedFire",
               "hit": 5
             }
           ]
-        }
-      ],
-      "wyvern": [
-        {
-          "damage": [
+        ],
+        "shoot": 1.26,
+        "reload": 4.05,
+        "reloadOpening1": 3.77,
+        "reloadOpening2": 3.64,
+        "reloadOpening3": 3.34
+      },
+      "wyvern": {
+        "damage": [
+          [
             {
               "value": 80,
               "type": "fixed",
@@ -279,7 +292,7 @@
             },
             {
               "value": 40,
-              "type": "fire",
+              "type": "fixedFire",
               "hit": 1
             },
             {
@@ -289,238 +302,341 @@
             },
             {
               "value": 20,
-              "type": "fire",
+              "type": "fixedFire",
               "hit": 1
             }
           ]
-        }
-      ],
-      "flaming": [
-        {
-          "damage": [
+        ],
+        "shoot": 4.43,
+        "reload": 2.09,
+        "reloadOpening2": 1.9,
+        "reloadOpening1": 1.82,
+        "reloadOpening3": 1.6
+      },
+      "flaming": {
+        "damage": [
+          [
             {
               "value": 8,
-              "type": "fire",
+              "type": "shell",
               "hit": 2
             },
             {
               "value": 7.2,
-              "type": "fire",
+              "type": "shell",
               "hit": 1
             },
             {
               "value": 6.4,
-              "type": "fire",
+              "type": "shell",
               "hit": 1
             },
             {
               "value": 5.6,
-              "type": "fire",
+              "type": "shell",
               "hit": 3
             }
-          ]
-        },
-        {
-          "damage": [
+          ],
+          [
             {
               "value": 10,
-              "type": "fire",
+              "type": "shell",
               "hit": 2
             },
             {
               "value": 9,
-              "type": "fire",
+              "type": "shell",
               "hit": 1
             },
             {
               "value": 8,
-              "type": "fire",
+              "type": "shell",
               "hit": 1
             },
             {
               "value": 7,
-              "type": "fire",
+              "type": "shell",
               "hit": 3
             }
           ]
-        }
-      ],
-      "water": [
-        {
-          "damage": [
+        ],
+        "elemental": [
+          {
+            "value": 200,
+            "type": "fire"
+          },
+          {
+            "value": 250,
+            "type": "fire"
+          }
+        ],
+        "shoot": 0.95,
+        "reload": 1.34,
+        "reloadOpening1": 1.22,
+        "reloadOpening2": 1.175,
+        "reloadOpening3": 1.04
+      },
+      "water": {
+        "damage": [
+          [
             {
               "value": 8,
-              "type": "water",
+              "type": "shell",
               "hit": 2
             },
             {
               "value": 7.2,
-              "type": "water",
+              "type": "shell",
               "hit": 1
             },
             {
               "value": 6.4,
-              "type": "water",
+              "type": "shell",
               "hit": 1
             },
             {
               "value": 5.6,
-              "type": "water",
+              "type": "shell",
               "hit": 3
-            }
-          ]
-        },
-        {
-          "damage": [
-            {
-              "value": 10,
-              "type": "water",
-              "hit": 2
             },
-            {
-              "value": 9,
-              "type": "water",
-              "hit": 1
-            },
-            {
-              "value": 8,
-              "type": "water",
-              "hit": 1
-            },
-            {
-              "value": 7,
-              "type": "water",
-              "hit": 3
-            }
-          ]
-        }
-      ],
-      "freeze": [
-        {
-          "damage": [
-            {
-              "value": 8,
-              "type": "ice",
-              "hit": 2
-            },
-            {
-              "value": 7.2,
-              "type": "ice",
-              "hit": 1
-            },
-            {
-              "value": 6.4,
-              "type": "ice",
-              "hit": 1
-            },
-            {
-              "value": 5.6,
-              "type": "ice",
-              "hit": 3
-            }
-          ]
-        },
-        {
-          "damage": [
-            {
-              "value": 10,
-              "type": "ice",
-              "hit": 2
-            },
-            {
-              "value": 9,
-              "type": "ice",
-              "hit": 1
-            },
-            {
-              "value": 8,
-              "type": "ice",
-              "hit": 1
-            },
-            {
-              "value": 7,
-              "type": "ice",
-              "hit": 3
-            }
-          ]
-        }
-      ],
-      "thunder": [
-        {
-          "damage": [
-            {
-              "value": 8,
-              "type": "thunder",
-              "hit": 2
-            },
-            {
-              "value": 7.2,
-              "type": "thunder",
-              "hit": 1
-            },
-            {
-              "value": 6.4,
-              "type": "thunder",
-              "hit": 1
-            },
-            {
-              "value": 5.6,
-              "type": "thunder",
-              "hit": 3
-            }
-          ]
-        },
-        {
-          "damage": [
-            {
-              "value": 10,
-              "type": "thunder",
-              "hit": 2
-            },
-            {
-              "value": 9,
-              "type": "thunder",
-              "hit": 1
-            },
-            {
-              "value": 8,
-              "type": "thunder",
-              "hit": 1
-            },
-            {
-              "value": 7,
-              "type": "thunder",
-              "hit": 3
-            }
-          ]
-        }
-      ],
-      "dragon": [
-        {
-          "damage": [
             {
               "value": 20,
-              "type": "dragon",
+              "type": "water",
+              "hit": 7
+            }
+          ],
+          [
+            {
+              "value": 10,
+              "type": "shell",
+              "hit": 2
+            },
+            {
+              "value": 9,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 8,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 7,
+              "type": "shell",
+              "hit": 3
+            },
+            {
+              "value": 25,
+              "type": "water",
+              "hit": 7
+            }
+          ]
+        ],
+        "elemental": [
+          {
+            "value": 200,
+            "type": "water"
+          },
+          {
+            "value": 250,
+            "type": "water"
+          }
+        ],
+        "shoot": 0.95,
+        "reload": 1.34,
+        "reloadOpening1": 1.22,
+        "reloadOpening2": 1.175,
+        "reloadOpening3": 1.04
+      },
+      "freeze": {
+        "damage": [
+          [
+            {
+              "value": 8,
+              "type": "shell",
+              "hit": 2
+            },
+            {
+              "value": 7.2,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 6.4,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 5.6,
+              "type": "shell",
+              "hit": 3
+            },
+            {
+              "value": 20,
+              "type": "ice",
+              "hit": 7
+            }
+          ],
+          [
+            {
+              "value": 10,
+              "type": "shell",
+              "hit": 2
+            },
+            {
+              "value": 9,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 8,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 7,
+              "type": "shell",
+              "hit": 3
+            },
+            {
+              "value": 25,
+              "type": "ice",
+              "hit": 7
+            }
+          ]
+        ],
+        "elemental": [
+          {
+            "value": 200,
+            "type": "ice"
+          },
+          {
+            "value": 250,
+            "type": "ice"
+          }
+        ],
+        "shoot": 0.95,
+        "reload": 1.34,
+        "reloadOpening1": 1.22,
+        "reloadOpening2": 1.175,
+        "reloadOpening3": 1.04
+      },
+      "thunder": {
+        "damage": [
+          [
+            {
+              "value": 8,
+              "type": "shell",
+              "hit": 2
+            },
+            {
+              "value": 7.2,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 6.4,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 5.6,
+              "type": "shell",
+              "hit": 3
+            },
+            {
+              "value": 20,
+              "type": "thunder",
+              "hit": 7
+            }
+          ],
+          [
+            {
+              "value": 10,
+              "type": "shell",
+              "hit": 2
+            },
+            {
+              "value": 9,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 8,
+              "type": "shell",
+              "hit": 1
+            },
+            {
+              "value": 7,
+              "type": "shell",
+              "hit": 3
+            },
+            {
+              "value": 25,
+              "type": "thunder",
+              "hit": 7
+            }
+          ]
+        ],
+        "elemental": [
+          {
+            "value": 200,
+            "type": "thunder"
+          },
+          {
+            "value": 250,
+            "type": "thunder"
+          }
+        ],
+        "shoot": 0.95,
+        "reload": 1.34,
+        "reloadOpening1": 1.22,
+        "reloadOpening2": 1.175,
+        "reloadOpening3": 1.04
+      },
+      "dragon": {
+        "damage": [
+          [
+            {
+              "value": 20,
+              "type": "shell",
               "hit": 2
             },
             {
               "value": 18,
-              "type": "dragon",
+              "type": "shell",
               "hit": 1
             },
             {
               "value": 16,
-              "type": "dragon",
+              "type": "shell",
               "hit": 1
             },
             {
               "value": 14,
-              "type": "dragon",
+              "type": "shell",
               "hit": 1
+            },
+            {
+              "value": 44,
+              "type": "dragon",
+              "hit": 7
             }
           ]
-        }
-      ]
+        ],
+        "elemental": [
+          {
+            "value": 440,
+            "type": "dragon"
+          }
+        ],
+        "shoot": 1.09,
+        "reload": 2.09,
+        "reloadOpening2": 1.9,
+        "reloadOpening1": 1.82,
+        "reloadOpening3": 1.6
+      }
     }
   }
 }

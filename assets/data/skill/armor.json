@@ -4,80 +4,178 @@
             "en": "Adaptability",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 2,
+        "effect": [
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Adrenaline Rush": {
         "name": {
             "en": "Adrenaline Rush",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {
+                "attack": 10
+            },
+            {
+                "attack": 15
+            },
+            {
+                "attack": 20
+            },
+            {
+                "attack": 25
+            },
+            {
+                "attack": 30
+            }
+        ],
+        "trigger": true,
+        "show": false
     },
     "Agitator": {
         "name": {
             "en": "Agitator",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {
+                "attack": 4,
+                "affinity": 0.03
+            },
+            {
+                "attack": 8,
+                "affinity": 0.05
+            },
+            {
+                "attack": 12,
+                "affinity": 0.07
+            },
+            {
+                "attack": 16,
+                "affinity": 0.1
+            },
+            {
+                "attack": 20,
+                "affinity": 0.15
+            }
+        ],
+        "trigger": true,
+        "show": false
     },
     "Ambush": {
         "name": {
             "en": "Ambush",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {
+                "attackMultiplier": 1.05
+            },
+            {
+                "attackMultiplier": 1.1
+            },
+            {
+                "attackMultiplier": 1.15
+            }
+        ],
+        "trigger": true,
+        "show": false
     },
     "Antivirus": {
         "name": {
             "en": "Antivirus",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {
+                "affinityRecovered": 0.03
+            },
+            {
+                "affinityRecovered": 0.06
+            },
+            {
+                "affinityRecovered": 0.10
+            }
+        ],
+        "trigger": false,
+        "show": true,
+        "group": "affinity"
     },
     "Aquatic/Oilsilt Mobility": {
         "name": {
             "en": "Aquatic/Oilsilt Mobility",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 2,
+        "effect": [
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Blight Resistance": {
         "name": {
             "en": "Blight Resistance",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Blast Resistance": {
         "name": {
             "en": "Blast Resistance",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Bleeding Resistance": {
         "name": {
             "en": "Bleeding Resistance",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Blindsider": {
         "name": {
             "en": "Blindsider",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Bombardier": {
         "name": {
@@ -92,415 +190,969 @@
             "en": "Botanist",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Burst": {
         "name": {
             "en": "Burst",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {
+                "attackHBG": 5,
+                "attack2HBG": 6
+            },
+            {
+                "attackHBG": 5,
+                "attack2HBG": 7
+            },
+            {
+                "attackHBG": 5,
+                "attack2HBG": 8
+            },
+            {
+                "attackHBG": 5,
+                "attack2HBG": 9
+            },
+            {
+                "attackHBG": 5,
+                "attack2HBG": 10
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 2,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            },
+            {
+                "en": "Boost",
+                "zh": "二段"
+            }
+        ],
+        "defaultCoverage": [
+            0.99,
+            0.7
+        ],
+        "show": true,
+        "group": "attack"
     },
     "Cliffhanger": {
         "name": {
             "en": "Cliffhanger",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Coalescence": {
         "name": {
             "en": "Coalescence",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {
+                "elementalMultiplier": 1.1
+            },
+            {
+                "elementalMultiplier": 1.2
+            },
+            {
+                "elementalMultiplier": 1.3
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.45
+        ],
+        "show": true,
+        "group": "elemental"
     },
     "Constitution": {
         "name": {
             "en": "Constitution",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Convert Element": {
         "name": {
             "en": "Convert Element",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {
+                "dragonAttack": 80
+            },
+            {
+                "dragonAttack": 120
+            },
+            {
+                "dragonAttack": 180
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.2
+        ],
+        "show": true,
+        "group": "elemental"
     },
     "Counterstrike": {
         "name": {
             "en": "Counterstrike",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {
+                "attack": 10
+            },
+            {
+                "attack": 15
+            },
+            {
+                "attack": 25
+            }
+        ],
+        "trigger": true,
+        "show": false
     },
     "Defense Boost": {
         "name": {
             "en": "Defense Boost",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 7,
+        "effect": [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Divine Blessing": {
         "name": {
             "en": "Divine Blessing",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": true,
+        "show": false
     },
     "Earplugs": {
         "name": {
             "en": "Earplugs",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Elemental Absorption": {
         "name": {
             "en": "Elemental Absorption",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": true,
+        "show": false
     },
     "Entomologist": {
         "name": {
             "en": "Entomologist",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Evade Extender": {
         "name": {
             "en": "Evade Extender",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Evade Window": {
         "name": {
             "en": "Evade Window",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Fire Resistance": {
         "name": {
             "en": "Fire Resistance",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Flayer": {
         "name": {
             "en": "Flayer",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Flinch Free": {
         "name": {
             "en": "Flinch Free",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Foray": {
         "name": {
             "en": "Foray",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {
+                "attack": 6
+            },
+            {
+                "attack": 8,
+                "affinity": 0.05
+            },
+            {
+                "attack": 10,
+                "affinity": 0.1
+            },
+            {
+                "attack": 12,
+                "affinity": 0.15
+            },
+            {
+                "attack": 15,
+                "affinity": 0.2
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.4
+        ],
+        "show": true
     },
     "Free Meal": {
         "name": {
             "en": "Free Meal",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Geologist": {
         "name": {
             "en": "Geologist",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Heroics": {
         "name": {
             "en": "Heroics",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {},
+            {
+                "attackMultiplier": 1.05
+            },
+            {
+                "attackMultiplier": 1.05
+            },
+            {
+                "attackMultiplier": 1.1
+            },
+            {
+                "attackMultiplier": 1.3
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.9
+        ],
+        "show": true,
+        "group": "attack"
     },
     "Hunger Resistance": {
         "name": {
             "en": "Hunger Resistance",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Intimidator": {
         "name": {
             "en": "Intimidator",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Iron Skin": {
         "name": {
             "en": "Iron Skin",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Item Prolonger": {
         "name": {
             "en": "Item Prolonger",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Jump Master": {
         "name": {
             "en": "Jump Master",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Latent Power": {
         "name": {
             "en": "Latent Power",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {
+                "affinity": 0.1
+            },
+            {
+                "affinity": 0.2
+            },
+            {
+                "affinity": 0.3
+            },
+            {
+                "affinity": 0.4
+            },
+            {
+                "affinity": 0.5
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.5
+        ],
+        "show": true,
+        "group": "affinity"
     },
     "Leap of Faith": {
         "name": {
             "en": "Leap of Faith",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Marathon Runner": {
         "name": {
             "en": "Marathon Runner",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Maximum Might": {
         "name": {
             "en": "Maximum Might",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {
+                "affinity": 0.1
+            },
+            {
+                "affinity": 0.2
+            },
+            {
+                "affinity": 0.3
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.9
+        ],
+        "show": true,
+        "group": "affinity"
     },
     "Mushroomancer": {
         "name": {
             "en": "Mushroomancer",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Outdoorsman": {
         "name": {
             "en": "Outdoorsman",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Palico Rally": {
         "name": {
             "en": "Palico Rally",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Partbreaker": {
         "name": {
             "en": "Partbreaker",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Peak Performance": {
         "name": {
             "en": "Peak Performance",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {
+                "attack": 3
+            },
+            {
+                "attack": 6
+            },
+            {
+                "attack": 10
+            },
+            {
+                "attack": 15
+            },
+            {
+                "attack": 20
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.5
+        ],
+        "show": true,
+        "group": "attack"
     },
     "Poison Resistance": {
         "name": {
             "en": "Poison Resistance",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Quick Sheathe": {
         "name": {
             "en": "Quick Sheathe",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Recovery Speed": {
         "name": {
             "en": "Recovery Speed",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Recovery Up": {
         "name": {
             "en": "Recovery Up",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Resentment": {
         "name": {
             "en": "Resentment",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {
+                "attack": 5
+            },
+            {
+                "attack": 10
+            },
+            {
+                "attack": 15
+            },
+            {
+                "attack": 20
+            },
+            {
+                "attack": 25
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "defaultCoverage": [
+            0.2
+        ],
+        "show": true,
+        "group": "attack"
     },
     "Self-Improvement": {
         "name": {
             "en": "Self-Improvement",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 1,
+        "effect": [
+            {
+                "siAttack1": 4,
+                "siAttack2": 8,
+                "siAttack3": 12
+            }
+        ],
+        "trigger": true,
+        "show": false
     },
     "Shock Absorber": {
         "name": {
             "en": "Shock Absorber",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 1,
+        "effect": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Speed Eating": {
         "name": {
             "en": "Speed Eating",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Stamina Surge": {
         "name": {
             "en": "Stamina Surge",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Stench Resistance": {
         "name": {
             "en": "Stench Resistance",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 2,
+        "effect": [
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Survival Expert": {
         "name": {
             "en": "Survival Expert",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Tool Specialist": {
         "name": {
             "en": "Tool Specialist",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Tremor Resistance": {
         "name": {
             "en": "Tremor Resistance",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Water Resistance": {
         "name": {
             "en": "Water Resistance",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Weakness Exploit": {
         "name": {
             "en": "Weakness Exploit",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {
+                "affinity": 0.05,
+                "wpAffinity": 0.03
+            },
+            {
+                "affinity": 0.1,
+                "wpAffinity": 0.05
+            },
+            {
+                "affinity": 0.15,
+                "wpAffinity": 0.1
+            },
+            {
+                "affinity": 0.20,
+                "wpAffinity": 0.15
+            },
+            {
+                "affinity": 0.3,
+                "wpAffinity": 0.2
+            }
+        ],
+        "trigger": true,
+        "triggerLevel": 2,
+        "triggerName": [
+            {
+                "en": "Weak point",
+                "zh": "弱點"
+            },
+            {
+                "en": "Wound",
+                "zh": "傷口"
+            }
+        ],
+        "defaultCoverage": [
+            0.9,
+            0.2
+        ],
+        "show": true,
+        "group": "affinity"
     },
     "Wide-Range": {
         "name": {
             "en": "Wide-Range",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 5,
+        "effect": [
+            {},
+            {},
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     },
     "Windproof": {
         "name": {
             "en": "Windproof",
             "zh": ""
         },
-        "maxLevel": 0,
-        "effect": []
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": false,
+        "show": false
     }
 }

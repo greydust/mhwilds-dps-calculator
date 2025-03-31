@@ -1,0 +1,507 @@
+{
+  "Charm": {
+    "name": {
+      "en": "Charm",
+      "zh": "護符"
+    },
+    "options": [
+      {
+        "name": {
+          "en": "Powercharm",
+          "zh": "力量之護符"
+        },
+        "effect": {
+          "attack": 6
+        },
+        "trigger": false
+      }
+    ],
+    "group": "attack"
+  },
+  "Demondrug": {
+    "name": {
+      "en": "Demondrug",
+      "zh": "鬼人藥"
+    },
+    "options": [
+      {
+        "name": {
+          "en": "Demondrug",
+          "zh": "鬼人藥"
+        },
+        "effect": {
+          "attack": 5
+        },
+        "trigger": false
+      },
+      {
+        "name": {
+          "en": "Mega Demondrug",
+          "zh": "鬼人藥・大"
+        },
+        "effect": {
+          "attack": 7
+        },
+        "trigger": false
+      }
+    ],
+    "group": "attack"
+  },
+  "DemonPowder": {
+    "name": {
+      "en": "Powder/War Cry",
+      "zh": "鬼人粉塵/戰嚎"
+    },
+    "options": [
+      {
+        "name": {
+          "en": "Demon Powder",
+          "zh": "鬼人粉塵"
+        },
+        "effect": {
+          "attack": 10
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.75
+        ],
+        "group": "attack"
+      },
+      {
+        "name": {
+          "en": "War Cry I",
+          "zh": "戰嚎I"
+        },
+        "effect": {
+          "attack": 3
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.75
+        ],
+        "group": "attack"
+      },
+      {
+        "name": {
+          "en": "War Cry II",
+          "zh": "戰嚎II"
+        },
+        "effect": {
+          "attack": 6
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.75
+        ],
+        "group": "attack"
+      }
+    ],
+    "group": "attack"
+  },
+  "Might": {
+    "name": {
+      "en": "Might/Protein/Powerhouse/Break-time",
+      "zh": "怪力/蠻勇/休息術"
+    },
+    "options": [
+      {
+        "name": {
+          "en": "Might Seed",
+          "zh": "鬼人粉塵"
+        },
+        "effect": {
+          "attack": 10
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.75
+        ],
+        "group": "attack"
+      },
+      {
+        "name": {
+          "en": "Might Pill",
+          "zh": "怪力藥丸"
+        },
+        "effect": {
+          "attack": 25
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.08
+        ],
+        "group": "attack"
+      },
+      {
+        "name": {
+          "en": "Protein Fiend I",
+          "zh": "蠻勇的餐桌I"
+        },
+        "effect": {
+          "attack": 15
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.4
+        ],
+        "group": "attack"
+      },
+      {
+        "name": {
+          "en": "Protein Fiend II",
+          "zh": "蠻勇的餐桌II"
+        },
+        "effect": {
+          "attack": 25
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.4
+        ],
+        "group": "attack"
+      },
+      {
+        "name": {
+          "en": "Powerhouse I",
+          "zh": ""
+        },
+        "effect": {
+          "attack": 10
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.05
+        ],
+        "group": "attack"
+      },
+      {
+        "name": {
+          "en": "Powerhouse II",
+          "zh": ""
+        },
+        "effect": {
+          "attack": 25
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.05
+        ],
+        "group": "attack"
+      },
+      {
+        "name": {
+          "en": "Break-time Meal",
+          "zh": ""
+        },
+        "effect": {
+          "attack": 15
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.1
+        ],
+        "group": "attack"
+      }
+    ],
+    "group": "attack"
+  },
+  "Meal": {
+    "name": {
+      "en": "Meal",
+      "zh": "餐點"
+    },
+    "options": [
+      {
+        "name": {
+          "en": "Meat",
+          "zh": "肉"
+        },
+        "effect": {
+          "attack": 2
+        },
+        "trigger": false
+      },
+      {
+        "name": {
+          "en": "Villager",
+          "zh": "村民"
+        },
+        "effect": {
+          "attack": 5
+        },
+        "trigger": false
+      }
+    ],
+    "group": "meal"
+  },
+  "CapriceMeal": {
+    "name": {
+      "en": "Caprice Meal",
+      "zh": "餐點飄忽術"
+    },
+    "options": [
+      {
+        "name": {
+          "en": "Caprice Meal (Lo)",
+          "zh": "餐點飄忽術【小】"
+        },
+        "effect": {
+          "attack": 7
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.3
+        ],
+        "group": "attack"
+      },
+      {
+        "name": {
+          "en": "Caprice Meal (Hi)",
+          "zh": "餐點飄忽術【大】"
+        },
+        "effect": {
+          "attack": 15
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.3
+        ],
+        "group": "attack"
+      }
+    ],
+    "group": "meal"
+  },
+  "SwimmerMeal": {
+    "name": {
+      "en": "Swimmer Meal",
+      "zh": "餐點擅泳術"
+    },
+    "options": [
+      {
+        "name": {
+          "en": "Swimmer Meal",
+          "zh": "餐點擅泳術"
+        },
+        "effect": {
+          "attack": 3
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.3
+        ],
+        "group": "attack"
+      }
+    ],
+    "group": "meal"
+  },
+  "Mantle": {
+    "name": {
+      "en": "Mantle",
+      "zh": "衣裝"
+    },
+    "options": [
+      {
+        "name": {
+          "en": "Corrupted Mantle",
+          "zh": "蝕攻衣裝"
+        },
+        "effect": {
+          "affinity": 0.1,
+          "afiinityMantleRecovered": 0.3,
+          "attackMultiplierMantleRecovered": 1.1
+        },
+        "trigger": true,
+        "triggerLevel": 2,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          },
+          {
+            "en": "Recovered",
+            "zh": "克服"
+          }
+        ],
+        "defaultCoverage": [
+          0.31,
+          0.3
+        ],
+        "group": "attack"
+      },
+      {
+        "name": {
+          "en": "Evasion Mantle",
+          "zh": "迴避衣裝"
+        },
+        "effect": {
+          "attackMultiplier": 1.2
+        },
+        "trigger": true,
+        "triggerLevel": 1,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          }
+        ],
+        "defaultCoverage": [
+          0.3
+        ],
+        "group": "attack"
+      }
+    ]
+  },
+  "Melody": {
+    "name": {
+      "en": "Melody",
+      "zh": "旋律"
+    },
+    "options": [
+      {
+        "name": {
+          "en": "Attack Up (S)",
+          "zh": "攻擊力上升【小】"
+        },
+        "effect": {
+          "attackMultiplier1": 1.03,
+          "attackMultiplier2": 1.05
+        },
+        "trigger": true,
+        "triggerLevel": 2,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          },
+          {
+            "en": "Encore",
+            "zh": "強化"
+          }
+        ],
+        "defaultCoverage": [
+          1,
+          1
+        ],
+        "group": "attack"
+      },
+      {
+        "name": {
+          "en": "Attack Up (L)",
+          "zh": "攻擊力上升【大】"
+        },
+        "effect": {
+          "attackMultiplier1": 1.05,
+          "attackMultiplier2": 1.1
+        },
+        "trigger": true,
+        "triggerLevel": 2,
+        "triggerName": [
+          {
+            "en": "On",
+            "zh": "發動"
+          },
+          {
+            "en": "Encore",
+            "zh": "強化"
+          }
+        ],
+        "defaultCoverage": [
+          1,
+          1
+        ],
+        "group": "attack"
+      }
+    ]
+  }
+}

@@ -11,38 +11,180 @@
 <body>
   <h1 data-lang="title">Monster Hunter Wilds DPS Calculator</h1>
   <div id="calculator">
-    <label for="weapon-type" data-lang="weapon-type-label">Weapon Type:</label>
-    <select id="weapon-type">
-      <option value="heavy-bowgun" data-lang="heavy-bowgun">Heavy Bowgun</option>
-      <!-- Add other weapon types here -->
-    </select></p>
+    <div class="row">
+      <div class="group">
+        <label for="weapon-type" data-lang="weapon-type-label">Weapon Type:</label>
+        <select id="weapon-type">
+          <option value="hbg" data-lang="heavy-bowgun">Heavy Bowgun</option>
+        </select>
+      </div>
 
-    <label for="weapon" data-lang="weapon-label">Weapon:</label>
-    <select id="weapon"></select>
-
-    <div id="weapon-stats">
-      <p><span data-lang="base-attack">Base Attack:</span> <span id="base-attack">-</span></p>
-      <p><span data-lang="affinity">Affinity:</span> <span id="affinity">-</span></p>
+      <div class="group">
+        <label for="weapon" data-lang="weapon-label">Weapon:</label>
+        <select id="weapon"></select>
+      </div>
     </div>
 
-    <label for="ammo-type" data-lang="ammo-type-label">Ammo Type:</label>
-    <select id="ammo-type"></select>
+    <div class="stats-box">
+      <div class="row">
+        <div class="group">
+          <label for="ammo-type" data-lang="ammo-type-label">Ammo Type:</label>
+          <select id="ammo-type"></select>
+        </div>
+      </div>
 
-    <p data-lang="ammo-level">Ammo Level: <span id="ammo-level">-</span></p>
+      <div class="row">
+        <div class="group">
+          <label for="mod-1" data-lang="mod-1-label">Mod 1:</label>
+          <select id="mod-1"></select>
+        </div>
+        <div class="group">
+          <label for="mod-2" data-lang="mod-2-label">Mod 2:</label>
+          <select id="mod-2"></select>
+        </div>
+      </div>
 
-    <label for="enhancement-1" data-lang="enhancement-1-label">Enhancement 1:</label>
-    <select id="enhancement-1"></select>
+      <div class="stat-row">
+        <div class="stat-group">
+          <label data-lang="base-attack">Base Attack:</label>
+          <span id="base-attack">-</span>
+        </div>
+        <div class="stat-group">
+          <label data-lang="affinity">Affinity:</label>
+          <span id="affinity">-</span>
+        </div>
+      </div>
 
-    <label for="enhancement-2" data-lang="enhancement-2-label">Enhancement 2:</label>
-    <select id="enhancement-2"></select>
+      <div class="skills-box">
+        <h3 data-lang="weapon-skills-header">Weapon Skills</h3>
+        <div class="row" id="weapon-skill-attack"></div>
+        <div class="row" id="weapon-skill-affinity"></div>
+        <div class="row" id="weapon-skill-criticalDamage"></div>
+        <div class="row" id="weapon-skill-elemental"></div>
+        <div class="row" id="weapon-skill-shot"></div>
+        <div class="row" id="weapon-skill-ammo"></div>
+        <div class="row" id="weapon-skill"></div>
 
-    <p data-lang="enhance-type">Enhance Type: <span id="enhance-type">-</span></p>
+        <h3 data-lang="armor-skills-header">Armor Skills</h3>
+        <div class="row" id="armor-skill-attack"></div>
+        <div class="row" id="armor-skill-affinity"></div>
+        <div class="row" id="armor-skill-elemental"></div>
+        <div class="row" id="armor-skill"></div>
+
+        <h3 data-lang="group-skills-header">Group Skills</h3>
+        <div class="row" id="group-skill"></div>
+
+        <h3 data-lang="set-skills-header">Set Skills</h3>
+        <div class="row" id="set-skill"></div>
+
+        <h3 data-lang="buff-header">Buffs</h3>
+        <div class="row" id="buff-attack"></div>
+        <div class="row" id="buff-meal"></div>
+        <div class="row" id="buff"></div>
+      </div>
+    </div>
+
+    <div class="stats-box">
+      <h2 data-lang="final-stat-header">Final Stat</h2>
+      <div class="stat-row">
+        <div class="stat-group">
+          <label data-lang="final-attack">Attack:</label>
+          <span id="final-attack">-</span>
+        </div>
+        <div class="stat-group">
+          <label data-lang="elemental-attack">Elemental Attack:</label>
+          <span id="elemental-type"></span>
+          <span id="elemental-attack">-</span>
+        </div>
+        <div class="stat-group">
+          <label data-lang="final-affinity">Affinity:</label>
+          <span id="final-affinity">-</span>
+        </div>
+        <div class="stat-group">
+          <label data-lang="ammo-level-label">Ammo Level:</label>
+          <span id="ammo-level">-</span>
+        </div>
+        <div class="stat-group">
+          <label data-lang="ammo-count-label">Ammo:</label>
+          <span id="ammo-count">-</span>
+        </div>
+        <div class="stat-group">
+          <label data-lang="ignition-gauge-label">Ignition Gauge Recovery:</label>
+          <span id="ignition-gauge">Lv1</span>
+        </div>
+        <div class="stat-group">
+          <label data-lang="enhancement-type-label">Enhance Type:</label>
+          <span id="enhancement-type">-</span>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-group">
+          <label data-lang="shoot-speed-label">Shoot Speed:</label>
+          <span id="shoot-speed">-</span>
+          <label data-lang="shoot-speed-unit-label">s/shot</label>
+        </div>
+        <div class="stat-group">
+          <label data-lang="reload-speed-label">Reload Speed:</label>
+          <span id="reload-speed">-</span>
+          <label data-lang="reload-unit-label">s/reload</label>
+        </div>
+        <div class="stat-group">
+          <label data-lang="cycle-time-label">Cycle Time:</label>
+          <span id="cycle-time">-</span>
+          <label data-lang="cycle-time-unit-labell">s</label>
+        </div>
+        <div class="stat-group">
+          <label data-lang="shots-per-second-label">Shots per Second:</label>
+          <span id="shots-per-second">-</span>
+        </div>
+      </div>
+
+      <div class="trigger-box">
+        <h3 data-lang="trigger-header">Triggers</h3>
+        <div class="row hidden" id="trigger-attack"></div>
+        <div class="row hidden" id="trigger-affinity"></div>
+        <div class="row hidden" id="trigger-criticalDamage"></div>
+        <div class="row hidden" id="trigger-elemental"></div>
+        <div class="row hidden" id="trigger-shot"></div>
+        <div class="row hidden" id="trigger-ammo"></div>
+        <div class="row hidden" id="trigger"></div>
+      </div>
+    </div>
+
+    <button id="calculate-button" data-lang="calculate-button">Calculate</button>
+    <div class="stats-box">
+      <h2 data-lang="result-header">Result</h2>
+      <div class="stat-row">
+        <div class="stat-group">
+          <label data-lang="result-average-attack-label">Average Attack:</label>
+          <span id="result-average-attack">-</span>
+        </div>
+        <div class="stat-group">
+          <label data-lang="result-average-elemental-attack-label">Average Elemental Attack:</label>
+          <span id="result-average-elemental-attack">-</span>
+        </div>
+        <div class="stat-group">
+          <label data-lang="result-average-affinity-label">Average Affinity:</label>
+          <span id="result-average-affinity">-</span>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-group">
+          <label data-lang="result-dps-label">DPS:</label>
+          <span id="result-dps">-</span>
+        </div>
+      </div>
+      <details>
+        <summary data-lang="details-label">Details</summary>
+        <pre id="log-box"></pre>
+      </details>
+    </div>
   </div>
 
   <footer>
     <p>
       <a href="https://github.com/greydust/mhwilds-dps-calculator" target="_blank" data-lang="github-link">
-        View on GitHub
+        GitHub
       </a>
     </p>
     <div class="language-selector-container">

@@ -1,8 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 60px;
+  /* Add padding equal to the footer height */
+  box-sizing: border-box;
+}
+
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 60px;
+  /* Set a fixed height for the footer */
   background-color: #f1f1f1;
   text-align: center;
   padding: 10px 0;
@@ -14,6 +24,8 @@ footer {
   align-items: center;
   padding: 5px 20px;
   box-sizing: border-box;
+  z-index: 1000;
+  /* Ensure the footer stays on top */
 }
 
 footer a {
@@ -25,14 +37,141 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.language-selector-container {
+language-selector-container {
   display: inline-flex;
   align-items: center;
-  gap: 5px; /* Adds a small space between the label and the selector */
+  gap: 5px;
+  /* Adds a small space between the label and the selector */
 }
 
 footer select {
-  width: auto; /* Adjusts the width to fit the content */
+  width: auto;
+  /* Adjusts the width to fit the content */
   padding: 5px;
   font-size: 0.9em;
+}
+
+.stats-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* Align items to the right */
+  gap: 10px;
+  flex-wrap: nowrap;
+  min-width: 250px;
+  width: auto;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+}
+
+.stat-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+
+.group label {
+  text-align: right;
+  /* Align label text to the right */
+}
+
+.group select {
+  flex: 0;
+  /* Prevent selectors from stretching */
+}
+
+.group:last-child {
+  margin-right: 0;
+}
+
+.percentage-input {
+  width: 5ch;
+  text-align: right;
+}
+
+input[type="range"] {
+  width: 75px;
+}
+
+.trigger-container {
+  display: block;
+  /* Root container is no longer a flex container */
+  margin-bottom: 10px;
+  /* Add spacing between trigger groups */
+}
+
+.trigger-line {
+  display: flex;
+  /* Each line is a flex container */
+  align-items: center;
+  gap: 10px;
+  /* Maintain consistent gap between elements */
+  margin-bottom: 5px;
+  /* Add spacing between lines */
+}
+
+.hidden {
+  display: none;
+}
+
+.trigger-group {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  /* Maintain smaller gap for trigger elements */
+  flex-wrap: wrap;
+  /* Allow wrapping for trigger elements */
+}
+
+.trigger-group label {
+  width: auto;
+  /* Allow labels to size dynamically */
+  text-align: left;
+  /* Align text to the left for triggers */
+}
+
+.trigger-group input[type="range"] {
+  flex: 0;
+  /* Prevent sliders from stretching */
+  width: 75px;
+  /* Keep sliders short */
+}
+
+.trigger-group .percentage-input {
+  width: 5ch;
+  text-align: right;
+}
+
+#log-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  overflow-x: auto;
 }
