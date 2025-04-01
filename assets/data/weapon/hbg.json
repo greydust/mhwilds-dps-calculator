@@ -255,7 +255,7 @@
       "zh": "護鎖刃砲帕拉米迪斯"
     },
     "baseAttack": 240,
-    "affinity": -10,
+    "affinity": -0.1,
     "def": 0,
     "sockets": [
       3,
@@ -407,7 +407,7 @@
       "zh": "破壞者獵弩"
     },
     "baseAttack": 200,
-    "affinity": 15,
+    "affinity": 0.15,
     "def": 0,
     "sockets": [
       3,
@@ -457,7 +457,7 @@
       "zh": "狂瀾波濤砲弩"
     },
     "baseAttack": 240,
-    "affinity": -15,
+    "affinity": -0.15,
     "def": 0,
     "sockets": [
       3,
@@ -506,7 +506,7 @@
       "zh": "狂野放臭者"
     },
     "baseAttack": 220,
-    "affinity": 5,
+    "affinity": 0.05,
     "def": 0,
     "sockets": [
       3,
@@ -556,7 +556,7 @@
       "zh": "獄焰八帶砲"
     },
     "baseAttack": 230,
-    "affinity": -15,
+    "affinity": -0.15,
     "def": 0,
     "sockets": [
       3,
@@ -654,7 +654,7 @@
       "zh": "護雷重弩守衛導彈"
     },
     "baseAttack": 210,
-    "affinity": 15,
+    "affinity": 0.15,
     "def": 0,
     "sockets": [
       3,
@@ -752,7 +752,7 @@
       "zh": "妃龍砲【飛擊】"
     },
     "baseAttack": 210,
-    "affinity": 15,
+    "affinity": 0.15,
     "def": 0,
     "sockets": [
       3,
@@ -802,7 +802,7 @@
       "zh": "鎧龍終極怒吼"
     },
     "baseAttack": 240,
-    "affinity": -15,
+    "affinity": -0.15,
     "def": 30,
     "sockets": [
       3,
@@ -851,7 +851,7 @@
       "zh": "觸發of滅絕"
     },
     "baseAttack": 200,
-    "affinity": 20,
+    "affinity": 0.2,
     "def": 0,
     "sockets": [
       3,
@@ -896,6 +896,46 @@
       "magazine",
       "normal",
       "standard"
+    ]
+  },
+  "Greifen": {
+    "name": {
+      "en": "Greifen",
+      "zh": "抓取者"
+    },
+    "artian": "true",
+    "baseAttack": 190,
+    "affinity": 0.05,
+    "def": 0,
+    "sockets": [
+      3,
+      3,
+      3
+    ],
+    "ammo": {
+      "normal": {
+        "level": 2,
+        "ammo": 2
+      },
+      "pierce": {
+        "level": 2,
+        "ammo": 2
+      },
+      "spread": {
+        "level": 2,
+        "ammo": 3
+      }
+    },
+    "skills": {},
+    "ignitionRecovery": 1,
+    "mode": {
+      "type": "ignition",
+      "level": 1
+    },
+    "modType": [
+      "powder",
+      "normal",
+      "ignition"
     ]
   }
 }

@@ -1,0 +1,297 @@
+{
+  "None": {
+    "ammo": [
+      {}
+    ],
+    "reinceforcement": [
+      {
+        "type": "attack"
+      },
+      {
+        "type": "ammo",
+        "maximum": 2
+      },
+      {
+        "type": "affinity",
+        "maximum": 3
+      }
+    ]
+  },
+  "Fire": {
+    "ammo": [
+      {
+        "flaming": {
+          "level": 1,
+          "ammo": 5
+        }
+      },
+      {
+        "flaming": {
+          "level": 1,
+          "ammo": 6
+        }
+      }
+    ],
+    "reinceforcement": [
+      {
+        "type": "attack"
+      },
+      {
+        "type": "ammo",
+        "maximum": 2
+      },
+      {
+        "type": "affinity",
+        "maximum": 3
+      }
+    ]
+  },
+  "Water": {
+    "ammo": [
+      {
+        "water": {
+          "level": 1,
+          "ammo": 5
+        }
+      },
+      {
+        "water": {
+          "level": 1,
+          "ammo": 6
+        }
+      }
+    ],
+    "reinceforcement": [
+      {
+        "type": "attack"
+      },
+      {
+        "type": "ammo",
+        "maximum": 2
+      },
+      {
+        "type": "affinity",
+        "maximum": 3
+      }
+    ]
+  },
+  "Thunder": {
+    "ammo": [
+      {
+        "thunder": {
+          "level": 1,
+          "ammo": 5
+        }
+      },
+      {
+        "thunder": {
+          "level": 1,
+          "ammo": 6
+        }
+      }
+    ],
+    "reinceforcement": [
+      {
+        "type": "attack"
+      },
+      {
+        "type": "ammo",
+        "maximum": 2
+      },
+      {
+        "type": "affinity",
+        "maximum": 3
+      }
+    ]
+  },
+  "Ice": {
+    "ammo": [
+      {
+        "freeze": {
+          "level": 1,
+          "ammo": 5
+        }
+      },
+      {
+        "freeze": {
+          "level": 1,
+          "ammo": 6
+        }
+      }
+    ],
+    "reinceforcement": [
+      {
+        "type": "attack"
+      },
+      {
+        "type": "ammo",
+        "maximum": 2
+      },
+      {
+        "type": "affinity",
+        "maximum": 3
+      }
+    ]
+  },
+  "Dragon": {
+    "ammo": [
+      {
+        "flaming": {
+          "level": 1,
+          "ammo": 3
+        },
+        "dragon": {
+          "level": 1,
+          "ammo": 1
+        }
+      },
+      {
+        "flaming": {
+          "level": 1,
+          "ammo": 4
+        },
+        "dragon": {
+          "level": 1,
+          "ammo": 2
+        }
+      }
+    ],
+    "reinceforcement": [
+      {
+        "type": "attack"
+      },
+      {
+        "type": "ammo",
+        "maximum": 2
+      },
+      {
+        "type": "affinity",
+        "maximum": 3
+      }
+    ]
+  },
+  "Poison": {
+    "ammo": [
+      {
+        "water": {
+          "level": 1,
+          "ammo": 4
+        }
+      },
+      {
+        "water": {
+          "level": 1,
+          "ammo": 5
+        }
+      }
+    ],
+    "reinceforcement": [
+      {
+        "type": "attack"
+      },
+      {
+        "type": "ammo",
+        "maximum": 2
+      },
+      {
+        "type": "affinity",
+        "maximum": 3
+      }
+    ]
+  },
+  "Paralysis": {
+    "ammo": [
+      {
+        "thunder": {
+          "level": 1,
+          "ammo": 4
+        }
+      },
+      {
+        "thunder": {
+          "level": 1,
+          "ammo": 5
+        }
+      }
+    ],
+    "reinceforcement": [
+      {
+        "type": "attack"
+      },
+      {
+        "type": "ammo",
+        "maximum": 2
+      },
+      {
+        "type": "affinity",
+        "maximum": 3
+      }
+    ]
+  },
+  "Sleep": {
+    "ammo": [
+      {
+        "freeze": {
+          "level": 1,
+          "ammo": 4
+        }
+      },
+      {
+        "freeze": {
+          "level": 1,
+          "ammo": 5
+        }
+      }
+    ],
+    "reinceforcement": [
+      {
+        "type": "attack"
+      },
+      {
+        "type": "ammo",
+        "maximum": 2
+      },
+      {
+        "type": "affinity",
+        "maximum": 3
+      }
+    ]
+  },
+  "Blast": {
+    "ammo": [
+      {
+        "sticky": {
+          "level": 1,
+          "ammo": 2
+        },
+        "flaming": {
+          "level": 1,
+          "ammo": 4
+        }
+      },
+      {
+        "sticky": {
+          "level": 1,
+          "ammo": 3
+        },
+        "flaming": {
+          "level": 1,
+          "ammo": 5
+        }
+      }
+    ],
+    "reinceforcement": [
+      {
+        "type": "attack"
+      },
+      {
+        "type": "ammo",
+        "maximum": 2
+      },
+      {
+        "type": "affinity",
+        "maximum": 3
+      }
+    ]
+  }
+}

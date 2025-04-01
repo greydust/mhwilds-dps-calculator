@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const reloadSpeed = document.getElementById("reload-speed");
   const cycleTime = document.getElementById("cycle-time");
   const shotsPerSecond = document.getElementById("shots-per-second");
+  const artian = document.getElementById("artian");
 
   const files = [
     "assets/data/action.json",
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "assets/data/skill/group.json",
     "assets/data/skill/set.json",
     "assets/data/translation.json",
+    "assets/data/weapon/artian/hbg.json",
     "assets/data/weapon/hbg.json"
   ];
   const ammoTypeToModAmmoType = {
@@ -133,18 +135,21 @@ document.addEventListener("DOMContentLoaded", () => {
   function populateWeaponData() {
     const selectedWeaponType = weaponTypeSelect.value;
     const selectedWeaponKey = weaponSelect.value;
-    const weapon = data.weapon[selectedWeaponType][selectedWeaponKey];
-    if (weapon) {
-      hunter.baseAttack = weapon.baseAttack;
-      hunter.baseAffinity = weapon.affinity;
+    hunter.weapon = structuredClone(data.weapon[selectedWeaponType][selectedWeaponKey]);
+    if (hunter.weapon) {
+      if (hunter.weapon.artian) {
+        artian.classList.remove("hidden");
+        updateArtianType();
+      } else {
+        artian.classList.add("hidden");
+      }
 
-      baseAttack.textContent = hunter.baseAttack;
-      affinity.textContent = `${hunter.baseAffinity}%`;
+      updateWeaponBaseAttributes(hunter.weapon);
 
-      updateAmmoTypeSelector(weapon);
-      updateModSelector(weapon);
+      updateAmmoTypeSelector(hunter.weapon);
+      updateModSelector(hunter.weapon);
 
-      updateWeapondata(weapon);
+      updateWeapondata(hunter.weapon);
       updateFinalStats();
     } else {
       resetHunterStat();
@@ -158,6 +163,107 @@ document.addEventListener("DOMContentLoaded", () => {
       enhancementType.textContent = "-";
       ammoCount.textContent = "-";
     }
+  }
+
+  function updateWeaponBaseAttributes(weapon) {
+    hunter.baseAttack = weapon.baseAttack;
+    hunter.baseAffinity = weapon.affinity;
+    if (weapon.artian) {
+      for (let i = 1; i <= 3; i++) {
+        const element = document.getElementById(`artian-bonus-${i}`);
+        if (element.value == "attack") {
+          hunter.baseAttack += 5;
+        } else if (element.value == "affinity") {
+          hunter.baseAffinity += 0.05
+        }
+      }
+      for (let i = 1; i <= 5; i++) {
+        const element = document.getElementById(`artian-reinforcement-${i}`);
+        if (element.value == "attack") {
+          hunter.baseAttack += 5;
+        } else if (element.value == "affinity") {
+          hunter.baseAffinity += 0.05
+        }
+      }
+    }
+
+    baseAttack.textContent = hunter.baseAttack;
+    affinity.textContent = `${Number((hunter.baseAffinity * 100).toFixed(3))}%`;
+  }
+
+  function updateArtianType() {
+    const { type: type, level: level } = calculateArtianType();
+
+    const ammo = data.weapon.artian.hbg[type].ammo[level - 2];
+    Object.entries(ammo).forEach(([key, value]) => {
+      hunter.weapon.ammo[key] = value;
+    });
+
+    const reinceforcement = data.weapon.artian.hbg[type].reinceforcement;
+    for (let i = 1; i <= 5; i++) {
+      const element = document.getElementById(`artian-reinforcement-${i}`);
+      element.replaceChildren();
+      reinceforcement.forEach((r) => {
+        const option = document.createElement("option");
+        option.value = r.type;
+        option.setAttribute("data-lang", `artian-reinceforcement-${r.type}`);
+        option.textContent = data.translation[currentLanguage][`artian-reinceforcement-${r.type}`];
+        element.appendChild(option);
+      });
+
+      // Remove existing event listeners by cloning the element
+      const newElement = element.cloneNode(true);
+      element.parentNode.replaceChild(newElement, element);
+
+      newElement.addEventListener("change", () => {
+        // Count the occurrences of each type across all selectors
+        const typeCounts = {};
+        for (let j = 1; j <= 5; j++) {
+          const selectedValue = document.getElementById(`artian-reinforcement-${j}`).value;
+          if (selectedValue) {
+            typeCounts[selectedValue] = (typeCounts[selectedValue] || 0) + 1;
+          }
+        }
+
+        // Update the disabled state of options in all selectors
+        for (let j = 1; j <= 5; j++) {
+          const selector = document.getElementById(`artian-reinforcement-${j}`);
+          const options = selector.options;
+          for (let k = 0; k < options.length; k++) {
+            const option = options[k];
+            const type = option.value;
+            const maxCount = reinceforcement[k]?.maximum || Infinity;
+            option.disabled = typeCounts[type] >= maxCount;
+          }
+        }
+
+        updateWeaponBaseAttributes(hunter.weapon);
+        updateAmmoData(hunter.weapon, ammoTypeSelect.value);
+        updateFinalStats();
+      });
+    }
+  }
+
+  function calculateArtianType() {
+    const count = {};
+    const result = {
+      type: "None",
+      level: 1,
+    }
+    for (let i = 1; i <= 3; i++) {
+      const artianType = document.getElementById(`artian-element-type-${i}`).value;
+      if (count[artianType]) {
+        count[artianType]++;
+      }
+      else {
+        count[artianType] = 1;
+      }
+      if (count[artianType] > 1) {
+        result.type = artianType;
+        result.level = count[artianType];
+      }
+    }
+    return result;
   }
 
   function updateAmmoTypeSelector(weapon) {
@@ -204,7 +310,6 @@ document.addEventListener("DOMContentLoaded", () => {
       appendMod("ignition", mod2);
     }
     appendMod("ignition-mod", mod2);
-
   }
 
   function appendMod(mod, selector) {
@@ -241,9 +346,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateAmmoCount(weapon, ammo) {
     const modType = ammoTypeToModAmmoType[ammo] || "";
-    const magazineMods =
+    let magazineMods =
       Array.from(mod1.options).filter(option => option.selected && option.value.includes(`${modType}-magazine`)).length +
       Array.from(mod2.options).filter(option => option.selected && option.value.includes(`${modType}-magazine`)).length;
+    for (let i = 1; i <= 5; i++) {
+      const element = document.getElementById(`artian-reinforcement-${i}`);
+      if (element.value == "ammo") {
+        magazineMods += 1;
+      }
+    }
 
     const calculatedAmmo = weapon.ammo[ammo].ammo + magazineMods;
     ammoCount.textContent = calculatedAmmo;
@@ -465,9 +576,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     hunter.finalAttack = hunter.baseAttack * hunter.attackMultiplier + hunter.attack;
-    hunter.finalAffinity = Math.max(-1, Math.min(1, hunter.baseAffinity / 100.0 + hunter.affinity));
+    hunter.finalAffinity = Math.max(-1, Math.min(1, hunter.baseAffinity + hunter.affinity));
     finalAttack.textContent = Number(hunter.finalAttack.toFixed(3));
-    finalAffinity.textContent = `${hunter.finalAffinity * 100}%`;
+    finalAffinity.textContent = `${Number((hunter.finalAffinity * 100).toFixed(3))}%`;
 
     if (hunter.ammo.baseElemental > 0) {
       elementalType.textContent = data.translation[currentLanguage]?.[`elemental-${hunter.ammo.elementalType}`] || hunter.ammo.elementalType;
@@ -731,36 +842,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   weaponSelect.addEventListener("change", populateWeaponData);
 
+  for (let i = 1; i <= 3; i++) {
+    const element = document.getElementById(`artian-element-type-${i}`);
+    element.addEventListener("change", () => {
+      populateWeaponData();
+    });
+  }
+
+  for (let i = 1; i <= 3; i++) {
+    const element = document.getElementById(`artian-bonus-${i}`);
+    element.addEventListener("change", () => {
+      updateWeaponBaseAttributes(hunter.weapon);
+      updateFinalStats();
+    });
+  }
+
   ammoTypeSelect.addEventListener("change", (event) => {
-    const selectedWeaponType = weaponTypeSelect.value;
-    const selectedWeaponKey = weaponSelect.value;
-    const weapon = data.weapon[selectedWeaponType][selectedWeaponKey];
-    if (weapon) {
-      updateAmmoData(weapon, event.target.value);
+    if (hunter.weapon) {
+      updateAmmoData(hunter.weapon, event.target.value);
     }
   });
 
   // Update Ignition Gauge Recovery when mod2 changes
   mod1.addEventListener("change", () => {
-    const selectedWeaponType = weaponTypeSelect.value;
-    const selectedWeaponKey = weaponSelect.value;
-    const weapon = data.weapon[selectedWeaponType][selectedWeaponKey];
     const ammo = ammoTypeSelect.value;
-    if (weapon && ammo) {
-      updateWeapondata(weapon);
-      updateAmmoData(weapon, ammo);
+    if (hunter.weapon && ammo) {
+      updateWeapondata(hunter.weapon);
+      updateAmmoData(hunter.weapon, ammo);
     }
   });
 
   // Update Ammo Count when mod2 changes
   mod2.addEventListener("change", () => {
-    const selectedWeaponType = weaponTypeSelect.value;
-    const selectedWeaponKey = weaponSelect.value;
-    const weapon = data.weapon[selectedWeaponType][selectedWeaponKey];
     const ammo = ammoTypeSelect.value;
-    if (weapon && ammo) {
-      updateWeapondata(weapon);
-      updateAmmoData(weapon, ammo);
+    if (hunter.weapon && ammo) {
+      updateWeapondata(hunter.weapon);
+      updateAmmoData(hunter.weapon, ammo);
     }
   });
 
@@ -776,7 +893,8 @@ document.addEventListener("DOMContentLoaded", () => {
       enhancement: {},
       reload: "reload",
     },
-    skills: {}
+    skills: {},
+    weapon: null
   };
   window.hunter = hunter;
 });
