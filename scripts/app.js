@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultAverageAffinity = document.getElementById("result-average-affinity");
   const resultPhysicalPercentage = document.getElementById("result-physical-percentage");
   const resultElementalPercentage = document.getElementById("result-elemental-percentage");
+  const resultAverageElementalMultiplier = document.getElementById("result-average-elemental-multiplier");
+  const resultAverageElementalAdditive = document.getElementById("result-average-elemental-additive");
   const elementalHitZoneValue = document.getElementById("elemental-hitzone-value");
 
   const files = [
@@ -1059,6 +1061,8 @@ document.addEventListener("DOMContentLoaded", () => {
     hunter.dps = 0;
     hunter.physicalPercentage = 0;
     hunter.elementalPercentage = 0;
+    hunter.averageElementalMultiplier = 0;
+    hunter.averageElementalAdditive = 0;
     logBox.innerHTML = "";
     goThroughTrigger(0, 1);
 
@@ -1067,18 +1071,30 @@ document.addEventListener("DOMContentLoaded", () => {
     resultAverageAffinity.textContent = `${Number((hunter.averageAffinity * 100).toFixed(3))}%`;
     resultPhysicalPercentage.textContent = `${Number((hunter.physicalPercentage * 100).toFixed(3))}%`;
     resultElementalPercentage.textContent = `${Number((hunter.elementalPercentage * 100).toFixed(3))}%`;
+    resultAverageElementalMultiplier.textContent = Number(hunter.averageElementalMultiplier.toFixed(3));
+    resultAverageElementalAdditive.textContent = Number(hunter.averageElementalAdditive.toFixed(3));
   }
 
   function goThroughTrigger(index, percentage) {
     if (index == hunter.trigger.length) {
       logBox.innerHTML += " ".repeat(hunter.trigger.length) + `Calculating DPS. Coverage: ${percentage}\n`;
 
-      const { dps: dps, physicalPercentage: physicalPercentage, elementalPercentage: elementalPercentage } = calculateDPS();
-      hunter.averageAttack += hunter.finalAttack * percentage;
-      hunter.averageAffinity += hunter.finalAffinity * percentage;
+      const {
+        dps: dps,
+        physicalPercentage: physicalPercentage,
+        elementalPercentage: elementalPercentage,
+        averageAttack: averageAttack,
+        averageAffinity: averageAffinity,
+        averageElementalMultiplier: averageElementalMultiplier,
+        averageElementalAdditive: averageElementalAdditive,
+      } = calculateDPS();
       hunter.dps += dps * percentage;
       hunter.physicalPercentage += physicalPercentage * percentage;
       hunter.elementalPercentage += elementalPercentage * percentage;
+      hunter.averageAttack += averageAttack * percentage;
+      hunter.averageAffinity += averageAffinity * percentage;
+      hunter.averageElementalMultiplier += averageElementalMultiplier * percentage;
+      hunter.averageElementalAdditive += averageElementalAdditive * percentage;
 
       return;
     }
@@ -1126,22 +1142,33 @@ document.addEventListener("DOMContentLoaded", () => {
     let totalDamage = 0;
     let totalPhysicalDamage = 0;
     let totalElementalDamage = 0;
+    let averageAttack = 0;
+    let averageAffinity = 0;
+    let averageElementalMultiplier = 0;
+    let averageElementalAdditive = 0;
     for (let bullet = 1; bullet <= hunter.ammo.ammo; bullet++) {
       const physicalAttack =
         hunter.finalAttack +
         (bullet == 1 ? hunter.attackOpening : 0) +
         ((bullet == 4 || bullet == 6) ? hunter.attackTetrad : 0);
+      averageAttack += physicalAttack;
+
       const affinity = Math.min(100,
         hunter.finalAffinity +
         (hunter.status.recovered ? 0.15 : 0) +
         (bullet >= 4 ? hunter.affinityTetrad : 0)
       );
+      averageAffinity += affinity;
+
       const elementalMultiplier =
         hunter.elementalMultiplier *
         hunter[`${hunter.ammo.elementalType}Multiplier`] *
         (bullet == 1 ? hunter.elementalMultiplierOpening : 1) *
         (bullet == 4 || bullet == 6 ? hunter.elementalMultiplierTetrad : 1);
-      const elementalAddition = hunter[`${hunter.ammo.elementalType}`];
+      averageElementalMultiplier += elementalMultiplier;
+
+      const elementalAdditive = hunter[`${hunter.ammo.elementalType}`];
+      averageElementalAdditive += elementalAdditive;
 
       let physicalDamage = 0;
       let elementalDamage = 0;
@@ -1157,7 +1184,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (hunter.ammo.elementalType != "") {
           elementalDamage += (
-            (hunter.finalAttack / 100 * hunter.ammo.baseElemental / 10 * elementalMultiplier + elementalAddition) * elementalHitZoneValue.value / 100 *
+            (hunter.finalAttack / 100 * hunter.ammo.baseElemental / 10 * elementalMultiplier + elementalAdditive) * elementalHitZoneValue.value / 100 *
             (1 + affinity * (hunter.elementalCriticalDamage - 1)) *
             hunter.finalDamageMultiplier
           ).toFixed(2) * damageInfo.hit;
@@ -1171,7 +1198,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const dps = totalDamage / hunter.cycleTime;
     logBox.innerHTML += " ".repeat(hunter.trigger.length + 1) + `DPS: ${dps}\n`;
-    return { dps: dps, physicalPercentage: totalPhysicalDamage / totalDamage, elementalPercentage: totalElementalDamage / totalDamage };
+    return {
+      dps: dps,
+      physicalPercentage: totalPhysicalDamage / totalDamage,
+      elementalPercentage: totalElementalDamage / totalDamage,
+      averageAttack: averageAttack / hunter.ammo.ammo,
+      averageAffinity: averageAffinity / hunter.ammo.ammo,
+      averageElementalMultiplier: averageElementalMultiplier / hunter.ammo.ammo,
+      averageElementalAdditive: averageElementalAdditive / hunter.ammo.ammo,
+    };
   }
 
 
