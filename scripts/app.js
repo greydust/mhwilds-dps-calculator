@@ -1146,10 +1146,12 @@ document.addEventListener("DOMContentLoaded", () => {
           (1 + affinity * (hunter.criticalDamage - 1))
         ).toFixed(2) * damageInfo.hit;
 
-        elementalDamage += (
-          (hunter.finalAttack / 100 * hunter.ammo.baseElemental / 10 * elementalMultiplier + elementalAddition) * elementalHitZoneValue.value / 100 *
-          (1 + affinity * (hunter.elementalCriticalDamage - 1))
-        ).toFixed(2) * damageInfo.hit;
+        if (hunter.ammo.elementalType != "") {
+          elementalDamage += (
+            (hunter.finalAttack / 100 * hunter.ammo.baseElemental / 10 * elementalMultiplier + elementalAddition) * elementalHitZoneValue.value / 100 *
+            (1 + affinity * (hunter.elementalCriticalDamage - 1))
+          ).toFixed(2) * damageInfo.hit;
+        }
       }
 
       totalDamage += physicalDamage + elementalDamage;
