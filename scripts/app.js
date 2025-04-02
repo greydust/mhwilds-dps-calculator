@@ -21,6 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const cycleTime = document.getElementById("cycle-time");
   const shotsPerSecond = document.getElementById("shots-per-second");
   const artian = document.getElementById("artian");
+  const logBox = document.getElementById("log-box");
+  const resultDPS = document.getElementById("result-dps");
+  const resultAverageAttack = document.getElementById("result-average-attack");
+  const resultAverageAffinity = document.getElementById("result-average-affinity");
+  const resultPhysicalPercentage = document.getElementById("result-physical-percentage");
+  const resultElementalPercentage = document.getElementById("result-elemental-percentage");
+  const elementalHitZoneValue = document.getElementById("elemental-hitzone-value");
 
   const files = [
     "assets/data/action.json",
@@ -79,6 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
       populateSkill(skillData, skill, document.getElementById(`${skill}-skill`));
     });
     populateBuff();
+
+    populateFieldsFromURL();
 
     updateFinalStats();
   }
@@ -330,6 +339,8 @@ document.addEventListener("DOMContentLoaded", () => {
     updateAmmoLevel(weapon, ammo);
     updateAmmoCount(weapon, ammo);
     updateAmmoElemental(ammo);
+    hunter.ammo.damage = data.action.hbg.ammo[ammo].damage[hunter.ammo.level - 1];
+
     updateFinalStats();
   }
 
@@ -349,10 +360,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let magazineMods =
       Array.from(mod1.options).filter(option => option.selected && option.value.includes(`${modType}-magazine`)).length +
       Array.from(mod2.options).filter(option => option.selected && option.value.includes(`${modType}-magazine`)).length;
-    for (let i = 1; i <= 5; i++) {
-      const element = document.getElementById(`artian-reinforcement-${i}`);
-      if (element.value == "ammo") {
-        magazineMods += 1;
+    if (weapon.artian) {
+      for (let i = 1; i <= 5; i++) {
+        const element = document.getElementById(`artian-reinforcement-${i}`);
+        if (element.value == "ammo") {
+          magazineMods += 1;
+        }
       }
     }
 
@@ -511,6 +524,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function populateFieldsFromURL() {
+    const params = new URLSearchParams(window.location.search);
+
+    params.forEach((value, key) => {
+      const element = document.getElementById(key);
+      if (element) {
+        element.value = value;
+
+        // Trigger change events for select elements to ensure dependent updates
+        if (element.tagName === "SELECT") {
+          element.dispatchEvent(new Event("change"));
+        }
+      }
+    });
+  }
+
   function updateFinalStats() {
     resetHunterStat();
 
@@ -527,17 +556,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (level == 0 && triggerElement) {
           removeTriggerElement(triggerElement, triggerRow);
-        } else if (level > 0 && !triggerElement) {
-          hunter.trigger.push(triggerKey);
+        } else if (level > 0) {
+          hunter.trigger.push({ key: triggerKey, level: level });
+          if (!triggerElement) {
+            triggerRow.classList.remove("hidden"); // Show the row when adding elements
+            createTriggerElement(triggerRow, triggerKey, `skill-${triggerKey}`, triggerKey, skill.triggerLevel, skill.defaultCoverage);
+          }
+        }
+      }
 
-          triggerRow.classList.remove("hidden"); // Show the row when adding elements
-          createTriggerElement(triggerRow, triggerKey, `skill-${triggerKey}`, triggerKey, skill.triggerLevel, skill.defaultCoverage);
-        }
-      } else {
-        if (level > 0) {
-          const effect = skill.effect[level - 1];
-          updateEffect(effect);
-        }
+      if (level > 0) {
+        const effect = skill.effect[level - 1];
+        applyEffect(effect);
       }
     });
 
@@ -560,7 +590,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const buffOption = buff.options[option - 1];
       if (buffOption.trigger) {
-        hunter.trigger.push(triggerKey);
+        hunter.trigger.push({ key: triggerKey, level: option });
 
         if (triggerElement && previousOption == option) return;
 
@@ -570,22 +600,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         triggerRow.classList.remove("hidden"); // Show the row when adding elements
         createTriggerElement(triggerRow, triggerKey, `buff-${key}-${option}`, `${key}-${option}`, buffOption.triggerLevel, buffOption.defaultCoverage);
-      } else {
-        updateEffect(buffOption.effect);
       }
+
+      applyEffect(buffOption.effect);
     });
 
-    hunter.finalAttack = hunter.baseAttack * hunter.attackMultiplier + hunter.attack;
-    hunter.finalAffinity = Math.max(-1, Math.min(1, hunter.baseAffinity + hunter.affinity));
+    calculateHunterFinalStats();
     finalAttack.textContent = Number(hunter.finalAttack.toFixed(3));
     finalAffinity.textContent = `${Number((hunter.finalAffinity * 100).toFixed(3))}%`;
-
     if (hunter.ammo.baseElemental > 0) {
       elementalType.textContent = data.translation[currentLanguage]?.[`elemental-${hunter.ammo.elementalType}`] || hunter.ammo.elementalType;
       elementalType.setAttribute("data-lang", `elemental-${hunter.ammo.elementalType}`);
-
-      hunter.ammo.finalElemental = hunter.ammo.baseElemental * hunter.elementalMultiplier * hunter[`${hunter.ammo.elementalType}Multiplier`] + hunter[`${hunter.ammo.elementalType}`];
-      elementalAttack.textContent = Number(hunter.ammo.finalElemental.toFixed(3));
+      elementalAttack.textContent = Number(hunter.ammo.baseElemental.toFixed(3));
     } else {
       elementalType.textContent = "";
       elementalType.setAttribute("data-lang", "");
@@ -593,6 +619,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     calculateCycleTime();
+  }
+
+  function calculateHunterFinalStats() {
+    hunter.finalAttack = hunter.baseAttack * hunter.attackMultiplier + hunter.attack;
+    hunter.finalAffinity = Math.max(-1, Math.min(1, hunter.baseAffinity + hunter.affinity));
+    hunter.elementalCriticalDamage = hunter[`elementalCriticalDamage-${weaponTypeSelect.value}`];
   }
 
   function removeTriggerElement(element, row) {
@@ -634,13 +666,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const percentageInput = document.createElement("input");
 
       input.type = "range";
-      input.id = `trigger-${key}-coverage${i}`;
+      input.id = `trigger-${key}-coverage-${i}`;
       input.min = 0;
       input.max = 100;
       input.value = defaultCoverage[i] * 100 || 0;
       input.addEventListener("input", (event) => {
-        const min = i < triggerLevel - 1 ? document.getElementById(`trigger-${key}-coverage${i + 1}`).value : 0;
-        const max = i > 0 ? document.getElementById(`trigger-${key}-coverage${i - 1}`).value : 100;
+        const min = i < triggerLevel - 1 ? document.getElementById(`trigger-${key}-coverage-${i + 1}`).value : 0;
+        const max = i > 0 ? document.getElementById(`trigger-${key}-coverage-${i - 1}`).value : 100;
         const value = Math.max(min, Math.min(max, event.target.value));
         event.target.value = value;
         percentageDisplay.textContent = `${value}%`;
@@ -685,8 +717,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       function validatePercentageInput() {
-        const min = i < triggerLevel - 1 ? document.getElementById(`trigger-${key}-coverage${i + 1}`).value : 0;
-        const max = i > 0 ? document.getElementById(`trigger-${key}-coverage${i - 1}`).value : 100;
+        const min = i < triggerLevel - 1 ? document.getElementById(`trigger-${key}-coverage-${i + 1}`).value : 0;
+        const max = i > 0 ? document.getElementById(`trigger-${key}-coverage-${i - 1}`).value : 100;
         const value = Math.max(min, Math.min(max, percentageInput.value));
         percentageInput.value = value;
         input.value = value;
@@ -708,7 +740,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function updateEffect(effect) {
+  function applyEffect(effect) {
     Object.entries(effect).forEach(([key, value]) => {
       switch (key) {
         case "attack":
@@ -720,11 +752,14 @@ document.addEventListener("DOMContentLoaded", () => {
         case "affinity":
           hunter.affinity += value;
           break;
+        case "affinityRecovered":
+          hunter.affinityRecovered += value;
+          break;
         case "criticalDamage":
           hunter.criticalDamage += value;
           break;
-        case "elementalCriticalDamageHBG":
-          hunter.elementalCriticalDamage += value;
+        case "elementalCriticalDamage-hbg":
+          hunter["elementalCriticalDamage-hbg"] += value;
           break;
         case "fire":
           hunter.fire += value;
@@ -765,6 +800,15 @@ document.addEventListener("DOMContentLoaded", () => {
         case "elementalMultiplierOpening":
           hunter.elementalMultiplierOpening *= value;
           break;
+        case "attackTetrad":
+          hunter.attackTetrad += value;
+          break;
+        case "affinityTetrad":
+          hunter.affinityTetrad += value;
+          break;
+        case "elementalMultiplierTetrad":
+          hunter.elementalMultiplierTetrad *= value;
+          break;
         case "reload":
           hunter.ammo.reload = value;
           break;
@@ -780,8 +824,105 @@ document.addEventListener("DOMContentLoaded", () => {
         case "specialAmmoDamageMultiplier":
           hunter.specialAmmoDamageMultiplier *= value;
           break;
-        case "burstAttack":
-          hunter.burstAttack = value;
+        case "status":
+          hunter.status[value] = true;
+          break;
+        default:
+          console.error(`Unknown effect key: ${key}`);
+          break;
+      }
+    });
+  }
+
+  function removeEffect(effect) {
+    Object.entries(effect).forEach(([key, value]) => {
+      switch (key) {
+        case "attack":
+          hunter.attack -= value;
+          break;
+        case "attackMultiplier":
+          hunter.attackMultiplier /= value;
+          break;
+        case "affinity":
+          hunter.affinity -= value;
+          break;
+        case "affinityRecovered":
+          hunter.affinityRecovered -= value;
+          break;
+        case "criticalDamage":
+          hunter.criticalDamage -= value;
+          break;
+        case "elementalCriticalDamage-hbg":
+          hunter["elementalCriticalDamage-hbg"] -= value;
+          break;
+        case "fire":
+          hunter.fire -= value;
+          break;
+        case "fireMultiplier":
+          hunter.fireMultiplier /= value;
+          break;
+        case "water":
+          hunter.water -= value;
+          break;
+        case "waterMultiplier":
+          hunter.waterMultiplier /= value;
+          break;
+        case "thunder":
+          hunter.thunder -= value;
+          break;
+        case "thunderMultiplier":
+          hunter.thunderMultiplier /= value;
+          break;
+        case "ice":
+          hunter.ice -= value;
+          break;
+        case "iceMultiplier":
+          hunter.iceMultiplier /= value;
+          break;
+        case "dragon":
+          hunter.dragon -= value;
+          break;
+        case "dragonMultiplier":
+          hunter.dragonMultiplier /= value;
+          break;
+        case "elementalMultiplier":
+          hunter.elementalMultiplier /= value;
+          break;
+        case "attackOpening":
+          hunter.attackOpening -= value;
+          break;
+        case "elementalMultiplierOpening":
+          hunter.elementalMultiplierOpening /= value;
+          break;
+        case "attackTetrad":
+          hunter.attackTetrad -= value;
+          break;
+        case "affinityTetrad":
+          hunter.affinityTetrad -= value;
+          break;
+        case "elementalMultiplierTetrad":
+          hunter.elementalMultiplierTetrad /= value;
+          break;
+        case "reload":
+          hunter.ammo.reload = "reload";
+          break;
+        case "normalDamageMultiplier":
+          hunter.normalDamageMultiplier /= value;
+          break;
+        case "pierceDamageMultiplier":
+          hunter.pierceDamageMultiplier /= value;
+          break;
+        case "spreadDamageMultiplier":
+          hunter.spreadDamageMultiplier /= value;
+          break;
+        case "specialAmmoDamageMultiplier":
+          hunter.specialAmmoDamageMultiplier /= value;
+          break;
+        case "status":
+          delete hunter.status[value];
+          break;
+        default:
+          console.error(`Unknown effect key: ${key}`);
           break;
       }
     });
@@ -791,8 +932,10 @@ document.addEventListener("DOMContentLoaded", () => {
     hunter.attack = 0;
     hunter.attackMultiplier = 1;
     hunter.affinity = 0;
+    hunter.affinityRecovered = 0;
     hunter.criticalDamage = 1.25;
     hunter.elementalCriticalDamage = 1;
+    hunter["elementalCriticalDamage-hbg"] = 1;
     hunter.fire = 0;
     hunter.fireMultiplier = 1;
     hunter.water = 0;
@@ -806,13 +949,16 @@ document.addEventListener("DOMContentLoaded", () => {
     hunter.elementalMultiplier = 1;
     hunter.attackOpening = 0;
     hunter.elementalMultiplierOpening = 1;
+    hunter.attackTetrad = 0;
+    hunter.affinityTetrad = 0;
+    hunter.elementalMultiplierTetrad = 1;
     hunter.ammo.reload = "reload";
     hunter.normalDamageMultiplier = 1;
     hunter.pierceDamageMultiplier = 1;
     hunter.spreadDamageMultiplier = 1;
     hunter.specialAmmoDamageMultiplier = 1;
-    hunter.burstAttack = 0;
     hunter.trigger = [];
+    hunter.status = {};
   }
 
   function calculateCycleTime() {
@@ -882,8 +1028,153 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("calculate-button").addEventListener("click", calculate);
+  document.getElementById("reset-button").addEventListener("click", reset);
+
 
   function calculate() {
+    const params = new URLSearchParams();
+
+    // Include the current language in the URL
+    params.set("lang", currentLanguage);
+
+    document.querySelectorAll("input, select").forEach((element) => {
+      if (element.id) {
+        params.set(element.id, element.value);
+      }
+    });
+
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState({}, "", newUrl);
+
+    hunter.averageAttack = 0;
+    hunter.averageAffinity = 0;
+    hunter.dps = 0;
+    hunter.physicalPercentage = 0;
+    hunter.elementalPercentage = 0;
+    logBox.innerHTML = "";
+    goThroughTrigger(0, 1);
+
+    resultDPS.textContent = Number(hunter.dps.toFixed(3));
+    resultAverageAttack.textContent = Number(hunter.averageAttack.toFixed(3));
+    resultAverageAffinity.textContent = `${Number((hunter.averageAffinity * 100).toFixed(3))}%`;
+    resultPhysicalPercentage.textContent = `${Number((hunter.physicalPercentage * 100).toFixed(3))}%`;
+    resultElementalPercentage.textContent = `${Number((hunter.elementalPercentage * 100).toFixed(3))}%`;
+  }
+
+  function goThroughTrigger(index, percentage) {
+    if (index == hunter.trigger.length) {
+      logBox.innerHTML += " ".repeat(hunter.trigger.length) + `Calculating DPS. Coverage: ${percentage}\n`;
+
+      const { dps: dps, physicalPercentage: physicalPercentage, elementalPercentage: elementalPercentage } = calculateDPS();
+      hunter.averageAttack += hunter.finalAttack * percentage;
+      hunter.averageAffinity += hunter.finalAffinity * percentage;
+      hunter.dps += dps * percentage;
+      hunter.physicalPercentage += physicalPercentage * percentage;
+      hunter.elementalPercentage += elementalPercentage * percentage;
+
+      return;
+    }
+
+    let skill = null;
+    let triggerEffects = null;
+    const triggerKey = hunter.trigger[index].key;
+    const level = hunter.trigger[index].level;
+    const [category, key] = triggerKey.split("-");
+    if (category == "buff") {
+      skill = data.buff[key].options[level - 1];
+      triggerEffects = data.buff[key].options[level - 1].triggerEffect;
+    } else {
+      skill = data.skill[category][key];
+      triggerEffects = data.skill[category][key].triggerEffect[level - 1]
+    }
+
+    if (!skill) {
+      console.error(`Skill not found: ${hunter.trigger[index].key}`);
+      return;
+    }
+
+    let totalCoverage = 0;
+    for (let i = skill.triggerLevel; i > 0; i--) {
+      const coverage = document.getElementById(`trigger-${triggerKey}-coverage-${i - 1}`).value / 100.0;
+      const realCoverage = coverage - totalCoverage;
+      totalCoverage = coverage;
+      logBox.innerHTML += " ".repeat(index) + `Trigger ${hunter.trigger[index].key} - ${i}, level/option ${level}: ${realCoverage * 100}%\n`;
+      const triggerEffect = triggerEffects[i - 1];
+      applyEffect(triggerEffect);
+
+      goThroughTrigger(index + 1, realCoverage * percentage);
+
+      removeEffect(triggerEffect);
+    }
+
+    logBox.innerHTML += " ".repeat(index) + `Trigger ${hunter.trigger[index].key} - 0, level/option ${level}: ${(1 - totalCoverage) * 100}%\n`;
+    goThroughTrigger(index + 1, (1 - totalCoverage) * percentage);
+  }
+
+  function calculateDPS() {
+    calculateHunterFinalStats();
+    logBox.innerHTML += " ".repeat(hunter.trigger.length + 1) + `Attack: ${hunter.finalAttack}, Elemental attack: ${hunter.ammo.baseElemental}, Affinity: ${hunter.finalAffinity}\n`;
+
+    let totalDamage = 0;
+    let totalPhysicalDamage = 0;
+    let totalElementalDamage = 0;
+    for (let bullet = 1; bullet <= hunter.ammo.ammo; bullet++) {
+      const physicalAttack =
+        hunter.finalAttack +
+        (bullet == 1 ? hunter.attackOpening : 0) +
+        ((bullet == 4 || bullet == 6) ? hunter.attackTetrad : 0);
+      const affinity = Math.min(100,
+        hunter.finalAffinity +
+        (hunter.status.recovered ? 0.15 : 0) +
+        (bullet >= 4 ? hunter.affinityTetrad : 0)
+      );
+      const elementalMultiplier =
+        hunter.elementalMultiplier *
+        hunter[`${hunter.ammo.elementalType}Multiplier`] *
+        (bullet == 1 ? hunter.elementalMultiplierOpening : 1) *
+        (bullet == 4 || bullet == 6 ? hunter.elementalMultiplierTetrad : 1);
+      const elementalAddition = hunter[`${hunter.ammo.elementalType}`];
+
+      let physicalDamage = 0;
+      let elementalDamage = 0;
+
+      for (let hit = 0; hit < hunter.ammo.damage.length; hit++) {
+        const damageInfo = hunter.ammo.damage[hit];
+
+        physicalDamage += (
+          damageInfo.value / 100 * physicalAttack * document.getElementById(`${damageInfo.type}-hitzone-value`).value / 100 *
+          (1 + affinity * (hunter.criticalDamage - 1))
+        ).toFixed(2) * damageInfo.hit;
+
+        elementalDamage += (
+          (hunter.finalAttack / 100 * hunter.ammo.baseElemental / 10 * elementalMultiplier + elementalAddition) * elementalHitZoneValue.value / 100 *
+          (1 + affinity * (hunter.elementalCriticalDamage - 1))
+        ).toFixed(2) * damageInfo.hit;
+      }
+
+      totalDamage += physicalDamage + elementalDamage;
+      totalPhysicalDamage += physicalDamage;
+      totalElementalDamage += elementalDamage;
+    }
+
+    const dps = totalDamage / hunter.cycleTime;
+    logBox.innerHTML += " ".repeat(hunter.trigger.length + 1) + `DPS: ${dps}\n`;
+    return { dps: dps, physicalPercentage: totalPhysicalDamage / totalDamage, elementalPercentage: totalElementalDamage / totalDamage };
+  }
+
+
+  function reset() {
+    const params = new URLSearchParams();
+
+    // Only include the current language in the URL
+    params.set("lang", currentLanguage);
+
+    // Update the URL
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState({}, "", newUrl);
+
+    // Reload the page to reset all fields
+    window.location.reload();
   }
 
   const hunter = {

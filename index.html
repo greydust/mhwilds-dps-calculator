@@ -262,26 +262,31 @@
   </div>
 
   <button id="calculate-button" data-lang="calculate-button">Calculate</button>
+  <button id="reset-button" data-lang="reset-button">Reset</button>
   <div class="stats-box">
     <h2 data-lang="result-header">Result</h2>
+    <div class="stat-row">
+      <div class="stat-group">
+        <label data-lang="result-dps-label">DPS:</label>
+        <span id="result-dps">-</span>
+      </div>
+    </div>
     <div class="stat-row">
       <div class="stat-group">
         <label data-lang="result-average-attack-label">Average Attack:</label>
         <span id="result-average-attack">-</span>
       </div>
       <div class="stat-group">
-        <label data-lang="result-average-elemental-attack-label">Average Elemental Attack:</label>
-        <span id="result-average-elemental-attack">-</span>
-      </div>
-      <div class="stat-group">
         <label data-lang="result-average-affinity-label">Average Affinity:</label>
         <span id="result-average-affinity">-</span>
       </div>
-    </div>
-    <div class="stat-row">
       <div class="stat-group">
-        <label data-lang="result-dps-label">DPS:</label>
-        <span id="result-dps">-</span>
+        <label data-lang="result-physical-percentage-label">Physical %:</label>
+        <span id="result-physical-percentage">-</span>
+      </div>
+      <div class="stat-group">
+        <label data-lang="result-elemental-percentage-label">Elemental %:</label>
+        <span id="result-elemental-percentage">-</span>
       </div>
     </div>
     <details>

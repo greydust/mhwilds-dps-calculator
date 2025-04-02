@@ -2,7 +2,7 @@
     "Adaptability": {
         "name": {
             "en": "Adaptability",
-            "zh": ""
+            "zh": "適應環境"
         },
         "maxLevel": 2,
         "effect": [
@@ -15,7 +15,7 @@
     "Adrenaline Rush": {
         "name": {
             "en": "Adrenaline Rush",
-            "zh": ""
+            "zh": "巧擊"
         },
         "maxLevel": 5,
         "effect": [
@@ -41,38 +41,65 @@
     "Agitator": {
         "name": {
             "en": "Agitator",
-            "zh": ""
+            "zh": "挑戰者"
         },
         "maxLevel": 5,
         "effect": [
-            {
-                "attack": 4,
-                "affinity": 0.03
-            },
-            {
-                "attack": 8,
-                "affinity": 0.05
-            },
-            {
-                "attack": 12,
-                "affinity": 0.07
-            },
-            {
-                "attack": 16,
-                "affinity": 0.1
-            },
-            {
-                "attack": 20,
-                "affinity": 0.15
-            }
+            {},
+            {},
+            {},
+            {},
+            {}
         ],
         "trigger": true,
-        "show": false
+        "triggerLevel": 1,
+        "triggerName": [
+            {
+                "en": "On",
+                "zh": "發動"
+            }
+        ],
+        "triggerEffect": [
+            [
+                {
+                    "attack": 4,
+                    "affinity": 0.03
+                }
+            ],
+            [
+                {
+                    "attack": 8,
+                    "affinity": 0.05
+                }
+            ],
+            [
+                {
+                    "attack": 12,
+                    "affinity": 0.07
+                }
+            ],
+            [
+                {
+                    "attack": 16,
+                    "affinity": 0.1
+                }
+            ],
+            [
+                {
+                    "attack": 20,
+                    "affinity": 0.15
+                }
+            ]
+        ],
+        "defaultCoverage": [
+            0.6
+        ],
+        "show": true
     },
     "Ambush": {
         "name": {
             "en": "Ambush",
-            "zh": ""
+            "zh": "急襲"
         },
         "maxLevel": 3,
         "effect": [
@@ -92,7 +119,7 @@
     "Antivirus": {
         "name": {
             "en": "Antivirus",
-            "zh": ""
+            "zh": "無我境界"
         },
         "maxLevel": 3,
         "effect": [
@@ -113,7 +140,7 @@
     "Aquatic/Oilsilt Mobility": {
         "name": {
             "en": "Aquatic/Oilsilt Mobility",
-            "zh": ""
+            "zh": "適應水域/油泥"
         },
         "maxLevel": 2,
         "effect": [
@@ -126,7 +153,7 @@
     "Blight Resistance": {
         "name": {
             "en": "Blight Resistance",
-            "zh": ""
+            "zh": "屬性異常耐性"
         },
         "maxLevel": 3,
         "effect": [
@@ -140,7 +167,7 @@
     "Blast Resistance": {
         "name": {
             "en": "Blast Resistance",
-            "zh": ""
+            "zh": "爆破異常耐性"
         },
         "maxLevel": 3,
         "effect": [
@@ -154,7 +181,7 @@
     "Bleeding Resistance": {
         "name": {
             "en": "Bleeding Resistance",
-            "zh": ""
+            "zh": "裂傷耐性"
         },
         "maxLevel": 3,
         "effect": [
@@ -168,7 +195,7 @@
     "Blindsider": {
         "name": {
             "en": "Blindsider",
-            "zh": ""
+            "zh": "閃光強化"
         },
         "maxLevel": 1,
         "effect": [
@@ -180,7 +207,7 @@
     "Bombardier": {
         "name": {
             "en": "Bombardier",
-            "zh": ""
+            "zh": "炸彈客"
         },
         "maxLevel": 0,
         "effect": []
@@ -188,7 +215,7 @@
     "Botanist": {
         "name": {
             "en": "Botanist",
-            "zh": ""
+            "zh": "植生學"
         },
         "maxLevel": 3,
         "effect": [
@@ -202,30 +229,15 @@
     "Burst": {
         "name": {
             "en": "Burst",
-            "zh": ""
+            "zh": "連擊"
         },
         "maxLevel": 5,
         "effect": [
-            {
-                "attackHBG": 5,
-                "attack2HBG": 6
-            },
-            {
-                "attackHBG": 5,
-                "attack2HBG": 7
-            },
-            {
-                "attackHBG": 5,
-                "attack2HBG": 8
-            },
-            {
-                "attackHBG": 5,
-                "attack2HBG": 9
-            },
-            {
-                "attackHBG": 5,
-                "attack2HBG": 10
-            }
+            {},
+            {},
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 2,
@@ -239,6 +251,48 @@
                 "zh": "二段"
             }
         ],
+        "triggerEffect": [
+            [
+                {
+                    "attack": 5
+                },
+                {
+                    "attack": 6
+                }
+            ],
+            [
+                {
+                    "attack": 5
+                },
+                {
+                    "attack": 7
+                }
+            ],
+            [
+                {
+                    "attack": 5
+                },
+                {
+                    "attack": 8
+                }
+            ],
+            [
+                {
+                    "attack": 5
+                },
+                {
+                    "attack": 9
+                }
+            ],
+            [
+                {
+                    "attack": 5
+                },
+                {
+                    "attack": 10
+                }
+            ]
+        ],
         "defaultCoverage": [
             0.99,
             0.7
@@ -249,7 +303,7 @@
     "Cliffhanger": {
         "name": {
             "en": "Cliffhanger",
-            "zh": ""
+            "zh": "攀岩者"
         },
         "maxLevel": 1,
         "effect": [
@@ -261,19 +315,13 @@
     "Coalescence": {
         "name": {
             "en": "Coalescence",
-            "zh": ""
+            "zh": "轉禍為福"
         },
         "maxLevel": 3,
         "effect": [
-            {
-                "elementalMultiplier": 1.1
-            },
-            {
-                "elementalMultiplier": 1.2
-            },
-            {
-                "elementalMultiplier": 1.3
-            }
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -282,6 +330,23 @@
                 "en": "On",
                 "zh": "發動"
             }
+        ],
+        "triggerEffect": [
+            [
+                {
+                    "elementalMultiplier": 1.1
+                }
+            ],
+            [
+                {
+                    "elementalMultiplier": 1.2
+                }
+            ],
+            [
+                {
+                    "elementalMultiplier": 1.3
+                }
+            ]
         ],
         "defaultCoverage": [
             0.45
@@ -292,7 +357,7 @@
     "Constitution": {
         "name": {
             "en": "Constitution",
-            "zh": ""
+            "zh": "體術"
         },
         "maxLevel": 5,
         "effect": [
@@ -308,19 +373,13 @@
     "Convert Element": {
         "name": {
             "en": "Convert Element",
-            "zh": ""
+            "zh": "屬性轉換"
         },
         "maxLevel": 3,
         "effect": [
-            {
-                "dragonAttack": 80
-            },
-            {
-                "dragonAttack": 120
-            },
-            {
-                "dragonAttack": 180
-            }
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -329,6 +388,23 @@
                 "en": "On",
                 "zh": "發動"
             }
+        ],
+        "triggerEffect": [
+            [
+                {
+                    "dragonAttack": 80
+                }
+            ],
+            [
+                {
+                    "dragonAttack": 120
+                }
+            ],
+            [
+                {
+                    "dragonAttack": 180
+                }
+            ]
         ],
         "defaultCoverage": [
             0.2
@@ -339,7 +415,7 @@
     "Counterstrike": {
         "name": {
             "en": "Counterstrike",
-            "zh": ""
+            "zh": "逆襲"
         },
         "maxLevel": 3,
         "effect": [
@@ -359,7 +435,7 @@
     "Defense Boost": {
         "name": {
             "en": "Defense Boost",
-            "zh": ""
+            "zh": "防禦"
         },
         "maxLevel": 7,
         "effect": [
@@ -377,7 +453,7 @@
     "Divine Blessing": {
         "name": {
             "en": "Divine Blessing",
-            "zh": ""
+            "zh": "精靈加護"
         },
         "maxLevel": 3,
         "effect": [
@@ -391,7 +467,7 @@
     "Earplugs": {
         "name": {
             "en": "Earplugs",
-            "zh": ""
+            "zh": "耳塞"
         },
         "maxLevel": 3,
         "effect": [
@@ -405,7 +481,7 @@
     "Elemental Absorption": {
         "name": {
             "en": "Elemental Absorption",
-            "zh": ""
+            "zh": "屬性吸收"
         },
         "maxLevel": 3,
         "effect": [
@@ -419,7 +495,7 @@
     "Entomologist": {
         "name": {
             "en": "Entomologist",
-            "zh": ""
+            "zh": "昆蟲標本達人"
         },
         "maxLevel": 1,
         "effect": [
@@ -431,7 +507,7 @@
     "Evade Extender": {
         "name": {
             "en": "Evade Extender",
-            "zh": ""
+            "zh": "迴避距離上升"
         },
         "maxLevel": 3,
         "effect": [
@@ -445,7 +521,7 @@
     "Evade Window": {
         "name": {
             "en": "Evade Window",
-            "zh": ""
+            "zh": "迴避性能"
         },
         "maxLevel": 5,
         "effect": [
@@ -461,7 +537,7 @@
     "Fire Resistance": {
         "name": {
             "en": "Fire Resistance",
-            "zh": ""
+            "zh": "火耐性"
         },
         "maxLevel": 3,
         "effect": [
@@ -475,7 +551,7 @@
     "Flayer": {
         "name": {
             "en": "Flayer",
-            "zh": ""
+            "zh": "鎖刃刺擊"
         },
         "maxLevel": 5,
         "effect": [
@@ -491,7 +567,7 @@
     "Flinch Free": {
         "name": {
             "en": "Flinch Free",
-            "zh": ""
+            "zh": "減輕膽怯"
         },
         "maxLevel": 3,
         "effect": [
@@ -505,29 +581,15 @@
     "Foray": {
         "name": {
             "en": "Foray",
-            "zh": ""
+            "zh": "攻勢"
         },
         "maxLevel": 5,
         "effect": [
-            {
-                "attack": 6
-            },
-            {
-                "attack": 8,
-                "affinity": 0.05
-            },
-            {
-                "attack": 10,
-                "affinity": 0.1
-            },
-            {
-                "attack": 12,
-                "affinity": 0.15
-            },
-            {
-                "attack": 15,
-                "affinity": 0.2
-            }
+            {},
+            {},
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -537,6 +599,37 @@
                 "zh": "發動"
             }
         ],
+        "triggerEffect": [
+            [
+                {
+                    "attack": 6
+                }
+            ],
+            [
+                {
+                    "attack": 8,
+                    "affinity": 0.05
+                }
+            ],
+            [
+                {
+                    "attack": 10,
+                    "affinity": 0.1
+                }
+            ],
+            [
+                {
+                    "attack": 12,
+                    "affinity": 0.15
+                }
+            ],
+            [
+                {
+                    "attack": 15,
+                    "affinity": 0.2
+                }
+            ]
+        ],
         "defaultCoverage": [
             0.4
         ],
@@ -545,7 +638,7 @@
     "Free Meal": {
         "name": {
             "en": "Free Meal",
-            "zh": ""
+            "zh": "滿足感"
         },
         "maxLevel": 3,
         "effect": [
@@ -559,7 +652,7 @@
     "Geologist": {
         "name": {
             "en": "Geologist",
-            "zh": ""
+            "zh": "地質學"
         },
         "maxLevel": 3,
         "effect": [
@@ -573,23 +666,15 @@
     "Heroics": {
         "name": {
             "en": "Heroics",
-            "zh": ""
+            "zh": "火場怪力"
         },
         "maxLevel": 5,
         "effect": [
             {},
-            {
-                "attackMultiplier": 1.05
-            },
-            {
-                "attackMultiplier": 1.05
-            },
-            {
-                "attackMultiplier": 1.1
-            },
-            {
-                "attackMultiplier": 1.3
-            }
+            {},
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -598,6 +683,31 @@
                 "en": "On",
                 "zh": "發動"
             }
+        ],
+        "triggerEffect": [
+            [
+                {}
+            ],
+            [
+                {
+                    "attackMultiplier": 1.05
+                }
+            ],
+            [
+                {
+                    "attackMultiplier": 1.05
+                }
+            ],
+            [
+                {
+                    "attackMultiplier": 1.1
+                }
+            ],
+            [
+                {
+                    "attackMultiplier": 1.3
+                }
+            ]
         ],
         "defaultCoverage": [
             0.9
@@ -608,7 +718,7 @@
     "Hunger Resistance": {
         "name": {
             "en": "Hunger Resistance",
-            "zh": ""
+            "zh": "飢餓耐性"
         },
         "maxLevel": 3,
         "effect": [
@@ -622,7 +732,7 @@
     "Intimidator": {
         "name": {
             "en": "Intimidator",
-            "zh": ""
+            "zh": "威嚇"
         },
         "maxLevel": 3,
         "effect": [
@@ -636,7 +746,7 @@
     "Iron Skin": {
         "name": {
             "en": "Iron Skin",
-            "zh": ""
+            "zh": "防禦力下降耐性"
         },
         "maxLevel": 3,
         "effect": [
@@ -650,7 +760,7 @@
     "Item Prolonger": {
         "name": {
             "en": "Item Prolonger",
-            "zh": ""
+            "zh": "道具使用強化"
         },
         "maxLevel": 3,
         "effect": [
@@ -664,7 +774,7 @@
     "Jump Master": {
         "name": {
             "en": "Jump Master",
-            "zh": ""
+            "zh": "跳躍鐵人"
         },
         "maxLevel": 1,
         "effect": [
@@ -676,25 +786,15 @@
     "Latent Power": {
         "name": {
             "en": "Latent Power",
-            "zh": ""
+            "zh": "力量解放"
         },
         "maxLevel": 5,
         "effect": [
-            {
-                "affinity": 0.1
-            },
-            {
-                "affinity": 0.2
-            },
-            {
-                "affinity": 0.3
-            },
-            {
-                "affinity": 0.4
-            },
-            {
-                "affinity": 0.5
-            }
+            {},
+            {},
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -703,6 +803,33 @@
                 "en": "On",
                 "zh": "發動"
             }
+        ],
+        "triggerEffect": [
+            [
+                {
+                    "affinity": 0.1
+                }
+            ],
+            [
+                {
+                    "affinity": 0.2
+                }
+            ],
+            [
+                {
+                    "affinity": 0.3
+                }
+            ],
+            [
+                {
+                    "affinity": 0.4
+                }
+            ],
+            [
+                {
+                    "affinity": 0.5
+                }
+            ]
         ],
         "defaultCoverage": [
             0.5
@@ -713,7 +840,7 @@
     "Leap of Faith": {
         "name": {
             "en": "Leap of Faith",
-            "zh": ""
+            "zh": "飛身躍入"
         },
         "maxLevel": 1,
         "effect": [
@@ -725,7 +852,7 @@
     "Marathon Runner": {
         "name": {
             "en": "Marathon Runner",
-            "zh": ""
+            "zh": "跑者"
         },
         "maxLevel": 3,
         "effect": [
@@ -739,19 +866,13 @@
     "Maximum Might": {
         "name": {
             "en": "Maximum Might",
-            "zh": ""
+            "zh": "精神抖擻"
         },
         "maxLevel": 3,
         "effect": [
-            {
-                "affinity": 0.1
-            },
-            {
-                "affinity": 0.2
-            },
-            {
-                "affinity": 0.3
-            }
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -760,6 +881,23 @@
                 "en": "On",
                 "zh": "發動"
             }
+        ],
+        "triggerEffect": [
+            [
+                {
+                    "affinity": 0.1
+                }
+            ],
+            [
+                {
+                    "affinity": 0.2
+                }
+            ],
+            [
+                {
+                    "affinity": 0.3
+                }
+            ]
         ],
         "defaultCoverage": [
             0.9
@@ -770,7 +908,7 @@
     "Mushroomancer": {
         "name": {
             "en": "Mushroomancer",
-            "zh": ""
+            "zh": "最愛菇類"
         },
         "maxLevel": 3,
         "effect": [
@@ -784,7 +922,7 @@
     "Outdoorsman": {
         "name": {
             "en": "Outdoorsman",
-            "zh": ""
+            "zh": "獵人生活"
         },
         "maxLevel": 1,
         "effect": [
@@ -796,7 +934,7 @@
     "Palico Rally": {
         "name": {
             "en": "Palico Rally",
-            "zh": ""
+            "zh": "指示隨從"
         },
         "maxLevel": 5,
         "effect": [
@@ -812,7 +950,7 @@
     "Partbreaker": {
         "name": {
             "en": "Partbreaker",
-            "zh": ""
+            "zh": "破壞王"
         },
         "maxLevel": 3,
         "effect": [
@@ -826,25 +964,15 @@
     "Peak Performance": {
         "name": {
             "en": "Peak Performance",
-            "zh": ""
+            "zh": "無傷"
         },
         "maxLevel": 5,
         "effect": [
-            {
-                "attack": 3
-            },
-            {
-                "attack": 6
-            },
-            {
-                "attack": 10
-            },
-            {
-                "attack": 15
-            },
-            {
-                "attack": 20
-            }
+            {},
+            {},
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -853,6 +981,33 @@
                 "en": "On",
                 "zh": "發動"
             }
+        ],
+        "triggerEffect": [
+            [
+                {
+                    "attack": 3
+                }
+            ],
+            [
+                {
+                    "attack": 6
+                }
+            ],
+            [
+                {
+                    "attack": 10
+                }
+            ],
+            [
+                {
+                    "attack": 15
+                }
+            ],
+            [
+                {
+                    "attack": 20
+                }
+            ]
         ],
         "defaultCoverage": [
             0.5
@@ -863,7 +1018,7 @@
     "Poison Resistance": {
         "name": {
             "en": "Poison Resistance",
-            "zh": ""
+            "zh": "毒耐性"
         },
         "maxLevel": 3,
         "effect": [
@@ -877,7 +1032,7 @@
     "Quick Sheathe": {
         "name": {
             "en": "Quick Sheathe",
-            "zh": ""
+            "zh": "收刀術"
         },
         "maxLevel": 3,
         "effect": [
@@ -891,7 +1046,7 @@
     "Recovery Speed": {
         "name": {
             "en": "Recovery Speed",
-            "zh": ""
+            "zh": "回復速度"
         },
         "maxLevel": 3,
         "effect": [
@@ -905,7 +1060,7 @@
     "Recovery Up": {
         "name": {
             "en": "Recovery Up",
-            "zh": ""
+            "zh": "體力回復量上升"
         },
         "maxLevel": 3,
         "effect": [
@@ -919,25 +1074,15 @@
     "Resentment": {
         "name": {
             "en": "Resentment",
-            "zh": ""
+            "zh": "怨恨"
         },
         "maxLevel": 5,
         "effect": [
-            {
-                "attack": 5
-            },
-            {
-                "attack": 10
-            },
-            {
-                "attack": 15
-            },
-            {
-                "attack": 20
-            },
-            {
-                "attack": 25
-            }
+            {},
+            {},
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -946,6 +1091,33 @@
                 "en": "On",
                 "zh": "發動"
             }
+        ],
+        "triggerEffect": [
+            [
+                {
+                    "attack": 5
+                }
+            ],
+            [
+                {
+                    "attack": 10
+                }
+            ],
+            [
+                {
+                    "attack": 15
+                }
+            ],
+            [
+                {
+                    "attack": 20
+                }
+            ],
+            [
+                {
+                    "attack": 25
+                }
+            ]
         ],
         "defaultCoverage": [
             0.2
@@ -956,7 +1128,7 @@
     "Self-Improvement": {
         "name": {
             "en": "Self-Improvement",
-            "zh": ""
+            "zh": "鑽研"
         },
         "maxLevel": 1,
         "effect": [
@@ -972,7 +1144,7 @@
     "Shock Absorber": {
         "name": {
             "en": "Shock Absorber",
-            "zh": ""
+            "zh": "緩衝"
         },
         "maxLevel": 1,
         "effect": [
@@ -984,7 +1156,7 @@
     "Speed Eating": {
         "name": {
             "en": "Speed Eating",
-            "zh": ""
+            "zh": "快吃"
         },
         "maxLevel": 3,
         "effect": [
@@ -998,7 +1170,7 @@
     "Stamina Surge": {
         "name": {
             "en": "Stamina Surge",
-            "zh": ""
+            "zh": "耐力急速回復"
         },
         "maxLevel": 3,
         "effect": [
@@ -1012,7 +1184,7 @@
     "Stench Resistance": {
         "name": {
             "en": "Stench Resistance",
-            "zh": ""
+            "zh": "惡臭耐性"
         },
         "maxLevel": 2,
         "effect": [
@@ -1025,7 +1197,7 @@
     "Survival Expert": {
         "name": {
             "en": "Survival Expert",
-            "zh": ""
+            "zh": "環境利用知識"
         },
         "maxLevel": 3,
         "effect": [
@@ -1039,7 +1211,7 @@
     "Tool Specialist": {
         "name": {
             "en": "Tool Specialist",
-            "zh": ""
+            "zh": "整備"
         },
         "maxLevel": 5,
         "effect": [
@@ -1055,7 +1227,7 @@
     "Tremor Resistance": {
         "name": {
             "en": "Tremor Resistance",
-            "zh": ""
+            "zh": "耐震"
         },
         "effect": [
             {},
@@ -1068,7 +1240,7 @@
     "Water Resistance": {
         "name": {
             "en": "Water Resistance",
-            "zh": ""
+            "zh": "水耐性"
         },
         "effect": [
             {},
@@ -1081,30 +1253,15 @@
     "Weakness Exploit": {
         "name": {
             "en": "Weakness Exploit",
-            "zh": ""
+            "zh": "弱點特效"
         },
         "maxLevel": 5,
         "effect": [
-            {
-                "affinity": 0.05,
-                "wpAffinity": 0.03
-            },
-            {
-                "affinity": 0.1,
-                "wpAffinity": 0.05
-            },
-            {
-                "affinity": 0.15,
-                "wpAffinity": 0.1
-            },
-            {
-                "affinity": 0.20,
-                "wpAffinity": 0.15
-            },
-            {
-                "affinity": 0.3,
-                "wpAffinity": 0.2
-            }
+            {},
+            {},
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 2,
@@ -1118,6 +1275,48 @@
                 "zh": "傷口"
             }
         ],
+        "triggerEffect": [
+            [
+                {
+                    "affinity": 0.05
+                },
+                {
+                    "affinity": 0.08
+                }
+            ],
+            [
+                {
+                    "affinity": 0.1
+                },
+                {
+                    "affinity": 0.15
+                }
+            ],
+            [
+                {
+                    "affinity": 0.15
+                },
+                {
+                    "affinity": 0.25
+                }
+            ],
+            [
+                {
+                    "affinity": 0.20
+                },
+                {
+                    "affinity": 0.35
+                }
+            ],
+            [
+                {
+                    "affinity": 0.3
+                },
+                {
+                    "affinity": 0.5
+                }
+            ]
+        ],
         "defaultCoverage": [
             0.9,
             0.2
@@ -1128,7 +1327,7 @@
     "Wide-Range": {
         "name": {
             "en": "Wide-Range",
-            "zh": ""
+            "zh": "廣域化"
         },
         "maxLevel": 5,
         "effect": [
@@ -1144,7 +1343,7 @@
     "Windproof": {
         "name": {
             "en": "Windproof",
-            "zh": ""
+            "zh": "風壓耐性"
         },
         "maxLevel": 3,
         "effect": [

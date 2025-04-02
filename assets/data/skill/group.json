@@ -2,7 +2,7 @@
     "Alluring Pelt": {
         "name": {
             "en": "Alluring Pelt",
-            "zh": ""
+            "zh": "毛皮的誘惑"
         },
         "maxLevel": 3,
         "effect": [
@@ -16,7 +16,7 @@
     "Buttery Leathercraft": {
         "name": {
             "en": "Buttery Leathercraft",
-            "zh": ""
+            "zh": "皮革製品的滑順質感"
         },
         "maxLevel": 3,
         "effect": [
@@ -32,7 +32,7 @@
     "Flexible Leathercraft": {
         "name": {
             "en": "Flexible Leathercraft",
-            "zh": ""
+            "zh": "皮革製品的柔韌性"
         },
         "maxLevel": 3,
         "effect": [
@@ -46,16 +46,13 @@
     "Fortifying Pelt": {
         "name": {
             "en": "Fortifying Pelt",
-            "zh": ""
+            "zh": "毛皮的昂揚"
         },
         "maxLevel": 3,
         "effect": [
             {},
             {},
-            {
-                "fpAttackMultiplier1": 1.1,
-                "fpAttackMultiplier2": 1.2
-            }
+            {}
         ],
         "trigger": true,
         "triggerLevel": 2,
@@ -69,6 +66,22 @@
                 "zh": "二貓"
             }
         ],
+        "triggerEffect": [
+            [
+                {}
+            ],
+            [
+                {}
+            ],
+            [
+                {
+                    "attackMultiplier": 1.1
+                },
+                {
+                    "attackMultiplier": 1.2
+                }
+            ]
+        ],
         "defaultCoverage": [
             0.67,
             0.33
@@ -78,7 +91,7 @@
     "Guardian's Protection": {
         "name": {
             "en": "Guardian's Protection",
-            "zh": ""
+            "zh": "護龍的守護"
         },
         "maxLevel": 3,
         "effect": [
@@ -92,7 +105,7 @@
     "Guardian's Pulse": {
         "name": {
             "en": "Guardian's Pulse",
-            "zh": ""
+            "zh": "護龍的脈動"
         },
         "maxLevel": 3,
         "effect": [
@@ -106,7 +119,7 @@
     "Imparted Wisdom": {
         "name": {
             "en": "Imparted Wisdom",
-            "zh": ""
+            "zh": "前輩的指引"
         },
         "maxLevel": 3,
         "effect": [
@@ -120,7 +133,7 @@
     "Lord's Favor": {
         "name": {
             "en": "Lord's Favor",
-            "zh": ""
+            "zh": "霸主的自尊"
         },
         "maxLevel": 3,
         "effect": [
@@ -134,15 +147,13 @@
     "Lord's Fury": {
         "name": {
             "en": "Lord's Fury",
-            "zh": ""
+            "zh": "霸主的盛怒"
         },
         "maxLevel": 3,
         "effect": [
             {},
             {},
-            {
-                "attack": 10
-            }
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -152,6 +163,19 @@
                 "zh": "發動"
             }
         ],
+        "triggerEffect": [
+            [
+                {}
+            ],
+            [
+                {}
+            ],
+            [
+                {
+                    "attack": 10
+                }
+            ]
+        ],
         "defaultCoverage": [
             0.1
         ],
@@ -160,7 +184,7 @@
     "Neopteron Alert": {
         "name": {
             "en": "Neopteron Alert",
-            "zh": ""
+            "zh": "甲蟲的直覺"
         },
         "maxLevel": 3,
         "effect": [
@@ -174,7 +198,7 @@
     "Neopteron Camouflage": {
         "name": {
             "en": "Neopteron Camouflage",
-            "zh": ""
+            "zh": "甲蟲的擬態"
         },
         "maxLevel": 3,
         "effect": [
@@ -188,7 +212,7 @@
     "Scale Layering": {
         "name": {
             "en": "Scale Layering",
-            "zh": ""
+            "zh": "堆疊鱗片的手藝"
         },
         "maxLevel": 3,
         "effect": [
@@ -202,7 +226,7 @@
     "Scaling Prowess": {
         "name": {
             "en": "Scaling Prowess",
-            "zh": ""
+            "zh": "鋪排鱗片的技巧"
         },
         "maxLevel": 3,
         "effect": [

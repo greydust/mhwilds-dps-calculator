@@ -2,7 +2,7 @@
     "Airborne": {
         "name": {
             "en": "Airborne",
-            "zh": ""
+            "zh": "飛燕"
         },
         "maxLevel": 1,
         "effect": [
@@ -16,7 +16,7 @@
     "Artillery": {
         "name": {
             "en": "Artillery",
-            "zh": ""
+            "zh": "砲術"
         },
         "maxLevel": 3,
         "effect": [
@@ -65,7 +65,7 @@
     "Ballistics": {
         "name": {
             "en": "Ballistics",
-            "zh": ""
+            "zh": "彈道強化"
         },
         "maxLevel": 3,
         "effect": [
@@ -79,7 +79,7 @@
     "Blast Attack": {
         "name": {
             "en": "Blast Attack",
-            "zh": ""
+            "zh": "爆破屬性強化"
         },
         "maxLevel": 3,
         "effect": [
@@ -102,7 +102,7 @@
     "Blast Functionality": {
         "name": {
             "en": "Blast Functionality",
-            "zh": ""
+            "zh": "爆破瓶追加"
         },
         "maxLevel": 1,
         "effect": [
@@ -114,7 +114,7 @@
     "Bludgeoner": {
         "name": {
             "en": "Bludgeoner",
-            "zh": ""
+            "zh": "鈍器能手"
         },
         "maxLevel": 3,
         "effect": [
@@ -128,7 +128,7 @@
     "Charge Master": {
         "name": {
             "en": "Charge Master",
-            "zh": ""
+            "zh": "蓄力大師"
         },
         "maxLevel": 3,
         "effect": [
@@ -142,7 +142,7 @@
     "Charge Up": {
         "name": {
             "en": "Charge Up",
-            "zh": ""
+            "zh": "蓄攻強化"
         },
         "maxLevel": 1,
         "effect": [
@@ -185,15 +185,9 @@
         },
         "maxLevel": 3,
         "effect": [
-            {
-                "affinity": 0.5
-            },
-            {
-                "affinity": 0.75
-            },
-            {
-                "affinity": 1
-            }
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -202,6 +196,23 @@
                 "en": "On",
                 "zh": "發動"
             }
+        ],
+        "triggerEffect": [
+            [
+                {
+                    "affinity": 0.5
+                }
+            ],
+            [
+                {
+                    "affinity": 0.75
+                }
+            ],
+            [
+                {
+                    "affinity": 1
+                }
+            ]
         ],
         "defaultCoverage": [
             0.01
@@ -217,13 +228,13 @@
         "maxLevel": 3,
         "effect": [
             {
-                "elementalCriticalDamageHBG": 0.07
+                "elementalCriticalDamage-hbg": 0.07
             },
             {
-                "elementalCriticalDamageHBG": 0.14
+                "elementalCriticalDamage-hbg": 0.14
             },
             {
-                "elementalCriticalDamageHBG": 0.21
+                "elementalCriticalDamage-hbg": 0.21
             }
         ],
         "trigger": false,
@@ -260,7 +271,7 @@
     "Critical Status": {
         "name": {
             "en": "Critical Status",
-            "zh": ""
+            "zh": "會心擊【特殊】"
         },
         "maxLevel": 3,
         "effect": [
@@ -274,7 +285,7 @@
     "Exhaust Functionality": {
         "name": {
             "en": "Exhaust Functionality",
-            "zh": ""
+            "zh": "減氣瓶追加"
         },
         "maxLevel": 1,
         "effect": [
@@ -286,7 +297,7 @@
     "Focus": {
         "name": {
             "en": "Focus",
-            "zh": ""
+            "zh": "集中"
         },
         "maxLevel": 3,
         "effect": [
@@ -300,7 +311,7 @@
     "Guard": {
         "name": {
             "en": "Guard",
-            "zh": ""
+            "zh": "防禦性能"
         },
         "maxLevel": 3,
         "effect": [
@@ -314,7 +325,7 @@
     "Guard Up": {
         "name": {
             "en": "Guard Up",
-            "zh": ""
+            "zh": "防禦強化"
         },
         "maxLevel": 3,
         "effect": [
@@ -328,7 +339,7 @@
     "Handicraft": {
         "name": {
             "en": "Handicraft",
-            "zh": ""
+            "zh": "匠"
         },
         "maxLevel": 5,
         "effect": [
@@ -342,7 +353,7 @@
     "Horn Maestro": {
         "name": {
             "en": "Horn Maestro",
-            "zh": ""
+            "zh": "吹笛名人"
         },
         "maxLevel": 2,
         "effect": [
@@ -382,7 +393,7 @@
     "Mind's Eye": {
         "name": {
             "en": "Mind's Eye",
-            "zh": ""
+            "zh": "心眼"
         },
         "maxLevel": 3,
         "effect": [
@@ -400,15 +411,9 @@
         },
         "maxLevel": 3,
         "effect": [
-            {
-                "attackMultiplier": 1.05
-            },
-            {
-                "attackMultiplier": 1.1
-            },
-            {
-                "attackMultiplier": 1.15
-            }
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -417,6 +422,23 @@
                 "en": "On",
                 "zh": "發動"
             }
+        ],
+        "triggerEffect": [
+            [
+                {
+                    "attackMultiplier": 1.05
+                }
+            ],
+            [
+                {
+                    "attackMultiplier": 1.1
+                }
+            ],
+            [
+                {
+                    "attackMultiplier": 1.15
+                }
+            ]
         ],
         "defaultCoverage": [
             0.1
@@ -427,7 +449,7 @@
     "Opening Shot": {
         "name": {
             "en": "Opening Shot",
-            "zh": ""
+            "zh": "首發射擊"
         },
         "maxLevel": 3,
         "effect": [
@@ -466,7 +488,7 @@
     "Paralysis Attack": {
         "name": {
             "en": "Paralysis Attack",
-            "zh": ""
+            "zh": "麻痺屬性強化"
         },
         "maxLevel": 3,
         "effect": [
@@ -489,7 +511,7 @@
     "Poison Attack": {
         "name": {
             "en": "Poison Attack",
-            "zh": ""
+            "zh": "毒屬性強化"
         },
         "maxLevel": 3,
         "effect": [
@@ -550,7 +572,7 @@
     "Protective Polish": {
         "name": {
             "en": "Protective Polish",
-            "zh": ""
+            "zh": "剛刃研磨"
         },
         "maxLevel": 3,
         "effect": [
@@ -568,15 +590,9 @@
         },
         "maxLevel": 3,
         "effect": [
-            {
-                "attack": 3
-            },
-            {
-                "attack": 5
-            },
-            {
-                "attack": 7
-            }
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -585,6 +601,23 @@
                 "en": "On",
                 "zh": "發動"
             }
+        ],
+        "triggerEffect": [
+            [
+                {
+                    "attack": 3
+                }
+            ],
+            [
+                {
+                    "attack": 5
+                }
+            ],
+            [
+                {
+                    "attack": 7
+                }
+            ]
         ],
         "defaultCoverage": [
             0.01
@@ -609,7 +642,7 @@
     "Rapid Morph": {
         "name": {
             "en": "Rapid Morph",
-            "zh": ""
+            "zh": "高速變形"
         },
         "maxLevel": 3,
         "effect": [
@@ -623,7 +656,7 @@
     "Razor Sharp": {
         "name": {
             "en": "Razor Sharp",
-            "zh": ""
+            "zh": "利刃"
         },
         "maxLevel": 3,
         "effect": [
@@ -637,7 +670,7 @@
     "Slugger": {
         "name": {
             "en": "Slugger",
-            "zh": ""
+            "zh": "KO術"
         },
         "maxLevel": 3,
         "effect": [
@@ -678,23 +711,23 @@
     "Tetrad Shot": {
         "name": {
             "en": "Tetrad Shot",
-            "zh": ""
+            "zh": "第四射擊"
         },
         "maxLevel": 3,
         "effect": [
             {
-                "afiinityTetrad": 0.04,
-                "finalAttackTetrad": 3,
+                "affinityTetrad": 0.04,
+                "attackTetrad": 3,
                 "elementalMultiplierTetrad": 1.05
             },
             {
-                "afiinityTetrad": 0.08,
-                "finalAttackTetrad": 6,
+                "affinityTetrad": 0.08,
+                "attackTetrad": 6,
                 "elementalMultiplierTetrad": 1.05
             },
             {
-                "afiinity": 0.12,
-                "finalAttackTetrad": 10,
+                "affinityTetrad": 0.12,
+                "attackTetrad": 10,
                 "elementalMultiplierTetrad": 1.05
             }
         ],
@@ -705,7 +738,7 @@
     "Normal Shots": {
         "name": {
             "en": "Normal Shots",
-            "zh": ""
+            "zh": "通常彈・通常箭強化"
         },
         "maxLevel": 1,
         "effect": [
@@ -720,7 +753,7 @@
     "Piercing Shots": {
         "name": {
             "en": "Piercing Shots",
-            "zh": ""
+            "zh": "貫通彈・龍之箭強化"
         },
         "maxLevel": 1,
         "effect": [
@@ -735,7 +768,7 @@
     "Spread/Power Shots": {
         "name": {
             "en": "Spread/Power Shots",
-            "zh": ""
+            "zh": "散彈・剛射強化"
         },
         "maxLevel": 1,
         "effect": [
@@ -750,7 +783,7 @@
     "Special Ammo Boost": {
         "name": {
             "en": "Special Ammo Boost",
-            "zh": ""
+            "zh": "特殊射擊強化"
         },
         "maxLevel": 2,
         "effect": [
@@ -768,7 +801,7 @@
     "Fire Attack": {
         "name": {
             "en": "Fire Attack",
-            "zh": ""
+            "zh": "火屬性攻擊強化"
         },
         "maxLevel": 3,
         "effect": [
@@ -791,7 +824,7 @@
     "Water Attack": {
         "name": {
             "en": "Water Attack",
-            "zh": ""
+            "zh": "水屬性攻擊強化"
         },
         "maxLevel": 3,
         "effect": [
@@ -814,7 +847,7 @@
     "Thunder Attack": {
         "name": {
             "en": "Thunder Attack",
-            "zh": ""
+            "zh": "雷屬性攻擊強化"
         },
         "maxLevel": 3,
         "effect": [
@@ -837,7 +870,7 @@
     "Ice Attack": {
         "name": {
             "en": "Ice Attack",
-            "zh": ""
+            "zh": "冰屬性攻擊強化"
         },
         "maxLevel": 3,
         "effect": [

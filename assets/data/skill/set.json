@@ -2,7 +2,7 @@
     "Arkveld's Hunger": {
         "name": {
             "en": "Arkveld's Hunger",
-            "zh": ""
+            "zh": "鎖刃龍之飢餓"
         },
         "maxLevel": 4,
         "effect": [
@@ -17,7 +17,7 @@
     "Blangonga's Spirit": {
         "name": {
             "en": "Blangonga's Spirit",
-            "zh": ""
+            "zh": "雪獅子王之鬥志"
         },
         "maxLevel": 4,
         "effect": [
@@ -38,20 +38,14 @@
     "Doshaguma's Might": {
         "name": {
             "en": "Doshaguma's Might",
-            "zh": ""
+            "zh": "闢獸之力"
         },
         "maxLevel": 4,
         "effect": [
             {},
-            {
-                "attack": 10
-            },
-            {
-                "attack": 10
-            },
-            {
-                "attack": 25
-            }
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -61,6 +55,26 @@
                 "zh": "發動"
             }
         ],
+        "triggerEffect": [
+            [
+                {}
+            ],
+            [
+                {
+                    "attack": 10
+                }
+            ],
+            [
+                {
+                    "attack": 10
+                }
+            ],
+            [
+                {
+                    "attack": 25
+                }
+            ]
+        ],
         "defaultCoverage": [
             0.05
         ],
@@ -69,7 +83,7 @@
     "Ebony Odogaron's Power": {
         "name": {
             "en": "Ebony Odogaron's Power",
-            "zh": ""
+            "zh": "兇爪龍之力"
         },
         "maxLevel": 4,
         "effect": [
@@ -90,7 +104,7 @@
     "Fulgur Anjanath's Will": {
         "name": {
             "en": "Fulgur Anjanath's Will",
-            "zh": ""
+            "zh": "雷顎龍之鬥志"
         },
         "maxLevel": 4,
         "effect": [
@@ -105,25 +119,14 @@
     "Gore Magala's Tyranny": {
         "name": {
             "en": "Gore Magala's Tyranny",
-            "zh": ""
+            "zh": "黑蝕龍之力"
         },
         "maxLevel": 4,
         "effect": [
             {},
-            {
-                "status": "frenzy",
-                "affinityRecovered": 0.15
-            },
-            {
-                "status": "frenzy",
-                "affinityRecovered": 0.15
-            },
-            {
-                "status": "frenzy",
-                "attack": 10,
-                "attackRecovered": 15,
-                "affinityRecovered": 0.15
-            }
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 2,
@@ -137,6 +140,38 @@
                 "zh": "克服"
             }
         ],
+        "triggerEffect": [
+            [
+                {},
+                {}
+            ],
+            [
+                {
+                    "status": "frenzy"
+                },
+                {
+                    "status": "recovered"
+                }
+            ],
+            [
+                {
+                    "status": "frenzy"
+                },
+                {
+                    "status": "recovered"
+                }
+            ],
+            [
+                {
+                    "status": "frenzy",
+                    "attack": 10
+                },
+                {
+                    "status": "recovered",
+                    "attack": 15
+                }
+            ]
+        ],
         "defaultCoverage": [
             0.99,
             0.95
@@ -146,7 +181,7 @@
     "Gravios's Protection": {
         "name": {
             "en": "Gravios's Protection",
-            "zh": ""
+            "zh": "鎧龍之守護"
         },
         "maxLevel": 4,
         "effect": [
@@ -161,7 +196,7 @@
     "Guardian Arkveld's Vitality": {
         "name": {
             "en": "Guardian Arkveld's Vitality",
-            "zh": ""
+            "zh": "護鎖刃龍之命脈"
         },
         "maxLevel": 4,
         "effect": [
@@ -176,20 +211,14 @@
     "Jin Dahaad's Revolt": {
         "name": {
             "en": "Jin Dahaad's Revolt",
-            "zh": ""
+            "zh": "凍峰龍之叛逆"
         },
         "maxLevel": 4,
         "effect": [
             {},
-            {
-                "attack": 25
-            },
-            {
-                "attack": 25
-            },
-            {
-                "attack": 50
-            }
+            {},
+            {},
+            {}
         ],
         "trigger": true,
         "triggerLevel": 1,
@@ -199,6 +228,26 @@
                 "zh": "發動"
             }
         ],
+        "triggerEffect": [
+            [
+                {}
+            ],
+            [
+                {
+                    "attack": 25
+                }
+            ],
+            [
+                {
+                    "attack": 25
+                }
+            ],
+            [
+                {
+                    "attack": 50
+                }
+            ]
+        ],
         "defaultCoverage": [
             0.05
         ],
@@ -207,7 +256,7 @@
     "Nu Udra's Mutiny": {
         "name": {
             "en": "Nu Udra's Mutiny",
-            "zh": ""
+            "zh": "獄焰鱆之叛逆"
         },
         "maxLevel": 4,
         "effect": [
@@ -228,7 +277,7 @@
     "Rey Dau's Voltage": {
         "name": {
             "en": "Rey Dau's Voltage",
-            "zh": ""
+            "zh": "煌雷龍之力"
         },
         "maxLevel": 4,
         "effect": [
@@ -243,7 +292,7 @@
     "Rathalos's Flare": {
         "name": {
             "en": "Rathalos's Flare",
-            "zh": ""
+            "zh": "火龍之力"
         },
         "maxLevel": 4,
         "effect": [
@@ -264,7 +313,7 @@
     "Uth Duna's Cover": {
         "name": {
             "en": "Uth Duna's Cover",
-            "zh": ""
+            "zh": "波衣龍之守護"
         },
         "maxLevel": 4,
         "effect": [
@@ -279,7 +328,7 @@
     "Xu Wu's Vigor": {
         "name": {
             "en": "Xu Wu's Vigor",
-            "zh": ""
+            "zh": "暗器鱆之力"
         },
         "maxLevel": 4,
         "effect": [

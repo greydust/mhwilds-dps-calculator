@@ -6,21 +6,21 @@
           [
             {
               "value": 15,
-              "type": "shell",
+              "type": "shoot",
               "hit": 3
             }
           ],
           [
             {
               "value": 21,
-              "type": "shell",
+              "type": "shoot",
               "hit": 3
             }
           ],
           [
             {
               "value": 28.5,
-              "type": "shell",
+              "type": "shoot",
               "hit": 3
             }
           ]
@@ -41,66 +41,66 @@
           [
             {
               "value": 11,
-              "type": "shell",
+              "type": "shoot",
               "hit": 2
             },
             {
               "value": 9.9,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 8.8,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 7.7,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             }
           ],
           [
             {
               "value": 12,
-              "type": "shell",
+              "type": "shoot",
               "hit": 2
             },
             {
               "value": 10.8,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 9.6,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 8.4,
-              "type": "shell",
+              "type": "shoot",
               "hit": 3
             }
           ],
           [
             {
               "value": 12,
-              "type": "shell",
+              "type": "shoot",
               "hit": 2
             },
             {
               "value": 10.8,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 9.6,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 8.4,
-              "type": "shell",
+              "type": "shoot",
               "hit": 5
             }
           ]
@@ -116,21 +116,21 @@
           [
             {
               "value": 11,
-              "type": "shell",
+              "type": "shoot",
               "hit": 5
             }
           ],
           [
             {
               "value": 12.65,
-              "type": "shell",
+              "type": "shoot",
               "hit": 6
             }
           ],
           [
             {
               "value": 14.3,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             }
           ]
@@ -146,12 +146,12 @@
           [
             {
               "value": 1,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 33,
-              "type": "slash",
+              "type": "sever",
               "hit": 4
             }
           ]
@@ -318,44 +318,44 @@
           [
             {
               "value": 8,
-              "type": "shell",
+              "type": "shoot",
               "hit": 2
             },
             {
               "value": 7.2,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 6.4,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 5.6,
-              "type": "shell",
+              "type": "shoot",
               "hit": 3
             }
           ],
           [
             {
               "value": 10,
-              "type": "shell",
+              "type": "shoot",
               "hit": 2
             },
             {
               "value": 9,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 8,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 7,
-              "type": "shell",
+              "type": "shoot",
               "hit": 3
             }
           ]
@@ -381,55 +381,45 @@
           [
             {
               "value": 8,
-              "type": "shell",
+              "type": "shoot",
               "hit": 2
             },
             {
               "value": 7.2,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 6.4,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 5.6,
-              "type": "shell",
+              "type": "shoot",
               "hit": 3
-            },
-            {
-              "value": 20,
-              "type": "water",
-              "hit": 7
             }
           ],
           [
             {
               "value": 10,
-              "type": "shell",
+              "type": "shoot",
               "hit": 2
             },
             {
               "value": 9,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 8,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 7,
-              "type": "shell",
+              "type": "shoot",
               "hit": 3
-            },
-            {
-              "value": 25,
-              "type": "water",
-              "hit": 7
             }
           ]
         ],
@@ -454,55 +444,45 @@
           [
             {
               "value": 8,
-              "type": "shell",
+              "type": "shoot",
               "hit": 2
             },
             {
               "value": 7.2,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 6.4,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 5.6,
-              "type": "shell",
+              "type": "shoot",
               "hit": 3
-            },
-            {
-              "value": 20,
-              "type": "ice",
-              "hit": 7
             }
           ],
           [
             {
               "value": 10,
-              "type": "shell",
+              "type": "shoot",
               "hit": 2
             },
             {
               "value": 9,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 8,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 7,
-              "type": "shell",
+              "type": "shoot",
               "hit": 3
-            },
-            {
-              "value": 25,
-              "type": "ice",
-              "hit": 7
             }
           ]
         ],
@@ -527,55 +507,45 @@
           [
             {
               "value": 8,
-              "type": "shell",
+              "type": "shoot",
               "hit": 2
             },
             {
               "value": 7.2,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 6.4,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 5.6,
-              "type": "shell",
+              "type": "shoot",
               "hit": 3
-            },
-            {
-              "value": 20,
-              "type": "thunder",
-              "hit": 7
             }
           ],
           [
             {
               "value": 10,
-              "type": "shell",
+              "type": "shoot",
               "hit": 2
             },
             {
               "value": 9,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 8,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 7,
-              "type": "shell",
+              "type": "shoot",
               "hit": 3
-            },
-            {
-              "value": 25,
-              "type": "thunder",
-              "hit": 7
             }
           ]
         ],
@@ -600,28 +570,23 @@
           [
             {
               "value": 20,
-              "type": "shell",
+              "type": "shoot",
               "hit": 2
             },
             {
               "value": 18,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 16,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
             },
             {
               "value": 14,
-              "type": "shell",
+              "type": "shoot",
               "hit": 1
-            },
-            {
-              "value": 44,
-              "type": "dragon",
-              "hit": 7
             }
           ]
         ],
