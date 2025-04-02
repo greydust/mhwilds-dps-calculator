@@ -743,7 +743,7 @@
         "maxLevel": 1,
         "effect": [
             {
-                "normalDamageMultiplier": 0.05
+                "normalDamageMultiplier": 1.05
             }
         ],
         "trigger": false,
@@ -758,7 +758,7 @@
         "maxLevel": 1,
         "effect": [
             {
-                "pierceDamageMultiplier": 0.05
+                "pierceDamageMultiplier": 1.05
             }
         ],
         "trigger": false,

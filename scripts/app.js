@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const enhancementType = document.getElementById("enhancement-type");
   const finalAttack = document.getElementById("final-attack");
   const finalAffinity = document.getElementById("final-affinity");
+  const finalDamageMultiplier = document.getElementById("final-damage-multiplier");
   const elementalType = document.getElementById("elemental-type");
   const elementalAttack = document.getElementById("elemental-attack");
   const shootSpeed = document.getElementById("shoot-speed");
@@ -617,6 +618,7 @@ document.addEventListener("DOMContentLoaded", () => {
       elementalType.setAttribute("data-lang", "");
       elementalAttack.textContent = "-";
     }
+    finalDamageMultiplier.textContent = Number(hunter.finalDamageMultiplier.toFixed(3));
 
     calculateCycleTime();
   }
@@ -625,6 +627,14 @@ document.addEventListener("DOMContentLoaded", () => {
     hunter.finalAttack = hunter.baseAttack * hunter.attackMultiplier + hunter.attack;
     hunter.finalAffinity = Math.max(-1, Math.min(1, hunter.baseAffinity + hunter.affinity));
     hunter.elementalCriticalDamage = hunter[`elementalCriticalDamage-${weaponTypeSelect.value}`];
+
+    hunter.finalDamageMultiplier = 1;
+    if (["normal", "pierce", "spread"].includes(hunter.ammo.type)) {
+      if (hunter.ammo.enhancement.type == "standard") {
+        hunter.finalDamageMultiplier *= hunter.ammo.enhancement.level * 0.1 + 1;
+      }
+      hunter.finalDamageMultiplier *= hunter[`${hunter.ammo.type}DamageMultiplier`];
+    }
   }
 
   function removeTriggerElement(element, row) {
@@ -1009,7 +1019,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Update Ignition Gauge Recovery when mod2 changes
   mod1.addEventListener("change", () => {
     const ammo = ammoTypeSelect.value;
     if (hunter.weapon && ammo) {
@@ -1018,7 +1027,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Update Ammo Count when mod2 changes
   mod2.addEventListener("change", () => {
     const ammo = ammoTypeSelect.value;
     if (hunter.weapon && ammo) {
@@ -1143,13 +1151,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         physicalDamage += (
           damageInfo.value / 100 * physicalAttack * document.getElementById(`${damageInfo.type}-hitzone-value`).value / 100 *
-          (1 + affinity * (hunter.criticalDamage - 1))
+          (1 + affinity * (hunter.criticalDamage - 1)) *
+          hunter.finalDamageMultiplier
         ).toFixed(2) * damageInfo.hit;
 
         if (hunter.ammo.elementalType != "") {
           elementalDamage += (
             (hunter.finalAttack / 100 * hunter.ammo.baseElemental / 10 * elementalMultiplier + elementalAddition) * elementalHitZoneValue.value / 100 *
-            (1 + affinity * (hunter.elementalCriticalDamage - 1))
+            (1 + affinity * (hunter.elementalCriticalDamage - 1)) *
+            hunter.finalDamageMultiplier
           ).toFixed(2) * damageInfo.hit;
         }
       }
