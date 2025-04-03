@@ -1165,7 +1165,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const affinity = Math.min(1,
         hunter.finalAffinity +
-        (hunter.status.recovered ? 0.15 : 0) +
+        (hunter.status.recovered ? 0.15 + hunter.affinityRecovered : 0) +
         (bullet >= 4 ? hunter.affinityTetrad : 0)
       );
       averageAffinity += affinity;
