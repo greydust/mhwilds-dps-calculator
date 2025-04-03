@@ -537,7 +537,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Trigger change events for select elements to ensure dependent updates
         if (element.tagName === "SELECT") {
-          element.dispatchEvent(new Event("change"));
+          element.dispatchEvent(new Event("change", { bubbles: true })); // Ensure the event bubbles to trigger the listener
         }
       }
     });
@@ -1040,6 +1040,16 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("calculate-button").addEventListener("click", calculate);
   document.getElementById("reset-button").addEventListener("click", reset);
 
+  function updateGroupHighlight(select) {
+    const group = select.closest(".group");
+    if (group) {
+      if (select.selectedIndex !== 0) {
+        group.classList.add("highlight");
+      } else {
+        group.classList.remove("highlight");
+      }
+    }
+  }
 
   function calculate() {
     const params = new URLSearchParams();
@@ -1153,7 +1163,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ((bullet == 4 || bullet == 6) ? hunter.attackTetrad : 0);
       averageAttack += physicalAttack;
 
-      const affinity = Math.min(100,
+      const affinity = Math.min(1,
         hunter.finalAffinity +
         (hunter.status.recovered ? 0.15 : 0) +
         (bullet >= 4 ? hunter.affinityTetrad : 0)
@@ -1241,4 +1251,37 @@ document.addEventListener("DOMContentLoaded", () => {
     weapon: null
   };
   window.hunter = hunter;
+});
+
+const hightlightExceptionList = [
+  "weapon-type",
+  "weapon",
+  "ammo-type",
+  "mod-1",
+  "mod-2",
+  "artian-element-type-1",
+  "artian-element-type-2",
+  "artian-element-type-3",
+  "artian-bonus-1",
+  "artian-bonus-2",
+  "artian-bonus-3",
+  "artian-reinforcement-1",
+  "artian-reinforcement-2",
+  "artian-reinforcement-3",
+  "artian-reinforcement-4",
+  "artian-reinforcement-5",
+]
+document.body.addEventListener("change", (event) => {
+  if (event.target.tagName === "SELECT") {
+    if (hightlightExceptionList.includes(event.target.id)) return;
+
+    const group = event.target.closest(".group");
+    if (group) {
+      if (event.target.selectedIndex !== 0) {
+        group.classList.add("highlight");
+      } else {
+        group.classList.remove("highlight");
+      }
+    }
+  }
 });
