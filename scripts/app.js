@@ -1176,9 +1176,15 @@ document.addEventListener("DOMContentLoaded", () => {
       for (let hit = 0; hit < hunter.ammo.damage.length; hit++) {
         const damageInfo = hunter.ammo.damage[hit];
 
+        let affinityMultipler = 1;
+        if (affinity > 0) {
+          affinityMultipler = 1 + affinity * (hunter.criticalDamage - 1);
+        } else if (affinity < 0) {
+          affinityMultipler = (1 + -affinity * (0.75 - 1))
+        }
         physicalDamage += (
           damageInfo.value / 100 * physicalAttack * document.getElementById(`${damageInfo.type}-hitzone-value`).value / 100 *
-          (1 + affinity * (hunter.criticalDamage - 1)) *
+          affinityMultipler *
           hunter.finalDamageMultiplier
         ).toFixed(2) * damageInfo.hit;
 
