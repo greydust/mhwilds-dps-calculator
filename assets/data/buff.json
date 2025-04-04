@@ -457,11 +457,11 @@
         ],
         "triggerEffect": [
           {
-            "affinity": 0.1
+            "affinity": 0.05
           },
           {
-            "affinity": 0.3,
-            "attackMultiplier": 1.1
+            "affinity": 0.1,
+            "attackMultiplier": 1.05
           }
         ],
         "defaultCoverage": [

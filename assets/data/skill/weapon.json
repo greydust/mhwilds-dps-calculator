@@ -912,5 +912,72 @@
         "trigger": false,
         "show": true,
         "group": "elemental"
+    },
+    "Whiteflame Torrent": {
+        "name": {
+            "en": "Whiteflame Torrent",
+            "zh": "白熾奔流"
+        },
+        "maxLevel": 1,
+        "effec": [
+            {}
+        ],
+        "trigger": false,
+        "show": false
+    },
+    "Slicked Blade": {
+        "name": {
+            "en": "Slicked Blade",
+            "zh": "濡溼刀紋"
+        },
+        "maxLevel": 3,
+        "effect": [
+            {},
+            {},
+            {}
+        ],
+        "trigger": true,
+        "triggerLevel": 2,
+        "triggerName": [
+            {
+                "en": "Wet",
+                "zh": "沾溼"
+            },
+            {
+                "en": "Bubbleblight",
+                "zh": "泡沫"
+            }
+        ],
+        "triggerEffect": [
+            [
+                {
+                    "affinity": 0.03
+                },
+                {
+                    "affinity": 0.1
+                }
+            ],
+            [
+                {
+                    "affinity": 0.06
+                },
+                {
+                    "affinity": 0.2
+                }
+            ],
+            [
+                {
+                    "affinity": 0.09
+                },
+                {
+                    "affinity": 0.3
+                }
+            ]
+        ],
+        "defaultCoverage": [
+            0.1
+        ],
+        "show": true,
+        "group": "affinity"
     }
 }

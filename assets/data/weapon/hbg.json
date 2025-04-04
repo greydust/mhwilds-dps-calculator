@@ -898,6 +898,113 @@
       "standard"
     ]
   },
+  "Blazing Mitran": {
+    "name": {
+      "en": "Blazing Mitran",
+      "zh": "熾光梅塔特隆"
+    },
+    "baseAttack": 220,
+    "affinity": 0.05,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 6
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 6
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 6
+      },
+      "cluster": {
+        "level": 2,
+        "ammo": 2
+      },
+      "flaming": {
+        "level": 2,
+        "ammo": 5
+      },
+      "thunder": {
+        "level": 2,
+        "ammo": 4
+      },
+      "dragon": {
+        "level": 1,
+        "ammo": 2
+      }
+    },
+    "skills": {
+      "Whiteflame Torrent": 1
+    },
+    "ignitionRecovery": 1,
+    "mode": {
+      "type": "ignition",
+      "level": 1
+    },
+    "modType": [
+      "magazine",
+      "normal",
+      "ignition"
+    ]
+  },
+  "Mountainous Roar": {
+    "name": {
+      "en": "Mountainous Roar",
+      "zh": "卻步山砲之御車"
+    },
+    "baseAttack": 210,
+    "affinity": 0.15,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 4
+      },
+      "pierce": {
+        "level": 3,
+        "ammo": 5
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 4
+      },
+      "wyvern": {
+        "level": 1,
+        "ammo": 1
+      },
+      "water": {
+        "level": 2,
+        "ammo": 5
+      }
+    },
+    "skills": {
+      "Slicked Blade": 3,
+      "Critical Element": 1
+    },
+    "ignitionRecovery": 1,
+    "mode": {
+      "type": "ignition",
+      "level": 1
+    },
+    "modType": [
+      "magazine",
+      "elemental",
+      "ignition"
+    ]
+  },
   "Greifen": {
     "name": {
       "en": "Greifen",
