@@ -25,6 +25,7 @@
             }
           ]
         ],
+        "ignitionRecovery": 0.25,
         "shoot": 1.36,
         "shootDetail": [
           0.76,
@@ -105,6 +106,7 @@
             }
           ]
         ],
+        "ignitionRecovery": 0.2,
         "shoot": 0.95,
         "reload": 2.25,
         "reloadOpening1": 2.05,
@@ -135,6 +137,7 @@
             }
           ]
         ],
+        "ignitionRecovery": 0.15,
         "shoot": 1.51,
         "reload": 1.34,
         "reloadOpening1": 1.22,
@@ -156,6 +159,7 @@
             }
           ]
         ],
+        "ignitionRecovery": 0,
         "shoot": 1.82,
         "reload": 2.09,
         "reloadOpening2": 1.9,
@@ -216,6 +220,7 @@
             }
           ]
         ],
+        "ignitionRecovery": 0,
         "shoot": 1.09,
         "reload": 3.08,
         "reloadOpening1": 2.8,
@@ -276,6 +281,7 @@
             }
           ]
         ],
+        "ignitionRecovery": 0,
         "shoot": 1.26,
         "reload": 4.05,
         "reloadOpening1": 3.77,
@@ -307,6 +313,7 @@
             }
           ]
         ],
+        "ignitionRecovery": 0,
         "shoot": 4.43,
         "reload": 2.09,
         "reloadOpening2": 1.9,
@@ -360,6 +367,7 @@
             }
           ]
         ],
+        "ignitionRecovery": 0,
         "elemental": [
           {
             "value": 200,
@@ -423,6 +431,7 @@
             }
           ]
         ],
+        "ignitionRecovery": 0,
         "elemental": [
           {
             "value": 200,
@@ -486,6 +495,7 @@
             }
           ]
         ],
+        "ignitionRecovery": 0,
         "elemental": [
           {
             "value": 200,
@@ -549,6 +559,7 @@
             }
           ]
         ],
+        "ignitionRecovery": 0,
         "elemental": [
           {
             "value": 200,
@@ -590,6 +601,7 @@
             }
           ]
         ],
+        "ignitionRecovery": 0,
         "elemental": [
           {
             "value": 440,
@@ -602,6 +614,37 @@
         "reloadOpening1": 1.82,
         "reloadOpening3": 1.6
       }
-    }
+    },
+    "Wyvernheart Ignition": {
+      "damage": [
+        {
+          "value": 9,
+          "type": "shoot",
+          "hit": 2
+        },
+        {
+          "value": 10.8,
+          "type": "shoot",
+          "hit": 2
+        },
+        {
+          "value": 12.96,
+          "type": "shoot",
+          "hit": 2
+        },
+        {
+          "value": 15.552,
+          "type": "shoot",
+          "hit": 2
+        },
+        {
+          "value": 18.6624,
+          "type": "shoot",
+          "hit": 32
+        }
+      ],
+      "time": 10.822
+    },
+    "Wyvernpiercer Ignition": {}
   }
 }

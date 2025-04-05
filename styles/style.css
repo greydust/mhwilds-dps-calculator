@@ -97,6 +97,10 @@ footer select {
   flex-wrap: nowrap;
 }
 
+.stat-group.highlight {
+  background-color: #d0e7ff;
+}
+
 
 .group label {
   text-align: right;

@@ -165,6 +165,18 @@
       </div>
     </div>
 
+    <div class="stat-row">
+      <div class="stat-group">
+        <label data-lang="ignition-label">Ignition:</label>
+        <input type="checkbox" id="use-ignition">
+        <select id="ignition-type">
+          <option value="Wyvernheart Ignition" data-lang="wyvernheart-ignition">Wyvernheart Ignition</option>
+          <option value="Wyvernpiercer Ignition" data-lang="wyvernpiercer-ignition" disabled>Wyvernpiercer Ignition
+          </option>
+        </select>
+      </div>
+    </div>
+
     <div class="skills-box">
       <h3 data-lang="weapon-skills-header">Weapon Skills</h3>
       <div class="row" id="weapon-skill-attack"></div>
@@ -210,10 +222,6 @@
         <label data-lang="final-affinity">Affinity:</label>
         <span id="final-affinity">-</span>
       </div>
-      <div class="stat-group">
-        <label data-lang="final-damage-multiplier">Damage Multiplier:</label>
-        <span id="final-damage-multiplier">-</span>
-      </div>
     </div>
     <div class="stat-row">
       <div class="stat-group">
@@ -225,8 +233,8 @@
         <span id="ammo-count">-</span>
       </div>
       <div class="stat-group">
-        <label data-lang="ignition-gauge-label">Ignition Gauge Recovery:</label>
-        <span id="ignition-gauge">Lv1</span>
+        <label data-lang="ignition-recovery-level-label">Ignition Gauge Recovery:</label>
+        <span id="ignition-recovery-level">Lv1</span>
       </div>
       <div class="stat-group">
         <label data-lang="enhancement-type-label">Enhance Type:</label>
@@ -276,6 +284,10 @@
         <label data-lang="result-dps-label">DPS:</label>
         <span id="result-dps">-</span>
       </div>
+      <div class="stat-group">
+        <label data-lang="result-ignition-dps-label">Ignition DPS:</label>
+        <span id="result-ignition-dps">-</span>
+      </div>
     </div>
     <div class="stat-row">
       <div class="stat-group">
@@ -304,6 +316,10 @@
         <label data-lang="result-elemental-percentage-label">Elemental %:</label>
         <span id="result-elemental-percentage">-</span>
       </div>
+      <div class="stat-group">
+        <label data-lang="result-ignition-percentage-label">Ignition %:</label>
+        <span id="result-ignition-percentage">-</span>
+      </div>
     </div>
     <details>
       <summary data-lang="details-label">Details</summary>
@@ -327,7 +343,7 @@
       <label>1.010.00.00</label>
       &nbsp;&nbsp;
       <label data-lang="last-update-label">Last update:</label>
-      <label>2025-04-04</label>
+      <label>2025-04-05</label>
       &nbsp;&nbsp;
       <label for="language-selector" data-lang="language-label">Language:</label>
       <select id="language-selector">
