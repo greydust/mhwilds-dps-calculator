@@ -1,4 +1,4 @@
-# Monster Hunter: World DPS Calculator
+# Monster Hunter: Wilds DPS Calculator
 
 This project is a web-based DPS (Damage Per Second) calculator. It allows players to select their weapon and view various weapon statistics to optimize their gameplay.
 
