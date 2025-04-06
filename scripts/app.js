@@ -1204,6 +1204,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let averageElementalMultiplier = 0;
     let averageElementalAdditive = 0;
     let cycleTime = hunter.cycleTime;
+    let intervalDamageEffectiveTime = hunter.cycleTime;
     for (let bullet = 1; bullet <= hunter.ammo.ammo; bullet++) {
       const physicalAttack =
         hunter.finalAttack +
@@ -1284,6 +1285,7 @@ document.addEventListener("DOMContentLoaded", () => {
       totalPhysicalDamage = totalPhysicalDamage / cycleTime * ignitionRecoverTime;
       totalElementalDamage = totalElementalDamage / cycleTime * ignitionRecoverTime;
       cycleTime = ignitionRecoverTime + ignition.time;
+      intervalDamageEffectiveTime = ignitionRecoverTime;
 
       let affinityMultipler = 1;
       if (hunter.finalAffinity > 0) {
@@ -1322,7 +1324,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     }
-    totalIntervalDamage = totalIntervalDamage / intervalDamageGap.value * ignitionRecoverTime;
+    totalIntervalDamage = totalIntervalDamage / intervalDamageGap.value * intervalDamageEffectiveTime;
     totalDamage += totalIntervalDamage;
 
     const dps = totalDamage / cycleTime;
