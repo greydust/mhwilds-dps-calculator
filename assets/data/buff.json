@@ -458,12 +458,12 @@
         "triggerEffect": [
           {
             "affinity": 0.05,
-            "ignitionNatureRecoveryMultiplier": 3
+            "ignitionNatureRecoveryMultiplier": 1.5
           },
           {
             "affinity": 0.1,
             "attackMultiplier": 1.05,
-            "ignitionNatureRecoveryMultiplier": 3
+            "ignitionNatureRecoveryMultiplier": 1.5
           }
         ],
         "defaultCoverage": [
