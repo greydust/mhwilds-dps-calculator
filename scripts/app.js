@@ -23,17 +23,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const artian = document.getElementById("artian");
   const logBox = document.getElementById("log-box");
   const resultDPS = document.getElementById("result-dps");
+  const resultDPH = document.getElementById("result-dph");
   const resultIgnitionDPS = document.getElementById("result-ignition-dps");
+  const resultIgnitionDPA = document.getElementById("result-ignition-dpa");
   const resultAverageAttack = document.getElementById("result-average-attack");
   const resultAverageAffinity = document.getElementById("result-average-affinity");
   const resultPhysicalPercentage = document.getElementById("result-physical-percentage");
   const resultElementalPercentage = document.getElementById("result-elemental-percentage");
   const resultIgnitionPercentage = document.getElementById("result-ignition-percentage");
+  const resultIntervalDamagePercentage = document.getElementById("result-interval-damage-percentage");
   const resultAverageElementalMultiplier = document.getElementById("result-average-elemental-multiplier");
   const resultAverageElementalAdditive = document.getElementById("result-average-elemental-additive");
   const elementalHitZoneValue = document.getElementById("elemental-hitzone-value");
   const useIgnition = document.getElementById("use-ignition");
   const ignitionType = document.getElementById("ignition-type");
+  const miscellaneous = document.getElementById("miscellaneous");
+  const intervalDamageGap = document.getElementById("interval-damage-gap");
 
   const files = [
     "assets/data/action.json",
@@ -633,6 +638,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     calculateCycleTime();
+
+    if (hunter.intervalDamage.length > 0) {
+      miscellaneous.classList.remove("hidden");
+    } else {
+      miscellaneous.classList.add("hidden");
+    }
   }
 
   function calculateHunterFinalStats() {
@@ -846,6 +857,9 @@ document.addEventListener("DOMContentLoaded", () => {
         case "status":
           hunter.status[value] = true;
           break;
+        case "intervalDamage":
+          hunter.intervalDamage.push(value);
+          break;
         default:
           console.error(`Unknown effect key: ${key}`);
           break;
@@ -943,6 +957,9 @@ document.addEventListener("DOMContentLoaded", () => {
         case "status":
           delete hunter.status[value];
           break;
+        case "intervalDamage":
+          hunter.intervalDamage = hunter.intervalDamage.filter((item) => item.name !== value.name);
+          break;
         default:
           console.error(`Unknown effect key: ${key}`);
           break;
@@ -984,6 +1001,7 @@ document.addEventListener("DOMContentLoaded", () => {
     hunter.ignitionNatureRecovery = 1.9;
     hunter.trigger = [];
     hunter.status = {};
+    hunter.intervalDamage = [];
   }
 
   function calculateCycleTime() {
@@ -1075,22 +1093,28 @@ document.addEventListener("DOMContentLoaded", () => {
     hunter.averageAttack = 0;
     hunter.averageAffinity = 0;
     hunter.dps = 0;
+    hunter.dph = 0;
     hunter.ignitionDPS = 0;
+    hunter.ignitionDPA = 0;
     hunter.physicalPercentage = 0;
     hunter.elementalPercentage = 0;
     hunter.ignitionPercentage = 0;
+    hunter.intervalDamagePercentage = 0;
     hunter.averageElementalMultiplier = 0;
     hunter.averageElementalAdditive = 0;
     logBox.innerHTML = "";
     goThroughTrigger(0, 1);
 
     resultDPS.textContent = Number(hunter.dps.toFixed(3));
+    resultDPH.textContent = Number(hunter.dph.toFixed(3));
     resultIgnitionDPS.textContent = Number(hunter.ignitionDPS.toFixed(3));
+    resultIgnitionDPA.textContent = Number(hunter.ignitionDPA.toFixed(3));
     resultAverageAttack.textContent = Number(hunter.averageAttack.toFixed(3));
     resultAverageAffinity.textContent = `${Number((hunter.averageAffinity * 100).toFixed(3))}%`;
     resultPhysicalPercentage.textContent = `${Number((hunter.physicalPercentage * 100).toFixed(3))}%`;
     resultElementalPercentage.textContent = `${Number((hunter.elementalPercentage * 100).toFixed(3))}%`;
     resultIgnitionPercentage.textContent = `${Number((hunter.ignitionPercentage * 100).toFixed(3))}%`;
+    resultIntervalDamagePercentage.textContent = `${Number((hunter.intervalDamagePercentage * 100).toFixed(3))}%`;
     resultAverageElementalMultiplier.textContent = Number(hunter.averageElementalMultiplier.toFixed(3));
     resultAverageElementalAdditive.textContent = Number(hunter.averageElementalAdditive.toFixed(3));
   }
@@ -1101,20 +1125,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const {
         dps: dps,
+        dph: dph,
         ignitionDPS: ignitionDPS,
+        ignitionDPA: ignitionDPA,
         physicalPercentage: physicalPercentage,
         elementalPercentage: elementalPercentage,
         ignitionPercentage: ignitionPercentage,
+        intervalDamagePercentage: intervalDamagePercentage,
         averageAttack: averageAttack,
         averageAffinity: averageAffinity,
         averageElementalMultiplier: averageElementalMultiplier,
         averageElementalAdditive: averageElementalAdditive,
       } = calculateDPS();
       hunter.dps += dps * percentage;
+      hunter.dph += dph * percentage;
       hunter.ignitionDPS += ignitionDPS * percentage;
+      hunter.ignitionDPA += ignitionDPA * percentage;
       hunter.physicalPercentage += physicalPercentage * percentage;
       hunter.elementalPercentage += elementalPercentage * percentage;
       hunter.ignitionPercentage += ignitionPercentage * percentage;
+      hunter.intervalDamagePercentage += intervalDamagePercentage * percentage;
       hunter.averageAttack += averageAttack * percentage;
       hunter.averageAffinity += averageAffinity * percentage;
       hunter.averageElementalMultiplier += averageElementalMultiplier * percentage;
@@ -1188,11 +1218,15 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       averageAffinity += affinity;
 
-      let affinityMultipler = 1;
+      let physicalAffinityMultipler = 1;
       if (affinity > 0) {
-        affinityMultipler = 1 + affinity * (hunter.criticalDamage - 1);
+        physicalAffinityMultipler = 1 + affinity * (hunter.criticalDamage - 1);
       } else if (affinity < 0) {
-        affinityMultipler = (1 + -affinity * (0.75 - 1))
+        physicalAffinityMultipler = (1 + -affinity * (0.75 - 1))
+      }
+      let elementalAffinityMultipler = 1;
+      if (affinity > 0) {
+        elementalAffinityMultipler = 1 + affinity * (hunter.elementalCriticalDamage - 1);
       }
 
       let physicalFinalDamageMultiplier = hunter.finalDamageMultiplier;
@@ -1222,14 +1256,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         physicalDamage += (
           damageInfo.value / 100 * physicalAttack * document.getElementById(`${damageInfo.type}-hitzone-value`).value / 100 *
-          affinityMultipler *
+          physicalAffinityMultipler *
           physicalFinalDamageMultiplier
         ).toFixed(2) * damageInfo.hit;
 
         if (hunter.ammo.elementalType != "") {
           elementalDamage += (
             (hunter.finalAttack / 100 * hunter.ammo.baseElemental / 10 * elementalMultiplier + elementalAdditive) * elementalHitZoneValue.value / 100 *
-            (1 + affinity * (hunter.elementalCriticalDamage - 1)) *
+            elementalAffinityMultipler *
             elementalFinalDamageMultiplier
           ).toFixed(2) * damageInfo.hit;
         }
@@ -1239,6 +1273,8 @@ document.addEventListener("DOMContentLoaded", () => {
       totalPhysicalDamage += physicalDamage;
       totalElementalDamage += elementalDamage;
     }
+
+    const damagePerHit = totalDamage / hunter.ammo.ammo;
 
     if (useIgnition.checked) {
       const totalBulletHits = hunter.ammo.damage.reduce((acc, damageInfo) => acc + damageInfo.hit, 0);
@@ -1276,15 +1312,31 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
+    let totalIntervalDamage = 0;
+    for (let i = 0; i < hunter.intervalDamage.length; i++) {
+      for (let hit = 0; hit < hunter.intervalDamage[i].damage.length; hit++) {
+        const damageInfo = hunter.intervalDamage[i].damage[hit];
+
+        if (damageInfo.type === "fixed") {
+          totalIntervalDamage += damageInfo.value * damageInfo.hit;
+        }
+      }
+    }
+    totalIntervalDamage = totalIntervalDamage / intervalDamageGap.value * cycleTime;
+    totalDamage += totalIntervalDamage;
+
     const dps = totalDamage / cycleTime;
     const ignitionDPS = totalIgnitionDamage / ignition.time;
     logBox.innerHTML += " ".repeat(hunter.trigger.length + 1) + `DPS: ${dps}\n`;
     return {
       dps: dps,
+      dph: damagePerHit,
       ignitionDPS: ignitionDPS,
+      ignitionDPA: totalIgnitionDamage,
       physicalPercentage: totalPhysicalDamage / totalDamage,
       elementalPercentage: totalElementalDamage / totalDamage,
       ignitionPercentage: totalIgnitionDamage / totalDamage,
+      intervalDamagePercentage: totalIntervalDamage / totalDamage,
       averageAttack: averageAttack / hunter.ammo.ammo,
       averageAffinity: averageAffinity / hunter.ammo.ammo,
       averageElementalMultiplier: averageElementalMultiplier / hunter.ammo.ammo,

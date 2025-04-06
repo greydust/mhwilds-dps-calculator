@@ -121,6 +121,12 @@ footer select {
   text-align: right;
 }
 
+.second-input {
+  width: 6ch;
+  text-align: right;
+}
+
+
 input[type="range"] {
   width: 75px;
 }

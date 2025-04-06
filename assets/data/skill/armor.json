@@ -392,17 +392,17 @@
         "triggerEffect": [
             [
                 {
-                    "dragonAttack": 80
+                    "dragon": 8
                 }
             ],
             [
                 {
-                    "dragonAttack": 120
+                    "dragon": 12
                 }
             ],
             [
                 {
-                    "dragonAttack": 180
+                    "dragon": 18
                 }
             ]
         ],

@@ -806,14 +806,14 @@
         "maxLevel": 3,
         "effect": [
             {
-                "fire": 40
+                "fire": 4
             },
             {
-                "fire": 50,
+                "fire": 5,
                 "fireMultiplier": 1.1
             },
             {
-                "fire": 60,
+                "fire": 6,
                 "fireMultiplier": 1.2
             }
         ],
@@ -829,14 +829,14 @@
         "maxLevel": 3,
         "effect": [
             {
-                "water": 40
+                "water": 4
             },
             {
-                "water": 50,
+                "water": 5,
                 "waterMultiplier": 1.1
             },
             {
-                "water": 60,
+                "water": 6,
                 "waterMultiplier": 1.2
             }
         ],
@@ -852,14 +852,14 @@
         "maxLevel": 3,
         "effect": [
             {
-                "thunder": 40
+                "thunder": 4
             },
             {
-                "thunder": 50,
+                "thunder": 5,
                 "thunderMultiplier": 1.1
             },
             {
-                "thunder": 60,
+                "thunder": 6,
                 "thunderMultiplier": 1.2
             }
         ],
@@ -875,14 +875,14 @@
         "maxLevel": 3,
         "effect": [
             {
-                "ice": 40
+                "ice": 4
             },
             {
-                "ice": 50,
+                "ice": 5,
                 "iceMultiplier": 1.1
             },
             {
-                "ice": 60,
+                "ice": 6,
                 "iceMultiplier": 1.2
             }
         ],
@@ -898,14 +898,14 @@
         "maxLevel": 3,
         "effect": [
             {
-                "dragon": 40
+                "dragon": 4
             },
             {
-                "dragon": 50,
+                "dragon": 5,
                 "dragonMultiplier": 1.1
             },
             {
-                "dragon": 60,
+                "dragon": 6,
                 "dragonMultiplier": 1.2
             }
         ],
@@ -919,11 +919,22 @@
             "zh": "白熾奔流"
         },
         "maxLevel": 1,
-        "effec": [
-            {}
+        "effect": [
+            {
+                "intervalDamage": {
+                    "name": "Whiteflame Torrent",
+                    "damage": [
+                        {
+                            "value": 50,
+                            "type": "fixed",
+                            "hit": 1
+                        }
+                    ]
+                }
+            }
         ],
         "trigger": false,
-        "show": false
+        "show": true
     },
     "Slicked Blade": {
         "name": {

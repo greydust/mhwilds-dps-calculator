@@ -204,6 +204,17 @@
       <div class="row" id="buff-meal"></div>
       <div class="row" id="buff"></div>
     </div>
+
+    <div class="skills-box" id="miscellaneous">
+      <h3 data-lang="miscellaneous-label">Miscellaneous</h3>
+      <div class="row">
+        <div class="group">
+          <label data-lang="interval-damage-gap-label">Interval Damage:</label>
+          <input class="second-input" type="number" id="interval-damage-gap" value="7.5" min="3">
+          <label data-lang="interval-damage-second-label">s</label>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="stats-box">
@@ -285,8 +296,16 @@
         <span id="result-dps">-</span>
       </div>
       <div class="stat-group">
+        <label data-lang="result-dph-label">DPH:</label>
+        <span id="result-dph">-</span>
+      </div>
+      <div class="stat-group">
         <label data-lang="result-ignition-dps-label">Ignition DPS:</label>
         <span id="result-ignition-dps">-</span>
+      </div>
+      <div class="stat-group">
+        <label data-lang="result-ignition-dpa-label">Ignition DPA:</label>
+        <span id="result-ignition-dpa">-</span>
       </div>
     </div>
     <div class="stat-row">
@@ -319,6 +338,10 @@
       <div class="stat-group">
         <label data-lang="result-ignition-percentage-label">Ignition %:</label>
         <span id="result-ignition-percentage">-</span>
+      </div>
+      <div class="stat-group">
+        <label data-lang="result-interval-damage-percentage-label">Interval Damage %:</label>
+        <span id="result-interval-damage-percentage">-</span>
       </div>
     </div>
     <details>

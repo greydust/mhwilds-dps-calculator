@@ -89,10 +89,13 @@
     "result-average-elemental-additive": "Average Elemental Additive:",
     "result-average-affinity-label": "Average Affinity:",
     "result-dps-label": "DPS:",
+    "result-dph-label": "DPH:",
     "result-ignition-dps-label": "Ignition DPS:",
+    "result-ignition-dpa-label": "Ignition DPA:",
     "result-physical-percentage-label": "Physical %:",
     "result-elemental-percentage-label": "Elemental %:",
     "result-ignition-percentage-label": "Ignition %:",
+    "result-interval-damage-percentage-label": "Interval Damage %:",
     "artian-element-type-fire": "Fire",
     "artian-element-type-water": "Water",
     "artian-element-type-thunder": "Thunder",
@@ -105,7 +108,9 @@
     "reset-button": "Reset",
     "ignition-label": "Ignition:",
     "wyvernheart-ignition": "Wyvernheart Ignition",
-    "wyvernpiercer-ignition": "Wyvernpiercer Ignition"
+    "wyvernpiercer-ignition": "Wyvernpiercer Ignition",
+    "miscellaneous-label": "Miscellaneous",
+    "interval-damage-gap-label": "Interval Damage Gap:"
   },
   "zh": {
     "title": "魔物獵人荒野(重弩)DPS計算器",
@@ -197,10 +202,13 @@
     "result-average-elemental-multiplier": "平均屬性倍率：",
     "result-average-elemental-additive": "平均屬性加值：",
     "result-dps-label": "每秒傷害：",
+    "result-dph-label": "每發傷害：",
     "result-ignition-dps-label": "龍熱每秒傷害：",
+    "result-ignition-dpa-label": "龍熱每管傷害：",
     "result-physical-percentage-label": "物理佔比：",
     "result-elemental-percentage-label": "元素佔比：",
     "result-ignition-percentage-label": "龍熱佔比：",
+    "result-interval-damage-percentage-label": "觸發傷害佔比：",
     "artian-element-type-fire": "火",
     "artian-element-type-water": "水",
     "artian-element-type-thunder": "雷",
@@ -213,6 +221,8 @@
     "reset-button": "重置",
     "ignition-label": "龍熱：",
     "wyvernheart-ignition": "龍熱機關龍彈",
-    "wyvernpiercer-ignition": "龍熱穿甲彈"
+    "wyvernpiercer-ignition": "龍熱穿甲彈",
+    "miscellaneous-label": "其他",
+    "interval-damage-gap-label": "觸發傷害間隔:"
   }
 }
