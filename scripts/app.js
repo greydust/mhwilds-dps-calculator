@@ -1322,7 +1322,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     }
-    totalIntervalDamage = totalIntervalDamage / intervalDamageGap.value * cycleTime;
+    totalIntervalDamage = totalIntervalDamage / intervalDamageGap.value * ignitionRecoverTime;
     totalDamage += totalIntervalDamage;
 
     const dps = totalDamage / cycleTime;
