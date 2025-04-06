@@ -788,10 +788,10 @@
         "maxLevel": 2,
         "effect": [
             {
-                "specialDamageMultiplier": 1.1
+                "specialAmmoDamageMultiplier": 1.1
             },
             {
-                "specialDamageMultiplier": 1.2
+                "specialAmmoDamageMultiplier": 1.2
             }
         ],
         "trigger": false,
