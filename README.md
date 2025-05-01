@@ -5,3 +5,7 @@ This project is a web-based DPS (Damage Per Second) calculator. It allows player
 ## License
 
 This project is open-source and available under the MIT License.
+
+# Credits
+
+Monster data sourced from [Kiranico](https://mhwilds.kiranico.com/).

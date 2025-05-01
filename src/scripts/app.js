@@ -39,17 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const ignitionType = document.getElementById("ignition-type");
   const miscellaneous = document.getElementById("miscellaneous");
   const intervalDamageGap = document.getElementById("interval-damage-gap");
+  const fastReload = document.getElementById("fast-reload");
 
   const files = [
-    "assets/data/action.json",
-    "assets/data/buff.json",
-    "assets/data/skill/weapon.json",
-    "assets/data/skill/armor.json",
-    "assets/data/skill/group.json",
-    "assets/data/skill/set.json",
-    "assets/data/translation.json",
-    "assets/data/weapon/artian/hbg.json",
-    "assets/data/weapon/hbg.json"
+    "../assets/data/action.json",
+    "../assets/data/buff.json",
+    "../assets/data/skill/weapon.json",
+    "../assets/data/skill/armor.json",
+    "../assets/data/skill/group.json",
+    "../assets/data/skill/set.json",
+    "../assets/data/translation.json",
+    "../assets/data/weapon/artian/hbg.json",
+    "../assets/data/weapon/hbg.json"
   ];
   const ammoTypeToModAmmoType = {
     normal: "normal",
@@ -74,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(file)
       .then((response) => response.json())
       .then((fileData) => {
-        const pathParts = file.replace("assets/data/", "").replace(".json", "").split("/");
+        const pathParts = file.replace("../assets/data/", "").replace(".json", "").split("/");
         let current = data;
 
         pathParts.forEach((part, index) => {
@@ -1007,12 +1008,16 @@ document.addEventListener("DOMContentLoaded", () => {
   function calculateCycleTime() {
     const ammo = data.action["hbg"]["ammo"][hunter.ammo.type];
     hunter.ammo.shootSpeed = ammo.shoot;
-    hunter.ammo.reloadSpeed = ammo[hunter.ammo.reload];
+    if (fastReload.checked) {
+      hunter.ammo.reloadSpeed = Math.max(0, ammo[hunter.ammo.reload] - hunter.ammo.shootSpeed + 0.1);
+    } else {
+      hunter.ammo.reloadSpeed = ammo[hunter.ammo.reload];
+    }
     hunter.cycleTime = hunter.ammo.shootSpeed * hunter.ammo.ammo + hunter.ammo.reloadSpeed;
     hunter.shotsPerSecond = hunter.ammo.ammo / hunter.cycleTime;
 
     shootSpeed.textContent = hunter.ammo.shootSpeed;
-    reloadSpeed.textContent = hunter.ammo.reloadSpeed;
+    reloadSpeed.textContent = Number(hunter.ammo.reloadSpeed.toFixed(3));
     cycleTime.textContent = Number(hunter.cycleTime.toFixed(3));
     shotsPerSecond.textContent = Number(hunter.shotsPerSecond.toFixed(3));
   }
@@ -1064,6 +1069,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const ammo = ammoTypeSelect.value;
     if (hunter.weapon && ammo) {
       updateWeapondata(hunter.weapon);
+      updateAmmoData(hunter.weapon, ammo);
+    }
+  });
+
+  fastReload.addEventListener("change", () => {
+    const ammo = ammoTypeSelect.value;
+    if (hunter.weapon && ammo) {
       updateAmmoData(hunter.weapon, ammo);
     }
   });
