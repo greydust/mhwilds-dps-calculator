@@ -42,15 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const fastReload = document.getElementById("fast-reload");
 
   const files = [
-    "../assets/data/action.json",
-    "../assets/data/buff.json",
-    "../assets/data/skill/weapon.json",
-    "../assets/data/skill/armor.json",
-    "../assets/data/skill/group.json",
-    "../assets/data/skill/set.json",
-    "../assets/data/translation.json",
-    "../assets/data/weapon/artian/hbg.json",
-    "../assets/data/weapon/hbg.json"
+    "assets/data/action.json",
+    "assets/data/buff.json",
+    "assets/data/skill/weapon.json",
+    "assets/data/skill/armor.json",
+    "assets/data/skill/group.json",
+    "assets/data/skill/set.json",
+    "assets/data/translation.json",
+    "assets/data/weapon/artian/hbg.json",
+    "assets/data/weapon/hbg.json"
   ];
   const ammoTypeToModAmmoType = {
     normal: "normal",
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(file)
       .then((response) => response.json())
       .then((fileData) => {
-        const pathParts = file.replace("../assets/data/", "").replace(".json", "").split("/");
+        const pathParts = file.replace("assets/data/", "").replace(".json", "").split("/");
         let current = data;
 
         pathParts.forEach((part, index) => {
