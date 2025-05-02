@@ -1008,7 +1008,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function calculateCycleTime() {
     const ammo = data.action["hbg"]["ammo"][hunter.ammo.type];
     hunter.ammo.shootSpeed = ammo.shoot;
-    if (fastReload.checked) {
+    if (fastReload.checked && ammo.fastReload) {
       hunter.ammo.reloadSpeed = Math.max(0, ammo[hunter.ammo.reload] - hunter.ammo.shootSpeed + 0.1);
     } else {
       hunter.ammo.reloadSpeed = ammo[hunter.ammo.reload];

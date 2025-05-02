@@ -111,7 +111,8 @@
         "reload": 2.25,
         "reloadOpening1": 2.05,
         "reloadOpening2": 2.0,
-        "reloadOpening3": 1.75
+        "reloadOpening3": 1.75,
+        "fastReload": true
       },
       "spread": {
         "damage": [
@@ -382,7 +383,8 @@
         "reload": 1.34,
         "reloadOpening1": 1.22,
         "reloadOpening2": 1.175,
-        "reloadOpening3": 1.04
+        "reloadOpening3": 1.04,
+        "fastReload": true
       },
       "water": {
         "damage": [
@@ -446,7 +448,8 @@
         "reload": 1.34,
         "reloadOpening1": 1.22,
         "reloadOpening2": 1.175,
-        "reloadOpening3": 1.04
+        "reloadOpening3": 1.04,
+        "fastReload": true
       },
       "freeze": {
         "damage": [
@@ -510,7 +513,8 @@
         "reload": 1.34,
         "reloadOpening1": 1.22,
         "reloadOpening2": 1.175,
-        "reloadOpening3": 1.04
+        "reloadOpening3": 1.04,
+        "fastReload": true
       },
       "thunder": {
         "damage": [
@@ -574,7 +578,8 @@
         "reload": 1.34,
         "reloadOpening1": 1.22,
         "reloadOpening2": 1.175,
-        "reloadOpening3": 1.04
+        "reloadOpening3": 1.04,
+        "fastReload": true
       },
       "dragon": {
         "damage": [

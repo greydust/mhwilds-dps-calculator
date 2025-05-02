@@ -1,240 +1,277 @@
 {
-    "Alluring Pelt": {
-        "name": {
-            "en": "Alluring Pelt",
-            "zh": "毛皮的誘惑"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
+  "Alluring Pelt": {
+    "name": {
+      "en": "Alluring Pelt",
+      "zh": "毛皮的誘惑"
     },
-    "Buttery Leathercraft": {
-        "name": {
-            "en": "Buttery Leathercraft",
-            "zh": "皮革製品的滑順質感"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {
-                "affinity": 0.3
-            }
-        ],
-        "trigger": true,
-        "show": false
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Buttery Leathercraft": {
+    "name": {
+      "en": "Buttery Leathercraft",
+      "zh": "皮革製品的滑順質感"
     },
-    "Flexible Leathercraft": {
-        "name": {
-            "en": "Flexible Leathercraft",
-            "zh": "皮革製品的柔韌性"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {
+        "affinity": 0.3
+      }
+    ],
+    "trigger": true,
+    "show": false
+  },
+  "Flexible Leathercraft": {
+    "name": {
+      "en": "Flexible Leathercraft",
+      "zh": "皮革製品的柔韌性"
     },
-    "Fortifying Pelt": {
-        "name": {
-            "en": "Fortifying Pelt",
-            "zh": "毛皮的昂揚"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "triggerLevel": 2,
-        "triggerName": [
-            {
-                "en": "1 Faint",
-                "zh": "一貓"
-            },
-            {
-                "en": "2 Faints",
-                "zh": "二貓"
-            }
-        ],
-        "triggerEffect": [
-            [
-                {}
-            ],
-            [
-                {}
-            ],
-            [
-                {
-                    "attackMultiplier": 1.1
-                },
-                {
-                    "attackMultiplier": 1.2
-                }
-            ]
-        ],
-        "defaultCoverage": [
-            0.67,
-            0.33
-        ],
-        "show": true
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Fortifying Pelt": {
+    "name": {
+      "en": "Fortifying Pelt",
+      "zh": "毛皮的昂揚"
     },
-    "Guardian's Protection": {
-        "name": {
-            "en": "Guardian's Protection",
-            "zh": "護龍的守護"
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "triggerLevel": 2,
+    "triggerName": [
+      {
+        "en": "1 Faint",
+        "zh": "一貓"
+      },
+      {
+        "en": "2 Faints",
+        "zh": "二貓"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {}
+      ],
+      [
+        {}
+      ],
+      [
+        {
+          "attackMultiplier": 1.1
         },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
+        {
+          "attackMultiplier": 1.2
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      0.67,
+      0.33
+    ],
+    "show": true
+  },
+  "Guardian's Protection": {
+    "name": {
+      "en": "Guardian's Protection",
+      "zh": "護龍的守護"
     },
-    "Guardian's Pulse": {
-        "name": {
-            "en": "Guardian's Pulse",
-            "zh": "護龍的脈動"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Guardian's Pulse": {
+    "name": {
+      "en": "Guardian's Pulse",
+      "zh": "護龍的脈動"
     },
-    "Imparted Wisdom": {
-        "name": {
-            "en": "Imparted Wisdom",
-            "zh": "前輩的指引"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Imparted Wisdom": {
+    "name": {
+      "en": "Imparted Wisdom",
+      "zh": "前輩的指引"
     },
-    "Lord's Favor": {
-        "name": {
-            "en": "Lord's Favor",
-            "zh": "霸主的自尊"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Lord's Favor": {
+    "name": {
+      "en": "Lord's Favor",
+      "zh": "霸主的自尊"
     },
-    "Lord's Fury": {
-        "name": {
-            "en": "Lord's Fury",
-            "zh": "霸主的盛怒"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "triggerLevel": 1,
-        "triggerName": [
-            {
-                "en": "On",
-                "zh": "發動"
-            }
-        ],
-        "triggerEffect": [
-            [
-                {}
-            ],
-            [
-                {}
-            ],
-            [
-                {
-                    "attack": 10
-                }
-            ]
-        ],
-        "defaultCoverage": [
-            0.1
-        ],
-        "show": true
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Lord's Fury": {
+    "name": {
+      "en": "Lord's Fury",
+      "zh": "霸主的盛怒"
     },
-    "Neopteron Alert": {
-        "name": {
-            "en": "Neopteron Alert",
-            "zh": "甲蟲的直覺"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "triggerLevel": 1,
+    "triggerName": [
+      {
+        "en": "On",
+        "zh": "發動"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {}
+      ],
+      [
+        {}
+      ],
+      [
+        {
+          "attack": 10
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      0.1
+    ],
+    "show": true
+  },
+  "Neopteron Alert": {
+    "name": {
+      "en": "Neopteron Alert",
+      "zh": "甲蟲的直覺"
     },
-    "Neopteron Camouflage": {
-        "name": {
-            "en": "Neopteron Camouflage",
-            "zh": "甲蟲的擬態"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Neopteron Camouflage": {
+    "name": {
+      "en": "Neopteron Camouflage",
+      "zh": "甲蟲的擬態"
     },
-    "Scale Layering": {
-        "name": {
-            "en": "Scale Layering",
-            "zh": "堆疊鱗片的手藝"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Scale Layering": {
+    "name": {
+      "en": "Scale Layering",
+      "zh": "堆疊鱗片的手藝"
     },
-    "Scaling Prowess": {
-        "name": {
-            "en": "Scaling Prowess",
-            "zh": "鋪排鱗片的技巧"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    }
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Scaling Prowess": {
+    "name": {
+      "en": "Scaling Prowess",
+      "zh": "鋪排鱗片的技巧"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Lord's Soul": {
+    "name": {
+      "en": "Lord's Soul",
+      "zh": "霸主之魂"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "triggerLevel": 1,
+    "triggerName": [
+      {
+        "en": "On",
+        "zh": "發動"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {}
+      ],
+      [
+        {}
+      ],
+      [
+        {
+          "attackMultiplier": 1.05
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      1
+    ],
+    "show": true
+  }
 }
