@@ -5,21 +5,21 @@
         "damage": [
           [
             {
-              "value": 15,
+              "value": 17,
               "type": "shoot",
               "hit": 3
             }
           ],
           [
             {
-              "value": 21,
+              "value": 23.8,
               "type": "shoot",
               "hit": 3
             }
           ],
           [
             {
-              "value": 28.5,
+              "value": 32.3,
               "type": "shoot",
               "hit": 3
             }
@@ -118,21 +118,21 @@
         "damage": [
           [
             {
-              "value": 11,
+              "value": 13,
               "type": "shoot",
               "hit": 5
             }
           ],
           [
             {
-              "value": 12.65,
+              "value": 15.6,
               "type": "shoot",
               "hit": 6
             }
           ],
           [
             {
-              "value": 14.3,
+              "value": 18.2,
               "type": "shoot",
               "hit": 1
             }
@@ -340,7 +340,7 @@
               "hit": 1
             },
             {
-              "value": 5.6,
+              "value": 4,
               "type": "shoot",
               "hit": 2
             }
@@ -362,7 +362,7 @@
               "hit": 1
             },
             {
-              "value": 7,
+              "value": 5,
               "type": "shoot",
               "hit": 2
             }
@@ -405,7 +405,7 @@
               "hit": 1
             },
             {
-              "value": 5.6,
+              "value": 4,
               "type": "shoot",
               "hit": 2
             }
@@ -427,7 +427,7 @@
               "hit": 1
             },
             {
-              "value": 7,
+              "value": 5,
               "type": "shoot",
               "hit": 2
             }
@@ -470,7 +470,7 @@
               "hit": 1
             },
             {
-              "value": 5.6,
+              "value": 4,
               "type": "shoot",
               "hit": 2
             }
@@ -492,7 +492,7 @@
               "hit": 1
             },
             {
-              "value": 7,
+              "value": 5,
               "type": "shoot",
               "hit": 2
             }
@@ -535,7 +535,7 @@
               "hit": 1
             },
             {
-              "value": 5.6,
+              "value": 4,
               "type": "shoot",
               "hit": 2
             }
@@ -557,7 +557,7 @@
               "hit": 1
             },
             {
-              "value": 7,
+              "value": 5,
               "type": "shoot",
               "hit": 2
             }
@@ -600,7 +600,7 @@
               "hit": 1
             },
             {
-              "value": 14,
+              "value": 10,
               "type": "shoot",
               "hit": 1
             }
