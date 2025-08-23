@@ -27,15 +27,22 @@
         ],
         "ignitionRecovery": 0.25,
         "shoot": 1.36,
+        "shootEvadeReload": 1.96,
         "shootDetail": [
           0.76,
+          0.3,
+          0.3
+        ],
+        "evadeReloadDetail": [
+          1.36,
           0.3,
           0.3
         ],
         "reload": 1.34,
         "reloadOpening1": 1.22,
         "reloadOpening2": 1.175,
-        "reloadOpening3": 1.04
+        "reloadOpening3": 1.04,
+        "reloadEvadeReload": 0
       },
       "pierce": {
         "damage": [
@@ -108,11 +115,12 @@
         ],
         "ignitionRecovery": 0.2,
         "shoot": 0.95,
+        "shootEvadeReload": 1.39,
         "reload": 2.25,
         "reloadOpening1": 2.05,
         "reloadOpening2": 2.0,
         "reloadOpening3": 1.75,
-        "fastReload": true
+        "reloadEvadeReload": 0
       },
       "spread": {
         "damage": [
@@ -140,10 +148,12 @@
         ],
         "ignitionRecovery": 0.15,
         "shoot": 1.51,
+        "shootEvadeReload": 1.56,
         "reload": 1.34,
         "reloadOpening1": 1.22,
         "reloadOpening2": 1.175,
-        "reloadOpening3": 1.04
+        "reloadOpening3": 1.04,
+        "reloadEvadeReload": 0
       },
       "slicing": {
         "damage": [
@@ -162,10 +172,12 @@
         ],
         "ignitionRecovery": 0,
         "shoot": 1.82,
+        "shootEvadeReload": 1.813,
         "reload": 2.09,
         "reloadOpening2": 1.9,
         "reloadOpening1": 1.82,
-        "reloadOpening3": 1.6
+        "reloadOpening3": 1.6,
+        "reloadEvadeReload": 0
       },
       "sticky": {
         "damage": [
@@ -380,11 +392,12 @@
           }
         ],
         "shoot": 0.95,
+        "shootEvadeReload": 1.4285,
         "reload": 1.34,
         "reloadOpening1": 1.22,
         "reloadOpening2": 1.175,
         "reloadOpening3": 1.04,
-        "fastReload": true
+        "reloadEvadeReload": 0
       },
       "water": {
         "damage": [
@@ -445,11 +458,12 @@
           }
         ],
         "shoot": 0.95,
+        "shootEvadeReload": 1.4285,
         "reload": 1.34,
         "reloadOpening1": 1.22,
         "reloadOpening2": 1.175,
         "reloadOpening3": 1.04,
-        "fastReload": true
+        "reloadEvadeReload": 0
       },
       "freeze": {
         "damage": [
@@ -510,11 +524,12 @@
           }
         ],
         "shoot": 0.95,
+        "shootEvadeReload": 1.4285,
         "reload": 1.34,
         "reloadOpening1": 1.22,
         "reloadOpening2": 1.175,
         "reloadOpening3": 1.04,
-        "fastReload": true
+        "reloadEvadeReload": 0
       },
       "thunder": {
         "damage": [
@@ -575,11 +590,12 @@
           }
         ],
         "shoot": 0.95,
+        "shootEvadeReload": 1.4285,
         "reload": 1.34,
         "reloadOpening1": 1.22,
         "reloadOpening2": 1.175,
         "reloadOpening3": 1.04,
-        "fastReload": true
+        "reloadEvadeReload": 0
       },
       "dragon": {
         "damage": [
@@ -614,10 +630,12 @@
           }
         ],
         "shoot": 1.09,
+        "shootEvadeReload": 1.5715,
         "reload": 2.09,
         "reloadOpening2": 1.9,
         "reloadOpening1": 1.82,
-        "reloadOpening3": 1.6
+        "reloadOpening3": 1.6,
+        "reloadEvadeReload": 0
       }
     },
     "Wyvernheart Ignition": {

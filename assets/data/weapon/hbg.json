@@ -1005,6 +1005,110 @@
       "ignition"
     ]
   },
+  "Insurrection Cannon": {
+    "name": {
+      "en": "Insurrection Cannon",
+      "zh": "叛砲天倉一"
+    },
+    "baseAttack": 200,
+    "affinity": 0.2,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 3,
+        "ammo": 2
+      },
+      "pierce": {
+        "level": 1,
+        "ammo": 1
+      },
+      "spread": {
+        "level": 3,
+        "ammo": 2
+      },
+      "flaming": {
+        "level": 1,
+        "ammo": 2
+      },
+      "dragon": {
+        "level": 1,
+        "ammo": 2
+      }
+    },
+    "skills": {
+      "Bladescale Loading": 1,
+      "Evading Reload": 1
+    },
+    "ignitionRecovery": 1,
+    "mode": {
+      "type": "standard",
+      "level": 1
+    },
+    "modType": [
+      "magazine",
+      "elemental",
+      "standard"
+    ]
+  },
+  "Thunderblitz Cannon": {
+    "name": {
+      "en": "Thunderblitz Cannon",
+      "zh": "雷砲海龍電擊"
+    },
+    "baseAttack": 220,
+    "affinity": 0,
+    "def": 0,
+    "sockets": [
+      3,
+      2,
+      1
+    ],
+    "ammo": {
+      "normal": {
+        "level": 1,
+        "ammo": 4
+      },
+      "pierce": {
+        "level": 2,
+        "ammo": 5
+      },
+      "spread": {
+        "level": 1,
+        "ammo": 4
+      },
+      "slicing": {
+        "level": 1,
+        "ammo": 2
+      },
+      "water": {
+        "level": 1,
+        "ammo": 6
+      },
+      "thunder": {
+        "level": 2,
+        "ammo": 6
+      }
+    },
+    "skills": {
+      "Tetrad Shot": 2,
+      "Convert Thunder Resistance": 1
+    },
+    "ignitionRecovery": 2,
+    "mode": {
+      "type": "base",
+      "level": 0
+    },
+    "modType": [
+      "magazine",
+      "elemental",
+      "ignition"
+    ]
+  },
   "Greifen": {
     "name": {
       "en": "Greifen",

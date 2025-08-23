@@ -111,7 +111,7 @@
     "wyvernpiercer-ignition": "Wyvernpiercer Ignition",
     "miscellaneous-label": "Miscellaneous",
     "interval-damage-gap-label": "Interval Damage Gap:",
-    "fast-reload-label": "Fast Reload:"
+    "thunder-resistance-label": "Thunder Resistance:"
   },
   "zh": {
     "title": "魔物獵人荒野(重弩)DPS計算器",
@@ -224,7 +224,7 @@
     "wyvernheart-ignition": "龍熱機關龍彈",
     "wyvernpiercer-ignition": "龍熱穿甲彈",
     "miscellaneous-label": "其他",
-    "interval-damage-gap-label": "觸發傷害間隔:",
-    "fast-reload-label": "快速裝填："
+    "interval-damage-gap-label": "觸發傷害間隔：",
+    "thunder-resistance-label": "雷耐性："
   }
 }

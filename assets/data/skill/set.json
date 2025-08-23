@@ -1,349 +1,442 @@
 {
-    "Arkveld's Hunger": {
-        "name": {
-            "en": "Arkveld's Hunger",
-            "zh": "鎖刃龍之飢餓"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
+  "Arkveld's Hunger": {
+    "name": {
+      "en": "Arkveld's Hunger",
+      "zh": "鎖刃龍之飢餓"
     },
-    "Blangonga's Spirit": {
-        "name": {
-            "en": "Blangonga's Spirit",
-            "zh": "雪獅子王之鬥志"
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Blangonga's Spirit": {
+    "name": {
+      "en": "Blangonga's Spirit",
+      "zh": "雪獅子王之鬥志"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {
+        "attack": 3
+      },
+      {
+        "attack": 3
+      },
+      {
+        "attack": 6
+      }
+    ],
+    "trigger": true,
+    "show": false
+  },
+  "Doshaguma's Might": {
+    "name": {
+      "en": "Doshaguma's Might",
+      "zh": "闢獸之力"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "triggerLevel": 1,
+    "triggerName": [
+      {
+        "en": "On",
+        "zh": "發動"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {}
+      ],
+      [
+        {
+          "attack": 10
+        }
+      ],
+      [
+        {
+          "attack": 10
+        }
+      ],
+      [
+        {
+          "attack": 25
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      0.05
+    ],
+    "show": false
+  },
+  "Ebony Odogaron's Power": {
+    "name": {
+      "en": "Ebony Odogaron's Power",
+      "zh": "兇爪龍之力"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {
+        "burstAttack": 3
+      },
+      {
+        "burstAttack": 3
+      },
+      {
+        "burstAttack": 10
+      }
+    ],
+    "trigger": false,
+    "show": true
+  },
+  "Fulgur Anjanath's Will": {
+    "name": {
+      "en": "Fulgur Anjanath's Will",
+      "zh": "雷顎龍之鬥志"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Gore Magala's Tyranny": {
+    "name": {
+      "en": "Gore Magala's Tyranny",
+      "zh": "黑蝕龍之力"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "triggerLevel": 2,
+    "triggerName": [
+      {
+        "en": "Frenzy",
+        "zh": "狂龍症"
+      },
+      {
+        "en": "Recovered",
+        "zh": "克服"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {},
+        {}
+      ],
+      [
+        {
+          "status": "frenzy"
         },
-        "maxLevel": 4,
-        "effect": [
-            {},
+        {
+          "status": "recovered"
+        }
+      ],
+      [
+        {
+          "status": "frenzy"
+        },
+        {
+          "status": "recovered"
+        }
+      ],
+      [
+        {
+          "status": "frenzy",
+          "attack": 10
+        },
+        {
+          "status": "recovered",
+          "attack": 15
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      0.99,
+      0.95
+    ],
+    "show": true
+  },
+  "Gravios's Protection": {
+    "name": {
+      "en": "Gravios's Protection",
+      "zh": "鎧龍之守護"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Guardian Arkveld's Vitality": {
+    "name": {
+      "en": "Guardian Arkveld's Vitality",
+      "zh": "護鎖刃龍之命脈"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Jin Dahaad's Revolt": {
+    "name": {
+      "en": "Jin Dahaad's Revolt",
+      "zh": "凍峰龍之叛逆"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "triggerLevel": 1,
+    "triggerName": [
+      {
+        "en": "On",
+        "zh": "發動"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {}
+      ],
+      [
+        {
+          "attack": 25
+        }
+      ],
+      [
+        {
+          "attack": 25
+        }
+      ],
+      [
+        {
+          "attack": 50
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      0.05
+    ],
+    "show": true
+  },
+  "Nu Udra's Mutiny": {
+    "name": {
+      "en": "Nu Udra's Mutiny",
+      "zh": "獄焰鱆之叛逆"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {
+        "damage": 20
+      },
+      {
+        "damage": 20
+      },
+      {
+        "damage": 48
+      }
+    ],
+    "trigger": true,
+    "show": false
+  },
+  "Rey Dau's Voltage": {
+    "name": {
+      "en": "Rey Dau's Voltage",
+      "zh": "煌雷龍之力"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Rathalos's Flare": {
+    "name": {
+      "en": "Rathalos's Flare",
+      "zh": "火龍之力"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {
+        "fireDamage": 24
+      },
+      {
+        "fireDamage": 24
+      },
+      {
+        "fireDamage": 60
+      }
+    ],
+    "trigger": true,
+    "show": false
+  },
+  "Uth Duna's Cover": {
+    "name": {
+      "en": "Uth Duna's Cover",
+      "zh": "波衣龍之守護"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Xu Wu's Vigor": {
+    "name": {
+      "en": "Xu Wu's Vigor",
+      "zh": "暗器鱆之力"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {
+        "attack": 15
+      },
+      {
+        "attack": 15
+      },
+      {
+        "attack": 25
+      }
+    ],
+    "trigger": true,
+    "show": false
+  },
+  "Leviathan's Fury": {
+    "name": {
+      "en": "Leviathan's Fury",
+      "zh": "海龍的渦雷"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {
+        "intervalDamage": {
+          "name": "Leviathan's Fury",
+          "damage": [
             {
-                "attack": 3
+              "value": 30,
+              "type": "fixed",
+              "hit": 1
             },
             {
-                "attack": 3
-            },
-            {
-                "attack": 6
+              "value": 70,
+              "type": "thunder",
+              "hit": 1
             }
-        ],
-        "trigger": true,
-        "show": false
-    },
-    "Doshaguma's Might": {
-        "name": {
-            "en": "Doshaguma's Might",
-            "zh": "闢獸之力"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "triggerLevel": 1,
-        "triggerName": [
+          ]
+        }
+      },
+      {
+        "intervalDamage": {
+          "name": "Leviathan's Fury",
+          "damage": [
             {
-                "en": "On",
-                "zh": "發動"
+              "value": 30,
+              "type": "fixed",
+              "hit": 1
+            },
+            {
+              "value": 70,
+              "type": "thunder",
+              "hit": 1
             }
-        ],
-        "triggerEffect": [
-            [
-                {}
-            ],
-            [
-                {
-                    "attack": 10
-                }
-            ],
-            [
-                {
-                    "attack": 10
-                }
-            ],
-            [
-                {
-                    "attack": 25
-                }
-            ]
-        ],
-        "defaultCoverage": [
-            0.05
-        ],
-        "show": false
-    },
-    "Ebony Odogaron's Power": {
-        "name": {
-            "en": "Ebony Odogaron's Power",
-            "zh": "兇爪龍之力"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
+          ]
+        }
+      },
+      {
+        "intervalDamage": {
+          "name": "Leviathan's Fury",
+          "damage": [
             {
-                "burstAttack": 3
+              "value": 60,
+              "type": "fixed",
+              "hit": 1
             },
             {
-                "burstAttack": 3
-            },
-            {
-                "burstAttack": 10
+              "value": 200,
+              "type": "thunder",
+              "hit": 1
             }
-        ],
-        "trigger": false,
-        "show": true
-    },
-    "Fulgur Anjanath's Will": {
-        "name": {
-            "en": "Fulgur Anjanath's Will",
-            "zh": "雷顎龍之鬥志"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Gore Magala's Tyranny": {
-        "name": {
-            "en": "Gore Magala's Tyranny",
-            "zh": "黑蝕龍之力"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "triggerLevel": 2,
-        "triggerName": [
-            {
-                "en": "Frenzy",
-                "zh": "狂龍症"
-            },
-            {
-                "en": "Recovered",
-                "zh": "克服"
-            }
-        ],
-        "triggerEffect": [
-            [
-                {},
-                {}
-            ],
-            [
-                {
-                    "status": "frenzy"
-                },
-                {
-                    "status": "recovered"
-                }
-            ],
-            [
-                {
-                    "status": "frenzy"
-                },
-                {
-                    "status": "recovered"
-                }
-            ],
-            [
-                {
-                    "status": "frenzy",
-                    "attack": 10
-                },
-                {
-                    "status": "recovered",
-                    "attack": 15
-                }
-            ]
-        ],
-        "defaultCoverage": [
-            0.99,
-            0.95
-        ],
-        "show": true
-    },
-    "Gravios's Protection": {
-        "name": {
-            "en": "Gravios's Protection",
-            "zh": "鎧龍之守護"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Guardian Arkveld's Vitality": {
-        "name": {
-            "en": "Guardian Arkveld's Vitality",
-            "zh": "護鎖刃龍之命脈"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Jin Dahaad's Revolt": {
-        "name": {
-            "en": "Jin Dahaad's Revolt",
-            "zh": "凍峰龍之叛逆"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "triggerLevel": 1,
-        "triggerName": [
-            {
-                "en": "On",
-                "zh": "發動"
-            }
-        ],
-        "triggerEffect": [
-            [
-                {}
-            ],
-            [
-                {
-                    "attack": 25
-                }
-            ],
-            [
-                {
-                    "attack": 25
-                }
-            ],
-            [
-                {
-                    "attack": 50
-                }
-            ]
-        ],
-        "defaultCoverage": [
-            0.05
-        ],
-        "show": true
-    },
-    "Nu Udra's Mutiny": {
-        "name": {
-            "en": "Nu Udra's Mutiny",
-            "zh": "獄焰鱆之叛逆"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
-            {
-                "damage": 20
-            },
-            {
-                "damage": 20
-            },
-            {
-                "damage": 48
-            }
-        ],
-        "trigger": true,
-        "show": false
-    },
-    "Rey Dau's Voltage": {
-        "name": {
-            "en": "Rey Dau's Voltage",
-            "zh": "煌雷龍之力"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Rathalos's Flare": {
-        "name": {
-            "en": "Rathalos's Flare",
-            "zh": "火龍之力"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
-            {
-                "fireDamage": 24
-            },
-            {
-                "fireDamage": 24
-            },
-            {
-                "fireDamage": 60
-            }
-        ],
-        "trigger": true,
-        "show": false
-    },
-    "Uth Duna's Cover": {
-        "name": {
-            "en": "Uth Duna's Cover",
-            "zh": "波衣龍之守護"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Xu Wu's Vigor": {
-        "name": {
-            "en": "Xu Wu's Vigor",
-            "zh": "暗器鱆之力"
-        },
-        "maxLevel": 4,
-        "effect": [
-            {},
-            {
-                "attack": 15
-            },
-            {
-                "attack": 15
-            },
-            {
-                "attack": 25
-            }
-        ],
-        "trigger": true,
-        "show": false
-    }
+          ]
+        }
+      }
+    ],
+    "trigger": true,
+    "triggerLevel": 1,
+    "triggerName": [
+      {
+        "en": "On",
+        "zh": "發動"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {}
+      ],
+      [
+        {
+          "affinity": 0.15
+        }
+      ],
+      [
+        {
+          "attack": 0.15
+        }
+      ],
+      [
+        {
+          "attack": 0.15
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      0.5
+    ],
+    "show": true
+  }
 }

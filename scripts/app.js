@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ignitionType = document.getElementById("ignition-type");
   const miscellaneous = document.getElementById("miscellaneous");
   const intervalDamageGap = document.getElementById("interval-damage-gap");
-  const fastReload = document.getElementById("fast-reload");
+  const thunderResistance = document.getElementById("thunder-resistance");
 
   const files = [
     "assets/data/action.json",
@@ -640,10 +640,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     calculateCycleTime();
 
+    miscellaneousHidden = true;
     if (hunter.intervalDamage.length > 0) {
-      miscellaneous.classList.remove("hidden");
+      miscellaneousHidden = false;
+      document.getElementById("interval-damage-gap-row").classList.remove("hidden");
     } else {
+      document.getElementById("interval-damage-gap-row").classList.add("hidden");
+    }
+    if (hunter.convertThunderResistance > 0) {
+      miscellaneousHidden = false;
+      document.getElementById("thunder-resistance-row").classList.remove("hidden");
+    } else {
+      document.getElementById("thunder-resistance-row").classList.add("hidden");
+    }
+    if (miscellaneousHidden) {
       miscellaneous.classList.add("hidden");
+    } else {
+      miscellaneous.classList.remove("hidden");
     }
   }
 
@@ -837,6 +850,9 @@ document.addEventListener("DOMContentLoaded", () => {
         case "elementalMultiplierTetrad":
           hunter.elementalMultiplierTetrad *= value;
           break;
+        case "shoot":
+          hunter.ammo.shoot = value;
+          break;
         case "reload":
           hunter.ammo.reload = value;
           break;
@@ -860,6 +876,9 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
         case "intervalDamage":
           hunter.intervalDamage.push(value);
+          break;
+        case "convertThunderResistance":
+          hunter.convertThunderResistance += value;
           break;
         default:
           console.error(`Unknown effect key: ${key}`);
@@ -961,6 +980,9 @@ document.addEventListener("DOMContentLoaded", () => {
         case "intervalDamage":
           hunter.intervalDamage = hunter.intervalDamage.filter((item) => item.name !== value.name);
           break;
+        case "convertThunderResistance":
+          hunter.convertThunderResistance -= value;
+          break;
         default:
           console.error(`Unknown effect key: ${key}`);
           break;
@@ -992,6 +1014,7 @@ document.addEventListener("DOMContentLoaded", () => {
     hunter.attackTetrad = 0;
     hunter.affinityTetrad = 0;
     hunter.elementalMultiplierTetrad = 1;
+    hunter.ammo.shoot = "shoot";
     hunter.ammo.reload = "reload";
     hunter.normalDamageMultiplier = 1;
     hunter.pierceDamageMultiplier = 1;
@@ -1003,16 +1026,13 @@ document.addEventListener("DOMContentLoaded", () => {
     hunter.trigger = [];
     hunter.status = {};
     hunter.intervalDamage = [];
+    hunter.convertThunderResistance = 0;
   }
 
   function calculateCycleTime() {
     const ammo = data.action["hbg"]["ammo"][hunter.ammo.type];
-    hunter.ammo.shootSpeed = ammo.shoot;
-    if (fastReload.checked && ammo.fastReload) {
-      hunter.ammo.reloadSpeed = Math.max(0, ammo[hunter.ammo.reload] - hunter.ammo.shootSpeed + 0.1);
-    } else {
-      hunter.ammo.reloadSpeed = ammo[hunter.ammo.reload];
-    }
+    hunter.ammo.shootSpeed = ammo[hunter.ammo.shoot];
+    hunter.ammo.reloadSpeed = ammo[hunter.ammo.reload];
     hunter.cycleTime = hunter.ammo.shootSpeed * hunter.ammo.ammo + hunter.ammo.reloadSpeed;
     hunter.shotsPerSecond = hunter.ammo.ammo / hunter.cycleTime;
 
@@ -1069,13 +1089,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const ammo = ammoTypeSelect.value;
     if (hunter.weapon && ammo) {
       updateWeapondata(hunter.weapon);
-      updateAmmoData(hunter.weapon, ammo);
-    }
-  });
-
-  fastReload.addEventListener("change", () => {
-    const ammo = ammoTypeSelect.value;
-    if (hunter.weapon && ammo) {
       updateAmmoData(hunter.weapon, ammo);
     }
   });
@@ -1258,7 +1271,8 @@ document.addEventListener("DOMContentLoaded", () => {
         (bullet == 4 || bullet == 6 ? hunter.elementalMultiplierTetrad : 1);
       averageElementalMultiplier += elementalMultiplier;
 
-      const elementalAdditive = hunter[`${hunter.ammo.elementalType}`];
+      const elementalAdditive = hunter[`${hunter.ammo.elementalType}`] +
+        Math.max(0, hunter.ammo.elementalType == "thunder" ? hunter.convertThunderResistance * thunderResistance.value : 0);
       averageElementalAdditive += elementalAdditive;
 
       let physicalDamage = 0;
@@ -1333,6 +1347,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (damageInfo.type === "fixed") {
           totalIntervalDamage += damageInfo.value * damageInfo.hit;
+        } else if (damageInfo.type === "thunder") {
+          totalIntervalDamage += damageInfo.value * damageInfo.hit * elementalHitZoneValue.value / 100;
         }
       }
     }
@@ -1357,7 +1373,6 @@ document.addEventListener("DOMContentLoaded", () => {
       averageElementalAdditive: averageElementalAdditive / hunter.ammo.ammo,
     };
   }
-
 
   function reset() {
     const params = new URLSearchParams();

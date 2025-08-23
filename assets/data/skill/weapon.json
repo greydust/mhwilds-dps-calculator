@@ -1,994 +1,1055 @@
 {
-    "Airborne": {
-        "name": {
-            "en": "Airborne",
-            "zh": "飛燕"
-        },
-        "maxLevel": 1,
-        "effect": [
+  "Airborne": {
+    "name": {
+      "en": "Airborne",
+      "zh": "飛燕"
+    },
+    "maxLevel": 1,
+    "effect": [
+      {
+        "jumpMultiplier": 1.1
+      }
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Artillery": {
+    "name": {
+      "en": "Artillery",
+      "zh": "砲術"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {
+        "shellFireAttack": 30
+      },
+      {
+        "shellFireAttack": 60
+      },
+      {
+        "shellFireAttack": 90
+      }
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Attack Boost": {
+    "name": {
+      "en": "Attack Boost",
+      "zh": "攻擊"
+    },
+    "maxLevel": 5,
+    "effect": [
+      {
+        "attack": 3
+      },
+      {
+        "attack": 5
+      },
+      {
+        "attack": 7
+      },
+      {
+        "attack": 8,
+        "attackMultiplier": 1.02
+      },
+      {
+        "attack": 9,
+        "attackMultiplier": 1.04
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "attack"
+  },
+  "Ballistics": {
+    "name": {
+      "en": "Ballistics",
+      "zh": "彈道強化"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Blast Attack": {
+    "name": {
+      "en": "Blast Attack",
+      "zh": "爆破屬性強化"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {
+        "blast": 10,
+        "blastMultiplier": 1.05
+      },
+      {
+        "blast": 20,
+        "blastMultiplier": 1.1
+      },
+      {
+        "blast": 50,
+        "blastMultiplier": 1.2
+      }
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Blast Functionality": {
+    "name": {
+      "en": "Blast Functionality",
+      "zh": "爆破瓶追加"
+    },
+    "maxLevel": 1,
+    "effect": [
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Bludgeoner": {
+    "name": {
+      "en": "Bludgeoner",
+      "zh": "鈍器能手"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "show": false
+  },
+  "Charge Master": {
+    "name": {
+      "en": "Charge Master",
+      "zh": "蓄力大師"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Charge Up": {
+    "name": {
+      "en": "Charge Up",
+      "zh": "蓄攻強化"
+    },
+    "maxLevel": 1,
+    "effect": [
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Critical Boost": {
+    "name": {
+      "en": "Critical Boost",
+      "zh": "超會心"
+    },
+    "maxLevel": 5,
+    "effect": [
+      {
+        "criticalDamage": 0.03
+      },
+      {
+        "criticalDamage": 0.06
+      },
+      {
+        "criticalDamage": 0.09
+      },
+      {
+        "criticalDamage": 0.12
+      },
+      {
+        "criticalDamage": 0.15
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "criticalDamage"
+  },
+  "Critical Draw": {
+    "name": {
+      "en": "Critical Draw",
+      "zh": "拔刀術【技】"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "triggerLevel": 1,
+    "triggerName": [
+      {
+        "en": "On",
+        "zh": "發動"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {
+          "affinity": 0.5
+        }
+      ],
+      [
+        {
+          "affinity": 0.75
+        }
+      ],
+      [
+        {
+          "affinity": 1
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      0.01
+    ],
+    "show": true,
+    "group": "affinity"
+  },
+  "Critical Element": {
+    "name": {
+      "en": "Critical Element",
+      "zh": "會心擊【屬性】"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {
+        "elementalCriticalDamage-hbg": 0.07
+      },
+      {
+        "elementalCriticalDamage-hbg": 0.14
+      },
+      {
+        "elementalCriticalDamage-hbg": 0.21
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "criticalDamage"
+  },
+  "Critical Eye": {
+    "name": {
+      "en": "Critical Eye",
+      "zh": "看破"
+    },
+    "maxLevel": 5,
+    "effect": [
+      {
+        "affinity": 0.04
+      },
+      {
+        "affinity": 0.08
+      },
+      {
+        "affinity": 0.12
+      },
+      {
+        "affinity": 0.16
+      },
+      {
+        "affinity": 0.20
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "affinity"
+  },
+  "Critical Status": {
+    "name": {
+      "en": "Critical Status",
+      "zh": "會心擊【特殊】"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Exhaust Functionality": {
+    "name": {
+      "en": "Exhaust Functionality",
+      "zh": "減氣瓶追加"
+    },
+    "maxLevel": 1,
+    "effect": [
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Focus": {
+    "name": {
+      "en": "Focus",
+      "zh": "集中"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Guard": {
+    "name": {
+      "en": "Guard",
+      "zh": "防禦性能"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Guard Up": {
+    "name": {
+      "en": "Guard Up",
+      "zh": "防禦強化"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Handicraft": {
+    "name": {
+      "en": "Handicraft",
+      "zh": "匠"
+    },
+    "maxLevel": 5,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Horn Maestro": {
+    "name": {
+      "en": "Horn Maestro",
+      "zh": "吹笛名人"
+    },
+    "maxLevel": 2,
+    "effect": [
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Load Shells": {
+    "name": {
+      "en": "Load Shells",
+      "zh": ""
+    },
+    "maxLevel": 2,
+    "effect": [
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Master's Touch": {
+    "name": {
+      "en": "Master's Touch",
+      "zh": ""
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "show": false
+  },
+  "Mind's Eye": {
+    "name": {
+      "en": "Mind's Eye",
+      "zh": "心眼"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "show": false
+  },
+  "Offensive Guard": {
+    "name": {
+      "en": "Offensive Guard",
+      "zh": "攻擊守勢"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "triggerLevel": 1,
+    "triggerName": [
+      {
+        "en": "On",
+        "zh": "發動"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {
+          "attackMultiplier": 1.05
+        }
+      ],
+      [
+        {
+          "attackMultiplier": 1.1
+        }
+      ],
+      [
+        {
+          "attackMultiplier": 1.15
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      0.1
+    ],
+    "show": true,
+    "group": "attack"
+  },
+  "Opening Shot": {
+    "name": {
+      "en": "Opening Shot",
+      "zh": "首發射擊"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {
+        "attackOpening": 5,
+        "elementalMultiplierOpening": 1.1,
+        "reload": "reloadOpening1"
+      },
+      {
+        "attackOpening": 10,
+        "elementalMultiplierOpening": 1.1,
+        "reload": "reloadOpening2"
+      },
+      {
+        "attackOpening": 15,
+        "elementalMultiplierOpening": 1.1,
+        "reload": "reloadOpening3"
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "shot"
+  },
+  "Para Functionality": {
+    "name": {
+      "en": "Para Functionality",
+      "zh": ""
+    },
+    "maxLevel": 1,
+    "effect": [
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Paralysis Attack": {
+    "name": {
+      "en": "Paralysis Attack",
+      "zh": "麻痺屬性強化"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {
+        "paralysis": 10,
+        "paralysisMultiplier": 1.05
+      },
+      {
+        "paralysis": 20,
+        "paralysisMultiplier": 1.1
+      },
+      {
+        "paralysis": 50,
+        "paralysisMultiplier": 1.2
+      }
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Poison Attack": {
+    "name": {
+      "en": "Poison Attack",
+      "zh": "毒屬性強化"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {
+        "poison": 10,
+        "poisonMultiplier": 1.05
+      },
+      {
+        "poison": 20,
+        "poisonMultiplier": 1.1
+      },
+      {
+        "poison": 50,
+        "poisonMultiplier": 1.2
+      }
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Poison Duration Up": {
+    "name": {
+      "en": "Poison Duration Up",
+      "zh": ""
+    },
+    "maxLevel": 1,
+    "effect": [
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Poison Functionality": {
+    "name": {
+      "en": "Poison Functionality",
+      "zh": ""
+    },
+    "maxLevel": 1,
+    "effect": [
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Power Prolonger": {
+    "name": {
+      "en": "Power Prolonger",
+      "zh": ""
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Protective Polish": {
+    "name": {
+      "en": "Protective Polish",
+      "zh": "剛刃研磨"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "show": false
+  },
+  "Punishing Draw": {
+    "name": {
+      "en": "Punishing Draw",
+      "zh": "拔刀術【力】"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "triggerLevel": 1,
+    "triggerName": [
+      {
+        "en": "On",
+        "zh": "發動"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {
+          "attack": 3
+        }
+      ],
+      [
+        {
+          "attack": 5
+        }
+      ],
+      [
+        {
+          "attack": 7
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      0.01
+    ],
+    "show": true,
+    "group": "attack"
+  },
+  "Rapid Fire Up": {
+    "name": {
+      "en": "Rapid Fire Up",
+      "zh": ""
+    },
+    "maxLevel": 1,
+    "effect": [
+      {
+        "rapid": 0.05
+      }
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Rapid Morph": {
+    "name": {
+      "en": "Rapid Morph",
+      "zh": "高速變形"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Razor Sharp": {
+    "name": {
+      "en": "Razor Sharp",
+      "zh": "利刃"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "show": false
+  },
+  "Slugger": {
+    "name": {
+      "en": "Slugger",
+      "zh": "KO術"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Speed Sharpening": {
+    "name": {
+      "en": "Speed Sharpening",
+      "zh": ""
+    },
+    "maxLevel": 2,
+    "effect": [
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Stamina Thief": {
+    "name": {
+      "en": "Stamina Thief",
+      "zh": ""
+    },
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": false,
+    "show": false
+  },
+  "Tetrad Shot": {
+    "name": {
+      "en": "Tetrad Shot",
+      "zh": "第四射擊"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {
+        "affinityTetrad": 0.04,
+        "attackTetrad": 3,
+        "elementalMultiplierTetrad": 1.05
+      },
+      {
+        "affinityTetrad": 0.08,
+        "attackTetrad": 6,
+        "elementalMultiplierTetrad": 1.05
+      },
+      {
+        "affinityTetrad": 0.12,
+        "attackTetrad": 10,
+        "elementalMultiplierTetrad": 1.05
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "shot"
+  },
+  "Normal Shots": {
+    "name": {
+      "en": "Normal Shots",
+      "zh": "通常彈・通常箭強化"
+    },
+    "maxLevel": 1,
+    "effect": [
+      {
+        "normalDamageMultiplier": 1.05
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "ammo"
+  },
+  "Piercing Shots": {
+    "name": {
+      "en": "Piercing Shots",
+      "zh": "貫通彈・龍之箭強化"
+    },
+    "maxLevel": 1,
+    "effect": [
+      {
+        "pierceDamageMultiplier": 1.05
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "ammo"
+  },
+  "Spread/Power Shots": {
+    "name": {
+      "en": "Spread/Power Shots",
+      "zh": "散彈・剛射強化"
+    },
+    "maxLevel": 1,
+    "effect": [
+      {
+        "spreadDamageMultiplier": 1.05
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "ammo"
+  },
+  "Special Ammo Boost": {
+    "name": {
+      "en": "Special Ammo Boost",
+      "zh": "特殊射擊強化"
+    },
+    "maxLevel": 2,
+    "effect": [
+      {
+        "specialAmmoDamageMultiplier": 1.1
+      },
+      {
+        "specialAmmoDamageMultiplier": 1.2
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "ammo"
+  },
+  "Fire Attack": {
+    "name": {
+      "en": "Fire Attack",
+      "zh": "火屬性攻擊強化"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {
+        "fire": 4
+      },
+      {
+        "fire": 5,
+        "fireMultiplier": 1.1
+      },
+      {
+        "fire": 6,
+        "fireMultiplier": 1.2
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "elemental"
+  },
+  "Water Attack": {
+    "name": {
+      "en": "Water Attack",
+      "zh": "水屬性攻擊強化"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {
+        "water": 4
+      },
+      {
+        "water": 5,
+        "waterMultiplier": 1.1
+      },
+      {
+        "water": 6,
+        "waterMultiplier": 1.2
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "elemental"
+  },
+  "Thunder Attack": {
+    "name": {
+      "en": "Thunder Attack",
+      "zh": "雷屬性攻擊強化"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {
+        "thunder": 4
+      },
+      {
+        "thunder": 5,
+        "thunderMultiplier": 1.1
+      },
+      {
+        "thunder": 6,
+        "thunderMultiplier": 1.2
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "elemental"
+  },
+  "Ice Attack": {
+    "name": {
+      "en": "Ice Attack",
+      "zh": "冰屬性攻擊強化"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {
+        "ice": 4
+      },
+      {
+        "ice": 5,
+        "iceMultiplier": 1.1
+      },
+      {
+        "ice": 6,
+        "iceMultiplier": 1.2
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "elemental"
+  },
+  "Dragon Attack": {
+    "name": {
+      "en": "Dragon Attack",
+      "zh": "龍屬性攻擊強化"
+    },
+    "maxLevel": 3,
+    "effect": [
+      {
+        "dragon": 4
+      },
+      {
+        "dragon": 5,
+        "dragonMultiplier": 1.1
+      },
+      {
+        "dragon": 6,
+        "dragonMultiplier": 1.2
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "elemental"
+  },
+  "Whiteflame Torrent": {
+    "name": {
+      "en": "Whiteflame Torrent",
+      "zh": "白熾奔流"
+    },
+    "maxLevel": 1,
+    "effect": [
+      {
+        "intervalDamage": {
+          "name": "Whiteflame Torrent",
+          "damage": [
             {
-                "jumpMultiplier": 1.1
+              "value": 50,
+              "type": "fixed",
+              "hit": 1
             }
-        ],
-        "trigger": false,
-        "show": false
+          ]
+        }
+      }
+    ],
+    "trigger": false,
+    "show": true
+  },
+  "Slicked Blade": {
+    "name": {
+      "en": "Slicked Blade",
+      "zh": "濡溼刀紋"
     },
-    "Artillery": {
-        "name": {
-            "en": "Artillery",
-            "zh": "砲術"
+    "maxLevel": 3,
+    "effect": [
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "triggerLevel": 2,
+    "triggerName": [
+      {
+        "en": "Wet",
+        "zh": "沾溼"
+      },
+      {
+        "en": "Bubbleblight",
+        "zh": "泡沫"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {
+          "affinity": 0.03
         },
-        "maxLevel": 3,
-        "effect": [
-            {
-                "shellFireAttack": 30
-            },
-            {
-                "shellFireAttack": 60
-            },
-            {
-                "shellFireAttack": 90
-            }
-        ],
-        "trigger": false,
-        "show": false
+        {
+          "affinity": 0.1
+        }
+      ],
+      [
+        {
+          "affinity": 0.06
+        },
+        {
+          "affinity": 0.2
+        }
+      ],
+      [
+        {
+          "affinity": 0.09
+        },
+        {
+          "affinity": 0.3
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      0.1
+    ],
+    "show": true,
+    "group": "affinity"
+  },
+  "Bladescale Loading": {
+    "name": {
+      "en": "Bladescale Loading",
+      "zh": "刃鱗增裝"
     },
-    "Attack Boost": {
-        "name": {
-            "en": "Attack Boost",
-            "zh": "攻擊"
-        },
-        "maxLevel": 5,
-        "effect": [
-            {
-                "attack": 3
-            },
-            {
-                "attack": 5
-            },
-            {
-                "attack": 7
-            },
-            {
-                "attack": 8,
-                "attackMultiplier": 1.02
-            },
-            {
-                "attack": 9,
-                "attackMultiplier": 1.04
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "attack"
+    "maxLevel": 1,
+    "effect": [
+      {}
+    ],
+    "trigger": true,
+    "triggerLevel": 1,
+    "triggerName": [
+      {
+        "en": "Loaded",
+        "zh": "裝填"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {
+          "attackMultiplier": 1.4
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      0.1
+    ],
+    "show": true,
+    "group": "attack"
+  },
+  "Evading Reload": {
+    "name": {
+      "en": "Evading Reload",
+      "zh": "迴避裝填"
     },
-    "Ballistics": {
-        "name": {
-            "en": "Ballistics",
-            "zh": "彈道強化"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
+    "maxLevel": 1,
+    "effect": [
+      {
+        "shoot": "shootEvadeReload",
+        "reload": "reloadEvadeReload"
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "shot"
+  },
+  "Convert Thunder Resistance": {
+    "name": {
+      "en": "Convert Thunder Resistance",
+      "zh": "轉換耐性【雷】"
     },
-    "Blast Attack": {
-        "name": {
-            "en": "Blast Attack",
-            "zh": "爆破屬性強化"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {
-                "blast": 10,
-                "blastMultiplier": 1.05
-            },
-            {
-                "blast": 20,
-                "blastMultiplier": 1.1
-            },
-            {
-                "blast": 50,
-                "blastMultiplier": 1.2
-            }
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Blast Functionality": {
-        "name": {
-            "en": "Blast Functionality",
-            "zh": "爆破瓶追加"
-        },
-        "maxLevel": 1,
-        "effect": [
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Bludgeoner": {
-        "name": {
-            "en": "Bludgeoner",
-            "zh": "鈍器能手"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "show": false
-    },
-    "Charge Master": {
-        "name": {
-            "en": "Charge Master",
-            "zh": "蓄力大師"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Charge Up": {
-        "name": {
-            "en": "Charge Up",
-            "zh": "蓄攻強化"
-        },
-        "maxLevel": 1,
-        "effect": [
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Critical Boost": {
-        "name": {
-            "en": "Critical Boost",
-            "zh": "超會心"
-        },
-        "maxLevel": 5,
-        "effect": [
-            {
-                "criticalDamage": 0.03
-            },
-            {
-                "criticalDamage": 0.06
-            },
-            {
-                "criticalDamage": 0.09
-            },
-            {
-                "criticalDamage": 0.12
-            },
-            {
-                "criticalDamage": 0.15
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "criticalDamage"
-    },
-    "Critical Draw": {
-        "name": {
-            "en": "Critical Draw",
-            "zh": "拔刀術【技】"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "triggerLevel": 1,
-        "triggerName": [
-            {
-                "en": "On",
-                "zh": "發動"
-            }
-        ],
-        "triggerEffect": [
-            [
-                {
-                    "affinity": 0.5
-                }
-            ],
-            [
-                {
-                    "affinity": 0.75
-                }
-            ],
-            [
-                {
-                    "affinity": 1
-                }
-            ]
-        ],
-        "defaultCoverage": [
-            0.01
-        ],
-        "show": true,
-        "group": "affinity"
-    },
-    "Critical Element": {
-        "name": {
-            "en": "Critical Element",
-            "zh": "會心擊【屬性】"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {
-                "elementalCriticalDamage-hbg": 0.07
-            },
-            {
-                "elementalCriticalDamage-hbg": 0.14
-            },
-            {
-                "elementalCriticalDamage-hbg": 0.21
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "criticalDamage"
-    },
-    "Critical Eye": {
-        "name": {
-            "en": "Critical Eye",
-            "zh": "看破"
-        },
-        "maxLevel": 5,
-        "effect": [
-            {
-                "affinity": 0.04
-            },
-            {
-                "affinity": 0.08
-            },
-            {
-                "affinity": 0.12
-            },
-            {
-                "affinity": 0.16
-            },
-            {
-                "affinity": 0.20
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "affinity"
-    },
-    "Critical Status": {
-        "name": {
-            "en": "Critical Status",
-            "zh": "會心擊【特殊】"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Exhaust Functionality": {
-        "name": {
-            "en": "Exhaust Functionality",
-            "zh": "減氣瓶追加"
-        },
-        "maxLevel": 1,
-        "effect": [
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Focus": {
-        "name": {
-            "en": "Focus",
-            "zh": "集中"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Guard": {
-        "name": {
-            "en": "Guard",
-            "zh": "防禦性能"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Guard Up": {
-        "name": {
-            "en": "Guard Up",
-            "zh": "防禦強化"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Handicraft": {
-        "name": {
-            "en": "Handicraft",
-            "zh": "匠"
-        },
-        "maxLevel": 5,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Horn Maestro": {
-        "name": {
-            "en": "Horn Maestro",
-            "zh": "吹笛名人"
-        },
-        "maxLevel": 2,
-        "effect": [
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Load Shells": {
-        "name": {
-            "en": "Load Shells",
-            "zh": ""
-        },
-        "maxLevel": 2,
-        "effect": [
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Master's Touch": {
-        "name": {
-            "en": "Master's Touch",
-            "zh": ""
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "show": false
-    },
-    "Mind's Eye": {
-        "name": {
-            "en": "Mind's Eye",
-            "zh": "心眼"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "show": false
-    },
-    "Offensive Guard": {
-        "name": {
-            "en": "Offensive Guard",
-            "zh": "攻擊守勢"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "triggerLevel": 1,
-        "triggerName": [
-            {
-                "en": "On",
-                "zh": "發動"
-            }
-        ],
-        "triggerEffect": [
-            [
-                {
-                    "attackMultiplier": 1.05
-                }
-            ],
-            [
-                {
-                    "attackMultiplier": 1.1
-                }
-            ],
-            [
-                {
-                    "attackMultiplier": 1.15
-                }
-            ]
-        ],
-        "defaultCoverage": [
-            0.1
-        ],
-        "show": true,
-        "group": "attack"
-    },
-    "Opening Shot": {
-        "name": {
-            "en": "Opening Shot",
-            "zh": "首發射擊"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {
-                "attackOpening": 5,
-                "elementalMultiplierOpening": 1.1,
-                "reload": "reloadOpening1"
-            },
-            {
-                "attackOpening": 10,
-                "elementalMultiplierOpening": 1.1,
-                "reload": "reloadOpening2"
-            },
-            {
-                "attackOpening": 15,
-                "elementalMultiplierOpening": 1.1,
-                "reload": "reloadOpening3"
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "shot"
-    },
-    "Para Functionality": {
-        "name": {
-            "en": "Para Functionality",
-            "zh": ""
-        },
-        "maxLevel": 1,
-        "effect": [
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Paralysis Attack": {
-        "name": {
-            "en": "Paralysis Attack",
-            "zh": "麻痺屬性強化"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {
-                "paralysis": 10,
-                "paralysisMultiplier": 1.05
-            },
-            {
-                "paralysis": 20,
-                "paralysisMultiplier": 1.1
-            },
-            {
-                "paralysis": 50,
-                "paralysisMultiplier": 1.2
-            }
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Poison Attack": {
-        "name": {
-            "en": "Poison Attack",
-            "zh": "毒屬性強化"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {
-                "poison": 10,
-                "poisonMultiplier": 1.05
-            },
-            {
-                "poison": 20,
-                "poisonMultiplier": 1.1
-            },
-            {
-                "poison": 50,
-                "poisonMultiplier": 1.2
-            }
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Poison Duration Up": {
-        "name": {
-            "en": "Poison Duration Up",
-            "zh": ""
-        },
-        "maxLevel": 1,
-        "effect": [
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Poison Functionality": {
-        "name": {
-            "en": "Poison Functionality",
-            "zh": ""
-        },
-        "maxLevel": 1,
-        "effect": [
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Power Prolonger": {
-        "name": {
-            "en": "Power Prolonger",
-            "zh": ""
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Protective Polish": {
-        "name": {
-            "en": "Protective Polish",
-            "zh": "剛刃研磨"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "show": false
-    },
-    "Punishing Draw": {
-        "name": {
-            "en": "Punishing Draw",
-            "zh": "拔刀術【力】"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "triggerLevel": 1,
-        "triggerName": [
-            {
-                "en": "On",
-                "zh": "發動"
-            }
-        ],
-        "triggerEffect": [
-            [
-                {
-                    "attack": 3
-                }
-            ],
-            [
-                {
-                    "attack": 5
-                }
-            ],
-            [
-                {
-                    "attack": 7
-                }
-            ]
-        ],
-        "defaultCoverage": [
-            0.01
-        ],
-        "show": true,
-        "group": "attack"
-    },
-    "Rapid Fire Up": {
-        "name": {
-            "en": "Rapid Fire Up",
-            "zh": ""
-        },
-        "maxLevel": 1,
-        "effect": [
-            {
-                "rapid": 0.05
-            }
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Rapid Morph": {
-        "name": {
-            "en": "Rapid Morph",
-            "zh": "高速變形"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Razor Sharp": {
-        "name": {
-            "en": "Razor Sharp",
-            "zh": "利刃"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "show": false
-    },
-    "Slugger": {
-        "name": {
-            "en": "Slugger",
-            "zh": "KO術"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Speed Sharpening": {
-        "name": {
-            "en": "Speed Sharpening",
-            "zh": ""
-        },
-        "maxLevel": 2,
-        "effect": [
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Stamina Thief": {
-        "name": {
-            "en": "Stamina Thief",
-            "zh": ""
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": false,
-        "show": false
-    },
-    "Tetrad Shot": {
-        "name": {
-            "en": "Tetrad Shot",
-            "zh": "第四射擊"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {
-                "affinityTetrad": 0.04,
-                "attackTetrad": 3,
-                "elementalMultiplierTetrad": 1.05
-            },
-            {
-                "affinityTetrad": 0.08,
-                "attackTetrad": 6,
-                "elementalMultiplierTetrad": 1.05
-            },
-            {
-                "affinityTetrad": 0.12,
-                "attackTetrad": 10,
-                "elementalMultiplierTetrad": 1.05
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "shot"
-    },
-    "Normal Shots": {
-        "name": {
-            "en": "Normal Shots",
-            "zh": "通常彈・通常箭強化"
-        },
-        "maxLevel": 1,
-        "effect": [
-            {
-                "normalDamageMultiplier": 1.05
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "ammo"
-    },
-    "Piercing Shots": {
-        "name": {
-            "en": "Piercing Shots",
-            "zh": "貫通彈・龍之箭強化"
-        },
-        "maxLevel": 1,
-        "effect": [
-            {
-                "pierceDamageMultiplier": 1.05
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "ammo"
-    },
-    "Spread/Power Shots": {
-        "name": {
-            "en": "Spread/Power Shots",
-            "zh": "散彈・剛射強化"
-        },
-        "maxLevel": 1,
-        "effect": [
-            {
-                "spreadDamageMultiplier": 1.05
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "ammo"
-    },
-    "Special Ammo Boost": {
-        "name": {
-            "en": "Special Ammo Boost",
-            "zh": "特殊射擊強化"
-        },
-        "maxLevel": 2,
-        "effect": [
-            {
-                "specialAmmoDamageMultiplier": 1.1
-            },
-            {
-                "specialAmmoDamageMultiplier": 1.2
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "ammo"
-    },
-    "Fire Attack": {
-        "name": {
-            "en": "Fire Attack",
-            "zh": "火屬性攻擊強化"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {
-                "fire": 4
-            },
-            {
-                "fire": 5,
-                "fireMultiplier": 1.1
-            },
-            {
-                "fire": 6,
-                "fireMultiplier": 1.2
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "elemental"
-    },
-    "Water Attack": {
-        "name": {
-            "en": "Water Attack",
-            "zh": "水屬性攻擊強化"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {
-                "water": 4
-            },
-            {
-                "water": 5,
-                "waterMultiplier": 1.1
-            },
-            {
-                "water": 6,
-                "waterMultiplier": 1.2
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "elemental"
-    },
-    "Thunder Attack": {
-        "name": {
-            "en": "Thunder Attack",
-            "zh": "雷屬性攻擊強化"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {
-                "thunder": 4
-            },
-            {
-                "thunder": 5,
-                "thunderMultiplier": 1.1
-            },
-            {
-                "thunder": 6,
-                "thunderMultiplier": 1.2
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "elemental"
-    },
-    "Ice Attack": {
-        "name": {
-            "en": "Ice Attack",
-            "zh": "冰屬性攻擊強化"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {
-                "ice": 4
-            },
-            {
-                "ice": 5,
-                "iceMultiplier": 1.1
-            },
-            {
-                "ice": 6,
-                "iceMultiplier": 1.2
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "elemental"
-    },
-    "Dragon Attack": {
-        "name": {
-            "en": "Dragon Attack",
-            "zh": "龍屬性攻擊強化"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {
-                "dragon": 4
-            },
-            {
-                "dragon": 5,
-                "dragonMultiplier": 1.1
-            },
-            {
-                "dragon": 6,
-                "dragonMultiplier": 1.2
-            }
-        ],
-        "trigger": false,
-        "show": true,
-        "group": "elemental"
-    },
-    "Whiteflame Torrent": {
-        "name": {
-            "en": "Whiteflame Torrent",
-            "zh": "白熾奔流"
-        },
-        "maxLevel": 1,
-        "effect": [
-            {
-                "intervalDamage": {
-                    "name": "Whiteflame Torrent",
-                    "damage": [
-                        {
-                            "value": 50,
-                            "type": "fixed",
-                            "hit": 1
-                        }
-                    ]
-                }
-            }
-        ],
-        "trigger": false,
-        "show": true
-    },
-    "Slicked Blade": {
-        "name": {
-            "en": "Slicked Blade",
-            "zh": "濡溼刀紋"
-        },
-        "maxLevel": 3,
-        "effect": [
-            {},
-            {},
-            {}
-        ],
-        "trigger": true,
-        "triggerLevel": 2,
-        "triggerName": [
-            {
-                "en": "Wet",
-                "zh": "沾溼"
-            },
-            {
-                "en": "Bubbleblight",
-                "zh": "泡沫"
-            }
-        ],
-        "triggerEffect": [
-            [
-                {
-                    "affinity": 0.03
-                },
-                {
-                    "affinity": 0.1
-                }
-            ],
-            [
-                {
-                    "affinity": 0.06
-                },
-                {
-                    "affinity": 0.2
-                }
-            ],
-            [
-                {
-                    "affinity": 0.09
-                },
-                {
-                    "affinity": 0.3
-                }
-            ]
-        ],
-        "defaultCoverage": [
-            0.1
-        ],
-        "show": true,
-        "group": "affinity"
-    }
+    "maxLevel": 1,
+    "effect": [
+      {
+        "convertThunderResistance": 0.2
+      }
+    ],
+    "trigger": false,
+    "show": true,
+    "group": "elemental"
+  }
 }

@@ -177,13 +177,6 @@
       </div>
     </div>
 
-    <div class="stat-row">
-      <div class="stat-group">
-        <label data-lang="fast-reload-label">Fast Reload:</label>
-        <input type="checkbox" id="fast-reload">
-      </div>
-    </div>
-
     <div class="skills-box">
       <h3 data-lang="weapon-skills-header">Weapon Skills</h3>
       <div class="row" id="weapon-skill-attack"></div>
@@ -214,11 +207,17 @@
 
     <div class="skills-box" id="miscellaneous">
       <h3 data-lang="miscellaneous-label">Miscellaneous</h3>
-      <div class="row">
+      <div class="row" id="interval-damage-gap-row">
         <div class="group">
           <label data-lang="interval-damage-gap-label">Interval Damage:</label>
           <input class="second-input" type="number" id="interval-damage-gap" value="7.5" min="3">
           <label data-lang="interval-damage-second-label">s</label>
+        </div>
+      </div>
+      <div class="row" id="thunder-resistance-row">
+        <div class="group">
+          <label data-lang="thunder-resistance-label">Thunder Resistance:</label>
+          <input class="second-input" type="number" id="thunder-resistance" value="30">
         </div>
       </div>
     </div>
@@ -370,10 +369,10 @@
     </p>
     <div class="language-selector-container">
       <label data-lang="game-version-label">Game Version:</label>
-      <label>1.011.00.00</label>
+      <label>1.021.03.00</label>
       &nbsp;&nbsp;
       <label data-lang="last-update-label">Last update:</label>
-      <label>2025-05-29</label>
+      <label>2025-08-23</label>
       &nbsp;&nbsp;
       <label for="language-selector" data-lang="language-label">Language:</label>
       <select id="language-selector">
