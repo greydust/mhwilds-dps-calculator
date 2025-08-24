@@ -1354,7 +1354,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (damageInfo.type === "fixed") {
           totalIntervalDamage += damageInfo.value * damageInfo.hit;
         } else if (damageInfo.type === "thunder") {
-          totalIntervalDamage += damageInfo.value * damageInfo.hit * elementalHitZoneValue.value / 100;
+          totalIntervalDamage += (damageInfo.value * damageInfo.thunderMultiplier + hunter.thunder) * damageInfo.hit * elementalHitZoneValue.value / 100;
         }
       }
     }
