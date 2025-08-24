@@ -1033,8 +1033,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const ammo = data.action["hbg"]["ammo"][hunter.ammo.type];
     hunter.ammo.shootSpeed = ammo[hunter.ammo.shoot];
     hunter.ammo.reloadSpeed = ammo[hunter.ammo.reload];
-    hunter.cycleTime = hunter.ammo.shootSpeed * hunter.ammo.ammo + hunter.ammo.reloadSpeed;
-    hunter.shotsPerSecond = hunter.ammo.ammo / hunter.cycleTime;
+    if (hunter.ammo.reloadSpeed == 0) {
+      hunter.cycleTime = hunter.ammo.shootSpeed;
+      hunter.shotsPerCycle = 1;
+    } else {
+      hunter.cycleTime = hunter.ammo.shootSpeed * hunter.ammo.ammo + hunter.ammo.reloadSpeed;
+      hunter.shotsPerCycle = hunter.ammo.ammo;
+    }
+    hunter.shotsPerSecond = hunter.shotsPerCycle / hunter.cycleTime;
 
     shootSpeed.textContent = hunter.ammo.shootSpeed;
     reloadSpeed.textContent = Number(hunter.ammo.reloadSpeed.toFixed(3));
@@ -1230,7 +1236,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let averageElementalAdditive = 0;
     let cycleTime = hunter.cycleTime;
     let intervalDamageEffectiveTime = hunter.cycleTime;
-    for (let bullet = 1; bullet <= hunter.ammo.ammo; bullet++) {
+    for (let bullet = 1; bullet <= hunter.shotsPerCycle; bullet++) {
       const physicalAttack =
         hunter.finalAttack +
         (bullet == 1 ? hunter.attackOpening : 0) +
@@ -1301,11 +1307,11 @@ document.addEventListener("DOMContentLoaded", () => {
       totalElementalDamage += elementalDamage;
     }
 
-    const damagePerHit = totalDamage / hunter.ammo.ammo;
+    const damagePerHit = totalDamage / hunter.shotsPerCycle;
 
     if (useIgnition.checked) {
       const totalBulletHits = hunter.ammo.damage.reduce((acc, damageInfo) => acc + damageInfo.hit, 0);
-      const ignitionRecoveryFromBulletsPerSecond = hunter.ammo.ammo * hunter.ammo.ignitionRecovery * totalBulletHits / hunter.cycleTime;
+      const ignitionRecoveryFromBulletsPerSecond = hunter.shotsPerCycle * hunter.ammo.ignitionRecovery * totalBulletHits / hunter.cycleTime;
       const ignitionRecoverTime = hunter.ignitionGauge / ((ignitionRecoveryFromBulletsPerSecond + hunter.ignitionNatureRecovery * hunter.ignitionNatureRecoveryMultiplier) * ignitionLevelRecoveryMultiplier[hunter.ignitionRecoveryLevel - 1]);
       totalDamage = totalDamage / cycleTime * ignitionRecoverTime;
       totalPhysicalDamage = totalPhysicalDamage / cycleTime * ignitionRecoverTime;
@@ -1367,10 +1373,10 @@ document.addEventListener("DOMContentLoaded", () => {
       elementalPercentage: totalElementalDamage / totalDamage,
       ignitionPercentage: totalIgnitionDamage / totalDamage,
       intervalDamagePercentage: totalIntervalDamage / totalDamage,
-      averageAttack: averageAttack / hunter.ammo.ammo,
-      averageAffinity: averageAffinity / hunter.ammo.ammo,
-      averageElementalMultiplier: averageElementalMultiplier / hunter.ammo.ammo,
-      averageElementalAdditive: averageElementalAdditive / hunter.ammo.ammo,
+      averageAttack: averageAttack / hunter.shotsPerCycle,
+      averageAffinity: averageAffinity / hunter.shotsPerCycle,
+      averageElementalMultiplier: averageElementalMultiplier / hunter.shotsPerCycle,
+      averageElementalAdditive: averageElementalAdditive / hunter.shotsPerCycle,
     };
   }
 
