@@ -111,6 +111,9 @@
     "wyvernpiercer-ignition": "Wyvernpiercer Ignition",
     "miscellaneous-label": "Miscellaneous",
     "interval-damage-gap-label": "Interval Damage Gap:",
+    "interval-damage-second-label": "second(s)",
+    "bladescale-loading-frequency-label": "Bladescale Loading Frequency: Once per",
+    "bladescale-loading-frequency-second-label": "shot(s)",
     "thunder-resistance-label": "Thunder Resistance:"
   },
   "zh": {
@@ -225,6 +228,9 @@
     "wyvernpiercer-ignition": "龍熱穿甲彈",
     "miscellaneous-label": "其他",
     "interval-damage-gap-label": "觸發傷害間隔：",
+    "interval-damage-second-label": "秒",
+    "bladescale-loading-frequency-label": "刃鱗增裝頻率：每",
+    "bladescale-loading-frequency-second-label": "發一次",
     "thunder-resistance-label": "雷耐性："
   }
 }

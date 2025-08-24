@@ -998,26 +998,11 @@
     },
     "maxLevel": 1,
     "effect": [
-      {}
-    ],
-    "trigger": true,
-    "triggerLevel": 1,
-    "triggerName": [
       {
-        "en": "Loaded",
-        "zh": "裝填"
+        "bladescaleLoadingAttackMultiplier": 1.4
       }
     ],
-    "triggerEffect": [
-      [
-        {
-          "attackMultiplier": 1.4
-        }
-      ]
-    ],
-    "defaultCoverage": [
-      0.1
-    ],
+    "trigger": false,
     "show": true,
     "group": "attack"
   },

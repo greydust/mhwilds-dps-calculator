@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ignitionType = document.getElementById("ignition-type");
   const miscellaneous = document.getElementById("miscellaneous");
   const intervalDamageGap = document.getElementById("interval-damage-gap");
+  const bladescaleLoadingFrequency = document.getElementById("bladescale-loading-frequency");
   const thunderResistance = document.getElementById("thunder-resistance");
 
   const files = [
@@ -66,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     1,
     1.1
   ];
+  const bladescaleReloadShots = 3;
 
   let data = {};
   let currentLanguage = "en";
@@ -653,6 +655,12 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       document.getElementById("thunder-resistance-row").classList.add("hidden");
     }
+    if (hunter.bladescaleLoadingAttackMultiplier > 1) {
+      miscellaneousHidden = false;
+      document.getElementById("bladescale-loading-frequency-row").classList.remove("hidden");
+    } else {
+      document.getElementById("bladescale-loading-frequency-row").classList.add("hidden");
+    }
     if (miscellaneousHidden) {
       miscellaneous.classList.add("hidden");
     } else {
@@ -880,6 +888,9 @@ document.addEventListener("DOMContentLoaded", () => {
         case "convertThunderResistance":
           hunter.convertThunderResistance += value;
           break;
+        case "bladescaleLoadingAttackMultiplier":
+          hunter.bladescaleLoadingAttackMultiplier *= value;
+          break;
         default:
           console.error(`Unknown effect key: ${key}`);
           break;
@@ -983,6 +994,9 @@ document.addEventListener("DOMContentLoaded", () => {
         case "convertThunderResistance":
           hunter.convertThunderResistance -= value;
           break;
+        case "bladescaleLoadingAttackMultiplier":
+          hunter.bladescaleLoadingAttackMultiplier /= value;
+          break;
         default:
           console.error(`Unknown effect key: ${key}`);
           break;
@@ -1027,10 +1041,12 @@ document.addEventListener("DOMContentLoaded", () => {
     hunter.status = {};
     hunter.intervalDamage = [];
     hunter.convertThunderResistance = 0;
+    hunter.bladescaleLoadingAttackMultiplier = 1;
   }
 
   function calculateCycleTime() {
     const ammo = data.action["hbg"]["ammo"][hunter.ammo.type];
+    hunter.ammo.normalShootSpeed = ammo.shoot;
     hunter.ammo.shootSpeed = ammo[hunter.ammo.shoot];
     hunter.ammo.reloadSpeed = ammo[hunter.ammo.reload];
     if (hunter.ammo.reloadSpeed == 0) {
@@ -1230,10 +1246,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let totalPhysicalDamage = 0;
     let totalElementalDamage = 0;
     let totalIgnitionDamage = 0;
-    let averageAttack = 0;
-    let averageAffinity = 0;
-    let averageElementalMultiplier = 0;
-    let averageElementalAdditive = 0;
+    let totalAttack = 0;
+    let totalAffinity = 0;
+    let totalElementalMultiplier = 0;
+    let totalElementalAdditive = 0;
+    let shots = hunter.shotsPerCycle;
     let cycleTime = hunter.cycleTime;
     let intervalDamageEffectiveTime = hunter.cycleTime;
     for (let bullet = 1; bullet <= hunter.shotsPerCycle; bullet++) {
@@ -1241,14 +1258,14 @@ document.addEventListener("DOMContentLoaded", () => {
         hunter.finalAttack +
         (bullet == 1 ? hunter.attackOpening : 0) +
         ((bullet == 4 || bullet == 6) ? hunter.attackTetrad : 0);
-      averageAttack += physicalAttack;
+      totalAttack += physicalAttack;
 
       const affinity = Math.min(1,
         hunter.finalAffinity +
         (hunter.status.recovered ? 0.15 + hunter.affinityRecovered : 0) +
         (bullet >= 4 ? hunter.affinityTetrad : 0)
       );
-      averageAffinity += affinity;
+      totalAffinity += affinity;
 
       let physicalAffinityMultipler = 1;
       if (affinity > 0) {
@@ -1275,11 +1292,11 @@ document.addEventListener("DOMContentLoaded", () => {
         hunter[`${hunter.ammo.elementalType}Multiplier`] *
         (bullet == 1 ? hunter.elementalMultiplierOpening : 1) *
         (bullet == 4 || bullet == 6 ? hunter.elementalMultiplierTetrad : 1);
-      averageElementalMultiplier += elementalMultiplier;
+      totalElementalMultiplier += elementalMultiplier;
 
       const elementalAdditive = hunter[`${hunter.ammo.elementalType}`] +
         Math.max(0, hunter.ammo.elementalType == "thunder" ? hunter.convertThunderResistance * thunderResistance.value : 0);
-      averageElementalAdditive += elementalAdditive;
+      totalElementalAdditive += elementalAdditive;
 
       let physicalDamage = 0;
       let elementalDamage = 0;
@@ -1307,11 +1324,69 @@ document.addEventListener("DOMContentLoaded", () => {
       totalElementalDamage += elementalDamage;
     }
 
-    const damagePerHit = totalDamage / hunter.shotsPerCycle;
+    if (hunter.bladescaleLoadingAttackMultiplier > 1) {
+      const physicalAttack =
+        hunter.baseAttack * hunter.attackMultiplier * hunter.bladescaleLoadingAttackMultiplier;
+      const firstPhysicalAttack =
+        hunter.baseAttack * hunter.attackMultiplier * hunter.bladescaleLoadingAttackMultiplier + hunter.attackOpening;
+
+      const affinity = Math.min(1,
+        hunter.finalAffinity +
+        (hunter.status.recovered ? 0.15 + hunter.affinityRecovered : 0)
+      );
+
+      let physicalAffinityMultipler = 1;
+      if (affinity > 0) {
+        physicalAffinityMultipler = 1 + affinity * (hunter.criticalDamage - 1);
+      } else if (affinity < 0) {
+        physicalAffinityMultipler = (1 + -affinity * (0.75 - 1))
+      }
+
+      let physicalFinalDamageMultiplier = hunter.finalDamageMultiplier;
+      if (["normal", "pierce", "spread"].includes(hunter.ammo.type)) {
+        physicalFinalDamageMultiplier *= hunter[`${hunter.ammo.type}DamageMultiplier`];
+        if (hunter.ammo.enhancement.type == "standard") {
+          physicalFinalDamageMultiplier *= hunter.ammo.enhancement.level * 0.1 + 1;
+        }
+      }
+
+      let physicalDamage = 0;
+      let firstPhysicalDamage = 0;
+      for (let hit = 0; hit < hunter.ammo.damage.length; hit++) {
+        const damageInfo = hunter.ammo.damage[hit];
+
+        physicalDamage += (
+          damageInfo.value / 100 * physicalAttack * document.getElementById(`${damageInfo.type}-hitzone-value`).value / 100 *
+          physicalAffinityMultipler *
+          physicalFinalDamageMultiplier
+        ).toFixed(2) * damageInfo.hit;
+
+        firstPhysicalDamage += (
+          damageInfo.value / 100 * firstPhysicalAttack * document.getElementById(`${damageInfo.type}-hitzone-value`).value / 100 *
+          physicalAffinityMultipler *
+          physicalFinalDamageMultiplier
+        ).toFixed(2) * damageInfo.hit;
+      }
+
+      let damage = firstPhysicalDamage + physicalDamage * (bladescaleReloadShots - 1);
+      let attack = firstPhysicalAttack + physicalAttack * (bladescaleReloadShots - 1);
+      const bladescaleShots = hunter.shotsPerCycle / bladescaleLoadingFrequency.value * bladescaleReloadShots;
+      const finalDamage = damage * bladescaleShots / bladescaleReloadShots;
+      const finalAttack = attack * bladescaleShots / bladescaleReloadShots;
+      const finalAffinity = affinity * bladescaleShots
+      const finalTime = hunter.ammo.normalShootSpeed * bladescaleShots;
+
+      shots += bladescaleShots;
+      totalDamage += finalDamage;
+      totalPhysicalDamage += finalDamage;
+      totalAttack += finalAttack;
+      totalAffinity += finalAffinity;
+      cycleTime += finalTime;
+    }
 
     if (useIgnition.checked) {
       const totalBulletHits = hunter.ammo.damage.reduce((acc, damageInfo) => acc + damageInfo.hit, 0);
-      const ignitionRecoveryFromBulletsPerSecond = hunter.shotsPerCycle * hunter.ammo.ignitionRecovery * totalBulletHits / hunter.cycleTime;
+      const ignitionRecoveryFromBulletsPerSecond = shots * hunter.ammo.ignitionRecovery * totalBulletHits / hunter.cycleTime;
       const ignitionRecoverTime = hunter.ignitionGauge / ((ignitionRecoveryFromBulletsPerSecond + hunter.ignitionNatureRecovery * hunter.ignitionNatureRecoveryMultiplier) * ignitionLevelRecoveryMultiplier[hunter.ignitionRecoveryLevel - 1]);
       totalDamage = totalDamage / cycleTime * ignitionRecoverTime;
       totalPhysicalDamage = totalPhysicalDamage / cycleTime * ignitionRecoverTime;
@@ -1362,21 +1437,20 @@ document.addEventListener("DOMContentLoaded", () => {
     totalDamage += totalIntervalDamage;
 
     const dps = totalDamage / cycleTime;
-    const ignitionDPS = totalIgnitionDamage / ignition.time;
     logBox.innerHTML += " ".repeat(hunter.trigger.length + 1) + `DPS: ${dps}\n`;
     return {
       dps: dps,
-      dph: damagePerHit,
-      ignitionDPS: ignitionDPS,
+      dph: totalDamage / shots,
+      ignitionDPS: totalIgnitionDamage / ignition.time,
       ignitionDPA: totalIgnitionDamage,
       physicalPercentage: totalPhysicalDamage / totalDamage,
       elementalPercentage: totalElementalDamage / totalDamage,
       ignitionPercentage: totalIgnitionDamage / totalDamage,
       intervalDamagePercentage: totalIntervalDamage / totalDamage,
-      averageAttack: averageAttack / hunter.shotsPerCycle,
-      averageAffinity: averageAffinity / hunter.shotsPerCycle,
-      averageElementalMultiplier: averageElementalMultiplier / hunter.shotsPerCycle,
-      averageElementalAdditive: averageElementalAdditive / hunter.shotsPerCycle,
+      averageAttack: totalAttack / shots,
+      averageAffinity: totalAffinity / shots,
+      averageElementalMultiplier: totalElementalMultiplier / shots,
+      averageElementalAdditive: totalElementalAdditive / shots,
     };
   }
 
