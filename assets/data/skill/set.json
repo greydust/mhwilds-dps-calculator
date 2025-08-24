@@ -346,6 +346,47 @@
     "trigger": true,
     "show": false
   },
+  "Seregios's Tenacity": {
+    "name": {
+      "en": "Seregios's Tenacity",
+      "zh": "千刃龍之鬥志"
+    },
+    "maxLevel": 4,
+    "effect": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trigger": true,
+    "triggerLevel": 1,
+    "triggerName": [
+      {
+        "en": "On",
+        "zh": "發動"
+      }
+    ],
+    "triggerEffect": [
+      [
+        {}
+      ],
+      [
+        {}
+      ],
+      [
+        {}
+      ],
+      [
+        {
+          "attackMultiplier": 1.05
+        }
+      ]
+    ],
+    "defaultCoverage": [
+      0.1
+    ],
+    "show": true
+  },
   "Leviathan's Fury": {
     "name": {
       "en": "Leviathan's Fury",
